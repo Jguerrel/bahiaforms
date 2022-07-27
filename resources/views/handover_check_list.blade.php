@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="container">
         <div class="row">
             <div class="col-9 p-0">
@@ -15,38 +14,39 @@
     <br>
     <div class="container border border-dark">
         <div class="row bg-secondary d-flex align-items-stretch">
-            <div class="col-md-3 border border-dark d-flex align-items-center">
+            <div class="col-sm-3 border border-dark d-flex align-items-center">
                 <p class="text-center text-white m-0 w-100">Company/(compañia)</p>
             </div>
-            <div class="col-md-3 border border-dark d-flex align-items-center">
+            <div class="col-sm-3 border border-dark d-flex align-items-center">
                 <p class="text-center text-white m-0 w-100">Vehicle identification number (VIN) Chasis</p>
             </div>
-            <div class="col-md-3 border border-dark d-flex align-items-center">
+            <div class="col-sm-3 border border-dark d-flex align-items-center">
                 <p class="text-center text-white m-0 w-100">Inspection date Fecha</p>
             </div>
-            <div class="col-md-3 border border-dark d-flex align-items-center">
+            <div class="col-sm-3 border border-dark d-flex align-items-center">
                 <p class="text-center text-white m-0 w-100">R.O#</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 p-0 border border-dark">
+            <div class="col-sm-3 p-0 border border-dark">
                 <input type="text" class="form-control border-0 rounded-0 text-center " id="" placeholder="">
             </div>
-            <div class="col-md-3 p-0 border border-dark">
-                <input type="text" class="form-control border-0 rounded-0 text-center " id="" placeholder="">
+            <div class="col-sm-3 p-0 border border-dark">
+                <input type="text" class="form-control border-0 rounded-0 text-center " id="chasis" placeholder="" value="{{ $request->chasis; }}
+">
             </div>
-            <div class="col-md-3 p-0 border border-dark">
+            <div class="col-sm-3 p-0 border border-dark">
                 <input type="date" class="form-control border-0 rounded-0" id="" placeholder="">
             </div>
-            <div class="col-md-3 p-0 border border-dark">
+            <div class="col-sm-3 p-0 border border-dark">
                 <input type="text" class="form-control border-0 rounded-0 text-center " id="" placeholder="">
             </div>
         </div>
         <div class="row">
             <div class="col-12 border border-dark">
                 <p>*Company: distributor, insurance company, shipping agent, etc. Empresa: distribuidor, compañía de seguros, agente marítimo, etc.</p>
-                <p>🞛External inspection Inspección externa</p>
-                <p>► Circle the part of vehicle that has problem or defect. Encierre en un círculo la parte del vehículo que tiene el problema o defecto.</p>
+                <p>External inspection Inspección externa</p>
+                <p>Circle the part of vehicle that has problem or defect. Encierre en un círculo la parte del vehículo que tiene el problema o defecto.</p>
             </div>
         </div>
         <div class="row">
@@ -159,7 +159,7 @@
             <div class="col-1 border-start border-end border-dark d-flex align-items-center">
                 <div class="input-group d-block">
                     <span class="input-group-text p-0 bg-transparent border-0" id="basic-addon1">Model</span>
-                    <input type="text" class="form-control w-100 ps-0 border-0 rounded-0" placeholder="--" aria-label="" aria-describedby="">
+                    <input type="text" class="form-control w-100 ps-0 border-0 rounded-0" placeholder="" value="{{$request->modelo}}" aria-label="" aria-describedby="">
                 </div>
             </div>
             <div class="col-2 border-start border-end border-dark d-flex align-items-center">
@@ -238,24 +238,24 @@
             </div>
         </div>
         <div class="row border border-dark">
-            <div class="col-12 col-md-3 border-end border-dark">
+            <div class="col-12 col-sm-3 border-end border-dark">
                 <p class="m-0">Inspection point<br>Puntos de inspeccion</p>
             </div>
-            <div class="col-12 col-md-3 border-start border-end border-dark">
+            <div class="col-12 col-sm-3 border-start border-end border-dark">
                 <p class="m-0">Distributor inspection<br>Inspección del distribuidor</p>
             </div>
-            <div class="col-12 col-md-3 border-start border-end border-dark">
+            <div class="col-12 col-sm-3 border-start border-end border-dark">
                 <p class="m-0">Transporter inspection<br>Inspección del transportista</p>
             </div>
-            <div class="col-12 col-md-3 border-start border-dark">
+            <div class="col-12 col-sm-3 border-start border-dark">
                 <p class="m-0">Dealer inspection<br>Inspeccion del distribuidor</p>
             </div>
         </div>
         <div class="row border border-dark">
-            <div class="col-12 col-md-3 border-end border-dark d-flex align-items-center">
+            <div class="col-12 col-sm-3 border-end border-dark d-flex align-items-center">
                 <p class="m-0 lh-sm">Defect No.</p>
             </div>
-            <div class="col-12 col-md-9 border-start border-dark">
+            <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center p-1 text-center">
                         <p class="m-0 lh-sm">Vehicle No</p>
@@ -297,10 +297,10 @@
             </div>
         </div>
         <div class="row border border-dark">
-            <div class="col-12 col-md-3 border-end border-dark d-flex align-items-center">
+            <div class="col-12 col-sm-3 border-end border-dark d-flex align-items-center">
                 <p class="m-0 lh-sm">A - Wear</p>
             </div>
-            <div class="col-12 col-md-9 border-start border-dark">
+            <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
                         <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
@@ -342,10 +342,10 @@
             </div>
         </div>
         <div class="row border border-dark">
-            <div class="col-12 col-md-3 border-end border-dark d-flex align-items-center">
+            <div class="col-12 col-sm-3 border-end border-dark d-flex align-items-center">
                 <p class="m-0 lh-sm">B – Damage Daño</p>
             </div>
-            <div class="col-12 col-md-9 border-start border-dark">
+            <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
                         <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
@@ -387,10 +387,10 @@
             </div>
         </div>
         <div class="row border border-dark">
-            <div class="col-12 col-md-3 border-end border-dark d-flex align-items-center">
+            <div class="col-12 col-sm-3 border-end border-dark d-flex align-items-center">
                 <p class="m-0 lh-sm">C – Notch muesca/corte</p>
             </div>
-            <div class="col-12 col-md-9 border-start border-dark">
+            <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
                         <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
@@ -432,10 +432,10 @@
             </div>
         </div>
         <div class="row border border-dark">
-            <div class="col-12 col-md-3 border-end border-dark d-flex align-items-center">
+            <div class="col-12 col-sm-3 border-end border-dark d-flex align-items-center">
                 <p class="m-0 lh-sm">D – Pit picadura</p>
             </div>
-            <div class="col-12 col-md-9 border-start border-dark">
+            <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
                         <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
@@ -477,10 +477,10 @@
             </div>
         </div>
         <div class="row border border-dark">
-            <div class="col-12 col-md-3 border-end border-dark d-flex align-items-center">
+            <div class="col-12 col-sm-3 border-end border-dark d-flex align-items-center">
                 <p class="m-0 lh-sm">G - Glass damage daño en vidrios</p>
             </div>
-            <div class="col-12 col-md-9 border-start border-dark">
+            <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
                         <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
@@ -522,10 +522,10 @@
             </div>
         </div>
         <div class="row border border-dark">
-            <div class="col-12 col-md-3 border-end border-dark d-flex align-items-center">
+            <div class="col-12 col-sm-3 border-end border-dark d-flex align-items-center">
                 <p class="m-0 lh-sm">I - Body corrosion corrosión en carrocería</p>
             </div>
-            <div class="col-12 col-md-9 border-start border-dark">
+            <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
                         <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
@@ -567,10 +567,10 @@
             </div>
         </div>
         <div class="row border border-dark">
-            <div class="col-12 col-md-3 border-end border-dark d-flex align-items-center">
+            <div class="col-12 col-sm-3 border-end border-dark d-flex align-items-center">
                 <p class="m-0 lh-sm">M - Missing parts partes faltantes</p>
             </div>
-            <div class="col-12 col-md-9 border-start border-dark">
+            <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
                         <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
@@ -612,10 +612,10 @@
             </div>
         </div>
         <div class="row border border-dark">
-            <div class="col-12 col-md-3 border-end border-dark d-flex align-items-center">
+            <div class="col-12 col-sm-3 border-end border-dark d-flex align-items-center">
                 <p class="m-0 lh-sm">S – Scratch rayas o rasguños</p>
             </div>
-            <div class="col-12 col-md-9 border-start border-dark">
+            <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
                         <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
@@ -657,10 +657,10 @@
             </div>
         </div>
         <div class="row border border-dark">
-            <div class="col-12 col-md-3 border-end border-dark d-flex align-items-center">
+            <div class="col-12 col-sm-3 border-end border-dark d-flex align-items-center">
                 <p class="m-0 lh-sm">Remarks Observaciones</p>
             </div>
-            <div class="col-12 col-md-9 border-start border-dark">
+            <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
                         <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
@@ -702,26 +702,26 @@
             </div>
         </div>
         <div class="row border border-dark">
-            <div class="col-12 col-md-3 border-end border-dark d-flex align-items-center text-center">
+            <div class="col-12 col-sm-3 border-end border-dark d-flex align-items-center text-center">
                 <p class="m-0 text-start lh-sm">Confirmed by delivery side:<br>Confirmado por la parte que entrega<br>Signature firma:</p>
             </div>
-            <div class="col-12 col-md-9 border-start border-dark d-flex align-items-center text-center p-0">
+            <div class="col-12 col-sm-9 border-start border-dark d-flex align-items-center text-center p-0">
                 <input type="text" class="form-control rounded-0 border-0 h-100" id="" placeholder="">
             </div>
         </div>
         <div class="row border border-dark">
-            <div class="col-12 col-md-3 border-end border-dark d-flex align-items-center text-center">
+            <div class="col-12 col-sm-3 border-end border-dark d-flex align-items-center text-center">
                 <p class="m-0 text-start lh-sm">Confirmed by receiving party:<br>Confirmado por la parte que recibe<br>Signature firma:</p>
             </div>
-            <div class="col-12 col-md-9 border-start border-dark d-flex align-items-center text-center p-0">
+            <div class="col-12 col-sm-9 border-start border-dark d-flex align-items-center text-center p-0">
                 <input type="text" class="form-control rounded-0 border-0 h-100" id="" placeholder="">
             </div>
         </div>
         <div class="row border border-dark">
-            <div class="col-12 col-md-3 border-end border-dark d-flex align-items-center text-center">
+            <div class="col-12 col-sm-3 border-end border-dark d-flex align-items-center text-center">
                 <p class="m-0 text-start lh-sm">Inspection date fecha de inspección</p>
             </div>
-            <div class="col-12 col-md-9 border-start border-dark d-flex align-items-center text-center p-0">
+            <div class="col-12 col-sm-9 border-start border-dark d-flex align-items-center text-center p-0">
                 <input type="date" class="form-control rounded-0 border-0 h-100" id="" placeholder="">
             </div>
         </div>

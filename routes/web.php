@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,6 +22,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('/search_vin',[App\Http\Controllers\SearchController::class, 'search_vin'])->name('search.vin');
+Route::post('/handover_check_list', [App\Http\Controllers\HandoverController::class, 'handover_check_list'])->name('handover.check');
+Route::post('/pdi_check_list',[App\Http\Controllers\PdiController::class, 'pdi_check_list'])->name('pdi.check');
+Route::post('/battery_inspection',[App\Http\Controllers\BatteryController::class, 'battery_inspection'])->name('battery.inspection');

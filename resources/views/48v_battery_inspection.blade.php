@@ -16,7 +16,7 @@
         
         <div class="row border border-dark ">
             <div class="col-md-4  ">
-                <p class="m-0">VIN No:</p>
+                <p class="m-0">VIN No: {{ $request->chasis; }}</p>
             </div>
             <div class="col-md-4 >
                 <p class="m-0">The Date Of First Receiving：</p>
