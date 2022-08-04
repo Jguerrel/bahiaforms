@@ -1,8 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="fs-2 text-center fw-bold m-0">Pre-Delivery Inspection (PDI) checking list</h1>
-
+<h1 class="fs-2 text-center fw-bold m-0"></h1>
+<div class="container">
+        <div class="row">
+            <div class="col-9 p-0">
+                <h1 class="fs-2 text-end fw-bold m-0">Pre-Delivery Inspection (PDI) checking list</h1>
+            </div>
+            <div class="col-3 p-0 text-end align-self-center">
+            <img src="{{ asset('img/geely.png') }}" class="w-50" alt="Geely">
+            </div>
+        </div>
+    </div>
+    <br>
 <div class="container ">
     <div class="row border border-dark d-flex flex-row ">
         <div class="col-sm-6 p-2">
@@ -25,24 +35,24 @@
                         <br><span class="text-danger"> Medidor de neumáticos, llave dinamométrica, toma de neumáticos, multímetro, herramientas</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                    <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
-                    <div class="col-sm-8 border-end border-dark  align-items-center p-1 text-start">
+                    <div class="col-sm-8 border-end border-dark  align-items-center p-1 text-start  ">
                         <p class="m-0 lh-sm">02. Chair cover, Steering wheel cover, foot pad, fender pad, cotton cloth 
                         <br><span class="text-danger">Funda para silla, funda para volante, almohadilla para pies, almohadilla para guardabarros, tela de algodón</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -51,24 +61,24 @@
                         <br><span class="text-danger"> Instalar/comprobar accesorios</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
-                    <div class="col-sm-8 border-end border-dark  align-items-center p-1 text-start">
+                    <div class="col-sm-8 border-end border-dark  align-items-center align-middle p-1 text-start">
                         <p class="m-0 lh-sm">04. Battery detector 
                         <br><span class="text-danger"> Detector de batería</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -77,11 +87,11 @@
                         <br><span class="text-danger"> Verifique la etiqueta de cumplimiento de seguridad, VIN, número de motor, etiqueta de identificación del vehículo</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100  " type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100   " type="checkbox" value="" id="">
                     </div>
                 </div>
             </div>
@@ -106,11 +116,11 @@
                         <br><span class="text-danger">El torque de la tuerca del neumático</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -119,11 +129,11 @@
                         <br><span class="text-danger">Ajustar la presión de los neumáticos</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -132,11 +142,11 @@
                         <br><span class="text-danger">Compruebe el daño del neumático</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -145,11 +155,11 @@
                         <br><span class="text-danger">Instalar accesorios</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -158,11 +168,11 @@
                         <br><span class="text-danger">Compruebe la manguera de freno, conector del sensor ABS</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -171,11 +181,11 @@
                         <br><span class="text-danger">Compruebe la fuga de aceite</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -184,11 +194,11 @@
                         <br><span class="text-danger">Comprobar el montaje y la fijación de los tornillos del chasis</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -197,11 +207,11 @@
                         <br><span class="text-danger">Compruebe el daño del chasis y el óxido</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -210,11 +220,11 @@
                         <br><span class="text-danger">Verifique que el tubo de escape esté fijo</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -223,11 +233,11 @@
                         <br><span class="text-danger">Compruebe la sobrecubierta en el eje de transmisión</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
             </div>
@@ -253,9 +263,9 @@
                         <p class="m-0 lh-sm ">Vehicle peripheral inspection</p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -264,11 +274,11 @@
                         <br><span class="text-danger">Pintura en carroceria, vidrio</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -277,11 +287,11 @@
                         <br><span class="text-danger"> Verificar si la llanta o rin estan deformados</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -290,11 +300,11 @@
                         <br><span class="text-danger"> manijas o maniguetas</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -303,11 +313,11 @@
                         <br><span class="text-danger">espejos y vidrios</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -316,11 +326,11 @@
                         <br><span class="text-danger">cover de las luces internas</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -329,11 +339,11 @@
                         <br><span class="text-danger">cubierta de la consola central</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -342,11 +352,11 @@
                         <br><span class="text-danger">caucho de goma que sella puerta/vidrio (sin roturas ni daños)</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -354,9 +364,9 @@
                         <p class="m-0 lh-sm">Inspection of body electrical, interior, instrument indication</p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -365,11 +375,11 @@
                         <br><span class="text-danger">Compruebe la luz de advertencia, bocina (llave, faro)</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -378,11 +388,11 @@
                         <br><span class="text-danger">Comprueba el rendimiento del motor, la estabilidad, el ruido y la vibración.</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -391,11 +401,11 @@
                         <br><span class="text-danger">Condiciones de trabajo de los componentes eléctricos.</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -404,11 +414,11 @@
                         <br><span class="text-danger">Faros, luces de gálibo, luz diurna, luces de consola</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -417,11 +427,11 @@
                         <br><span class="text-danger">Luz trasera, luz de matrícula</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -430,11 +440,11 @@
                         <br><span class="text-danger">Luz de freno, luz de marcha atrás</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -443,11 +453,11 @@
                         <br><span class="text-danger">Lámpara de luz de giro, lámpara de alarma</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -456,11 +466,11 @@
                         <br><span class="text-danger"> Limpiaparabrisas, boquilla limpiaparabrisas, bocina</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -469,11 +479,11 @@
                         <br><span class="text-danger">Función de desempañado, Encendedor de cigarrillos</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -482,11 +492,11 @@
                         <br><span class="text-danger">Reloj (Establecer hora)</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -495,11 +505,11 @@
                         <br><span class="text-danger">Visera solar, luz de maquillaje, espejo de maquillaje</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -508,11 +518,11 @@
                         <br><span class="text-danger">Luz interior</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -521,11 +531,11 @@
                         <br><span class="text-danger">Funcionamiento del techo solar del coche</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -534,11 +544,11 @@
                         <br><span class="text-danger">Verifique el espejo interior, el espejo exterior (ajustable)</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -547,11 +557,11 @@
                         <br><span class="text-danger">Comprobar el funcionamiento del volante</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -560,11 +570,11 @@
                         <br><span class="text-danger">Idioma del instrumento, tiempo, luz indicadora de cada función</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -573,11 +583,11 @@
                         <br><span class="text-danger">Revise los contenedores de almacenamiento, los materiales del cliente y los portavasos</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -586,11 +596,11 @@
                         <br><span class="text-danger">Verificar el funcionamiento y contaminación de asientos y cinturones de seguridad</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -599,11 +609,11 @@
                         <br><span class="text-danger">Compruebe si la tapa del motor, el maletero y la tapa del orificio de combustible se pueden abrir normalmente</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -612,11 +622,11 @@
                         <br><span class="text-danger">Comprobar el funcionamiento de los vidrios de las ventanas</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -625,11 +635,11 @@
                         <br><span class="text-danger">Verifique la cerradura de la puerta, el sistema de entrada sin llave</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -638,11 +648,11 @@
                         <br><span class="text-danger">Compruebe el interruptor de bloqueo de seguridad para niños</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -651,11 +661,11 @@
                         <br><span class="text-danger">Revisa la luz del maletero</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -664,11 +674,11 @@
                         <br><span class="text-danger">Inspección del revestimiento y acolchado del maletero.</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -677,11 +687,11 @@
                         <br><span class="text-danger">Comprobar la presión de aire y la inmovilización de la rueda de repuesto</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -690,11 +700,11 @@
                         <br><span class="text-danger">Verifique el gato hidráulico del camión, el paquete de herramientas, los trípodes y los ganchos de tracción</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -703,11 +713,11 @@
                         <br><span class="text-danger">Compruebe el espacio libre del capó y de la puerta</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -715,11 +725,11 @@
                         <p class="m-0 lh-sm">18. EPD, AUTO-HOLD</p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
             </div>
@@ -743,11 +753,11 @@
                         <br><span class="text-danger">Comprobar la cantidad y calidad del aceite.</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -756,11 +766,11 @@
                         <br><span class="text-danger">Aceite de Motor</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -769,11 +779,11 @@
                         <br><span class="text-danger">Presión de aceite de la bomba de dirección (dirección asistida no electrónica)</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -782,11 +792,11 @@
                         <br><span class="text-danger">líquido de los frenos</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -795,11 +805,11 @@
                         <br><span class="text-danger">Líquido limpiaparabrisas</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -808,11 +818,11 @@
                         <br><span class="text-danger">Líquido refrigerante</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -821,11 +831,11 @@
                         <br><span class="text-danger">Compruebe las conexiones de los tubos y las fugas</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -834,11 +844,11 @@
                         <br><span class="text-danger">Verifique la instalación de la cabeza de pila de la batería</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -847,11 +857,11 @@
                         <br><span class="text-danger">Mida el voltaje de la batería (valor estándar ≥ 12. 5v),y use el detector de batería para probar e imprimir y guardar los resultados de la prueba</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -860,11 +870,11 @@
                         <br><span class="text-danger">Compruebe el nivel de la batería</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -873,11 +883,11 @@
                         <br><span class="text-danger">Arnés de cableado y enchufe (sin extrusión, aflojamiento)</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
             </div>
@@ -902,11 +912,11 @@
                         <br><span class="text-danger">Verifique que los pedales funcionen correctamente</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -915,11 +925,11 @@
                         <br><span class="text-danger">Comprobar el arranque y el ralentí del motor</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -928,11 +938,11 @@
                         <br><span class="text-danger">Rendimiento de conducción (aceleración, velocidad constante, desaceleración, sensibilidad, etc.)</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -941,11 +951,11 @@
                         <br><span class="text-danger">Compruebe el estado de funcionamiento del panel de instrumentos y la luz indicadora</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -954,11 +964,11 @@
                         <br><span class="text-danger">Revise el embrague y el puente de transmisión</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -967,11 +977,11 @@
                         <br><span class="text-danger">Verifique el rendimiento del freno, ruido anormal, freno de estacionamiento</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -980,11 +990,11 @@
                         <br><span class="text-danger">Comprobar el estado de la dirección</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -993,11 +1003,11 @@
                         <br><span class="text-danger">Comprobar el aislamiento acústico, el ruido, las vibraciones y la estabilidad</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1006,11 +1016,11 @@
                         <br><span class="text-danger">Compruebe las condiciones del aire y la unidad de calefacción para un funcionamiento adecuado</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1019,11 +1029,11 @@
                         <br><span class="text-danger">Verifique la cámara de estacionamiento, el sistema de radar</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
             </div>
@@ -1046,11 +1056,11 @@
                         <br><span class="text-danger">Retire la etiqueta y la cubierta del automóvil.</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1059,11 +1069,11 @@
                         <br><span class="text-danger">Comprobar la instalación y defensa del interior del coche</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1072,11 +1082,11 @@
                         <br><span class="text-danger">Confirme los materiales relevantes, como el manual del usuario.</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1085,11 +1095,11 @@
                         <br><span class="text-danger">Limpieza de autos (Interiores,Exteriores)</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1098,11 +1108,11 @@
                         <br><span class="text-danger">Use un dispositivo de diagnóstico exclusivo para verificar los códigos de falla</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1111,11 +1121,11 @@
                         <br><span class="text-danger">Revisa las luces de advertencia</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1124,11 +1134,11 @@
                         <br><span class="text-danger">Configure el kilometraje de mantenimiento utilizando un instrumento de diagnóstico especial</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 
@@ -1149,7 +1159,7 @@
                 </div>
             </div>    
             <div class="container-sm  border border-dark ">
-            <div class="row border border-dark ">
+                <div class="row border border-dark ">
                     <div class="col-sm-8 border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
                         <p class="m-0 lh-sm ">H. Check the new technology </p>
                     </div>
@@ -1166,9 +1176,9 @@
                         <p class="m-0 lh-sm">EV</p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1177,11 +1187,11 @@
                         <br><span class="text-danger">Retire la etiqueta y la cubierta del automóvil.</span></p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1189,9 +1199,9 @@
                         <p class="m-0 lh-sm">48V EMS system</p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1199,15 +1209,83 @@
                         <p class="m-0 lh-sm">02.Measure 48V battery (standard: cell voltage≥3.3v and SOC value ≥45%)</p>
                     </div>
         
-                    <div class="col-sm-2 border-end border-dark   align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 0" type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
-                    <div class="col-sm-2  align-items-center p-1 text-center">
-                        <input class="form-check-input rounded-1 border-1 " type="checkbox" value="" id="">
+                    <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
+                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
-                 
             </div>
+            <div class="container-sm  border border-dark ">
+                <div class="row border  ">
+                    <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
+                        <p class="m-0 lh-sm ">Job Card </p>
+                    </div>
+                    <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
+                    <input type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                    </div>
+                    <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
+                        <p class="m-0 lh-sm ">Engine Number </p>
+                    </div>
+                    <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
+                        <input type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                    </div>
+                </div> 
+                <div class="row border ">    
+                <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
+                        <p class="m-0 lh-sm ">Inspector</p>
+                    </div>
+                    <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
+                        <input type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                    </div>
+                    <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
+                        <p class="m-0 lh-sm ">Quality Inspector</p>
+                    </div>
+                    <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
+                        <input type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                    </div>
+                </div>
+                <div class="row border ">    
+                    <div class="col-sm-4 border-end  align-items-center p-1 text-start fw-bold">
+                        <p class="m-0 lh-sm ">VIN</p>
+                    </div>
+                    <div class="col-sm-8 border-end  align-items-center p-1 text-start fw-bold">
+                        <input type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                    </div>
+                </div>
+                <div class="row border ">    
+                <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
+                        <p class="m-0 lh-sm ">Retailer</p>
+                    </div>
+                    <div class="col-sm-3 border-end  align-items-center p-1 text-start  fw-bold">
+                        <input type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                    </div>
+                    <div class="col-sm-3 border-end  align-items-center p-1 text-start  fw-bold">
+                        <p class="m-0 lh-sm ">Stamp</p>
+                    </div>
+                    <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
+                        <input type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                    </div>
+                </div>
+                <div class="row border ">    
+                    <div class="col-sm-4 border-end  align-items-center p-1 text-start  fw-bold">
+                        <p class="m-0 lh-sm ">Date</p>
+                    </div>
+                    <div class="col-sm-8 border-end  align-items-center p-1 text-start  fw-bold">
+                        <input type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                    </div>
+                </div>
+                <div class="row border ">    
+                    <div class="col-sm-4 border-end  align-items-center p-1 text-start  fw-bold">
+                        <p class="m-0 lh-sm ">Kilometer</p>
+                    </div>
+                    <div class="col-sm-8 border-end  align-items-center p-1 text-start fw-bold">
+                        <input type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                    </div>
+                </div>
+            </div>         
+                
         </div>
     </div>
     <div class="row border border-dark d-flex flex-row ">
@@ -1228,10 +1306,158 @@
             <span class="text-danger">Para el modo tienda, el resto de elementos deben hacerse en tienda;</span></p>
         </div>
     </div>
-
 </div>
-
 <br>
-
-
+<div class="container">
+        <div class="row">
+            <div class="col-9 p-0">
+                <h1 class="fs-2 text-end fw-bold m-0">Pre-Delivery Inspection (PDI) checking list</h1>
+            </div>
+            <div class="col-3 p-0 text-end align-self-center">
+            <img src="{{ asset('img/geely.png') }}" class="w-50" alt="Geely">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-sm  border border-dark ">
+        <div class="row border border-dark ">
+            <div class="col-sm-8 border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
+                <p class="m-0 lh-sm ">Fault codes record</p>
+            </div>
+        </div>
+        <div class="row border border-dark ">
+            <div class="col-sm-1  align-items-center p-1 text-end  fw-bold">
+                <p class="m-0 lh-sm ">1.
+                
+            </div>
+            <div class="col-sm-2  align-items-center p-1 text-start  fw-bold">
+                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
+            </div>
+            <div class="col-sm-1  align-items-center p-1 text-end  fw-bold">
+                <p class="m-0 lh-sm ">2.
+                
+            </div>
+            <div class="col-sm-2  align-items-center p-1 text-start  fw-bold">
+                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
+            </div>
+            <div class="col-sm-1  align-items-center p-1 text-end  fw-bold">
+                <p class="m-0 lh-sm ">3.
+                
+            </div>
+            <div class="col-sm-2  align-items-center p-1 text-start  fw-bold">
+                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
+            </div>
+            <div class="col-sm-1  align-items-center p-1 text-end  fw-bold">
+                <p class="m-0 lh-sm ">4.
+                
+            </div>
+            <div class="col-sm-2  align-items-center p-1 text-start  fw-bold">
+                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
+            </div>
+        </div>
+        <div class="row border border-dark ">
+            <div class="col-sm-1  align-items-center p-1 text-end  fw-bold">
+                <p class="m-0 lh-sm ">5.
+                
+            </div>
+            <div class="col-sm-2  align-items-center p-1 text-start  fw-bold">
+                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
+            </div>
+            <div class="col-sm-1  align-items-center p-1 text-end  fw-bold">
+                <p class="m-0 lh-sm ">6.
+                
+            </div>
+            <div class="col-sm-2  align-items-center p-1 text-start  fw-bold">
+                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
+            </div>
+            <div class="col-sm-1  align-items-center p-1 text-end  fw-bold">
+                <p class="m-0 lh-sm ">7.
+                
+            </div>
+            <div class="col-sm-2  align-items-center p-1 text-start  fw-bold">
+                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
+            </div>
+            <div class="col-sm-1  align-items-center p-1 text-end  fw-bold">
+                <p class="m-0 lh-sm ">8.
+                
+            </div>
+            <div class="col-sm-2  align-items-center p-1 text-start  fw-bold">
+                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
+            </div>
+        </div>
+        <div class="row border border-dark ">
+            <div class="col-sm-8 border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
+                <p class="m-0 lh-sm ">Voltage / SOC value record</p>
+            </div>
+        </div>
+        <div class="row border border-dark ">
+            <div class="col-sm-2  align-items-center p-1 text-end  fw-bold">
+                <p class="m-0 lh-sm ">12V battery voltage:</p>
+                
+            </div>
+            <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
+                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
+            </div>
+            <div class="col-sm-2  align-items-center p-1 text-end  fw-bold">
+                <p class="m-0 lh-sm ">EV power battery SOC:</p>
+                
+            </div>
+            <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
+                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
+            </div>
+        </div>
+        <div class="row border border-dark ">
+            <div class="col-sm-2  align-items-center p-1 text-end  fw-bold">
+                <p class="m-0 lh-sm ">48V EMS system battery min cell voltage:</p>
+                
+            </div>
+            <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
+                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
+            </div>
+            <div class="col-sm-2  align-items-center p-1 text-end  fw-bold">
+                <p class="m-0 lh-sm ">48V EMS system battery SOC:</p>
+                
+            </div>
+            <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
+                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
+            </div>
+        </div>
+        <div class="row border border-dark ">
+            <div class="col-sm-8 border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
+                <p class="m-0 lh-sm ">Voltage / SOC value record</p>
+            </div>
+        </div>
+        <div class="row border border-dark ">
+            <div class="col-sm-2  align-items-center p-1 text-end  fw-bold">
+                <p class="m-0 lh-sm ">LH</p>
+                
+            </div>
+            <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
+                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
+            </div>
+            <div class="col-sm-2  align-items-center p-1 text-end  fw-bold">
+                <p class="m-0 lh-sm ">RH</p>
+                
+            </div>
+            <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
+                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
+            </div>
+        </div>
+        <div class="row border border-dark ">
+            <div class="col-sm-2  align-items-center p-1 text-end  fw-bold">
+                <p class="m-0 lh-sm ">LR</p>
+                
+            </div>
+            <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
+                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
+            </div>
+            <div class="col-sm-2  align-items-center p-1 text-end  fw-bold">
+                <p class="m-0 lh-sm ">RR</p>
+                
+            </div>
+            <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
+                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
+            </div>
+        </div>
+    </div>        
 @endsection
