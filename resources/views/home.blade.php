@@ -109,7 +109,7 @@
                                     </form>    
                                 </div>
                                 <div class="col-md-3">
-                                    <form name="48v_battery" id="48v_battery" method="post" action="{{ route('battery.inspection') }}">    
+                                    <form name="long_term_store" id="long_term_store" method="post" action="{{ route('long.term') }}">    
                                     @csrf
                                         <input type="hidden" value="{{$data->marca}}"  id="marca"  name="marca" readonly class="border-1 rounded-1 text-start ">
                                         <input type="hidden" value="{{$data->modelo}}" id="modelo" name="modelo" readonly>

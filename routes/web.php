@@ -28,3 +28,4 @@ Route::post('/search_vin',[App\Http\Controllers\SearchController::class, 'search
 Route::post('/handover_check_list', [App\Http\Controllers\HandoverController::class, 'handover_check_list'])->name('handover.check');
 Route::post('/pdi_check_list',[App\Http\Controllers\PdiController::class, 'pdi_check_list'])->name('pdi.check');
 Route::post('/battery_inspection',[App\Http\Controllers\BatteryController::class, 'battery_inspection'])->name('battery.inspection');
+Route::post('/long_term_store',[App\Http\Controllers\LongtermController::class, 'long_term_store'])->name('long.term');
