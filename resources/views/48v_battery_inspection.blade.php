@@ -26,7 +26,7 @@
     <div class="container">
         <div class="row">
             <div class="col-9 p-0">
-                <h5 class=" text-end fw-bold m-0">48V Battery Vechicle Inspection and charging Record Form</h5>
+                <h5 class=" text-end fw-bold m-0">48V Battery Vehicle Inspection and charging Record Form</h5>
             </div>
             <div class="col-3 p-0 text-end align-self-center">
                 <img src="{{ asset('img/geely.png') }}" class="w-50" alt="Geely">
