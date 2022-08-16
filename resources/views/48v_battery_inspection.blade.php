@@ -374,9 +374,16 @@
                 <input type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" >
             </div>
         </div>
+        
     </div>
-
-    <button type="submit" class="btn btn-primary mh-100" style="width: 200px; height: 100px;">Guardar</button>
+    <div class="container">
+        <div style="height: 100px;" class="row ">
+            <div class="h-100 col-md-12 d-flex align-items-center p-1 text-center">
+                <button type="submit" class="btn btn-primary mh-100" style="width: 200px; height: 100px;">Guardar</button>
+            </div>
+        </div>
+    </div>
+    
 
 </form>
 @endsection

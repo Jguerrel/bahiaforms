@@ -12,7 +12,18 @@
         </div>
     </div>
     <br>
-
+    <form name="vehicleform" id="vehicleform" method="post" action="{{ route('vehicleform.store') }}">    
+@csrf
+    <input type="hidden" value="{{$request->marca}}"  id="marca"  name="marca"  >
+    <input type="hidden" value="{{$request->modelo}}" id="modelo" name="modelo" >
+    <input type="hidden" value="{{$request->motor}}" id="motor" name="motor" >
+    <input type="hidden" value="{{$request->chasis}}" id="chasis" name="chasis" >
+    <input type="hidden" value="{{$request->anio}}" id="anio" name="anio" >
+    <input type="hidden" value="{{$request->version}}" id="version" name="version" >
+    <input type="hidden" value="{{$request->colorexterior}}" id="colorexterior" name="colorexterior" >
+    <input type="hidden" value="{{$request->colorinterior}}" id="colorinterior" name="colorinterior" >
+    <input type="hidden" value="batteryinspection" id="formname" name="formname" >
+    <input type="hidden" value=" " id="formrequest" name="formrequest" >
     <div class="container border border-dark ">
         
         <div class="row border border-dark bg-secondary fw-bold">
@@ -2298,5 +2309,15 @@
             </div>
         </div>           
     </div>
+    <div class="container">
+        <div style="height: 100px;" class="row ">
+            <div class="h-100 col-md-12 d-flex align-items-center p-1 text-center">
+                <button type="submit" class="btn btn-primary mh-100" style="width: 200px; height: 100px;">Guardar</button>
+            </div>
+        </div>
+    </div>
+    
+
+</form>
     <br>
 @endsection
