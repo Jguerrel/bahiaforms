@@ -1241,7 +1241,7 @@
                         <p class="m-0 lh-sm ">Engine Number </p>
                     </div>
                     <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
-                        <input type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                        <input value="{{$request->motor}}" type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
                     </div>
                 </div> 
                 <div class="row border ">    
@@ -1249,7 +1249,7 @@
                         <p class="m-0 lh-sm ">Inspector</p>
                     </div>
                     <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
-                        <input type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                        <input value="{{ auth()->user()->name }}" type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
                     </div>
                     <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
                         <p class="m-0 lh-sm ">Quality Inspector</p>
@@ -1263,7 +1263,7 @@
                         <p class="m-0 lh-sm ">VIN</p>
                     </div>
                     <div class="col-sm-8 border-end  align-items-center p-1 text-start fw-bold">
-                        <input type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                        <input value="{{$request->chasis}}" type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
                     </div>
                 </div>
                 <div class="row border ">    

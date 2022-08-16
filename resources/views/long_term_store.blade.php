@@ -50,13 +50,13 @@
             </div>
 
             <div class="col-sm-2 border-end border-dark align-items-center p-1 text-center">
-                <input type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" >
+                <input value="{{$request->modelo}}" type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" >
             </div>
             <div class="col-sm-2 border-end border-dark align-items-center p-1 text-center">
                 <input type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" >
             </div>
             <div class="col-sm-3  border-end border-dark align-items-center p-1 text-center">
-                <input type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" >
+                <input value="{{$request->chasis}}" type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" >
             </div>
             <div class="col-sm-2 border-end border-dark align-items-center p-1 text-center">
                 <input type="date" class=" form-control border-0 p-0 text-center letter w-100" placeholder="" aria-label="" >

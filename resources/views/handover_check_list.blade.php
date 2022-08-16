@@ -24,7 +24,7 @@
     <input type="hidden" value="{{$request->colorinterior}}" id="colorinterior" name="colorinterior" >
     <input type="hidden" value="batteryinspection" id="formname" name="formname" >
     <input type="hidden" value=" " id="formrequest" name="formrequest" >
-    
+
     <div class="container border border-dark">
         <div class="row bg-secondary d-flex align-items-stretch">
             <div class="col-sm-3 border border-dark d-flex align-items-center">
@@ -133,7 +133,7 @@
             </div>
             <div class="col-6">
                 <center>
-                    <input type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark mb-2 text-center w-75" placeholder="" aria-label="" aria-describedby="">
+                    <input value="{{ auth()->user()->name }}" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark mb-2 text-center w-75" placeholder="" aria-label="" aria-describedby="">
                     <p class="form-label">Signature of inspector</p>
                 </center>
             </div>
