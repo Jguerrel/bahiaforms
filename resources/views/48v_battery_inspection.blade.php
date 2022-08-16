@@ -20,7 +20,7 @@
     <input type="hidden" value="{{$request->version}}" id="version" name="version" >
     <input type="hidden" value="{{$request->colorexterior}}" id="colorexterior" name="colorexterior" >
     <input type="hidden" value="{{$request->colorinterior}}" id="colorinterior" name="colorinterior" >
-    <input type="hidden" value="batteryinspection" id="formname" name="formname" >
+    <input type="hidden" value="48V Battery Vechicle Inspection and charging Record Form" id="formname" name="formname" >
     <input type="hidden" value=" " id="formrequest" name="formrequest" >
 
     <div class="container">

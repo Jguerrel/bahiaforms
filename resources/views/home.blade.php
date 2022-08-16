@@ -48,11 +48,14 @@
                                 </div>
                             </div>
                             <div class="row justify-content-center">    
-                                <div class="col-md-6">                    
+                                <div class="col-md-4">                    
                                 <strong>Color Exterior: </strong>{{$data->colorexterior}}
                                 </div>
-                                <div class="col-md-6">                    
+                                <div class="col-md-4">                    
                                 <strong>Color Interior: </strong>{{$data->colorinterior}}
+                                </div>
+                                <div class="col-md-4">                    
+                                <strong>Numero de auto: </strong>{{$data->numeroauto}}
                                 </div>
                             </div>
                         </div>
@@ -75,6 +78,8 @@
                                         <input type="hidden" value="{{$data->version}}" id="version" name="version" readonly>
                                         <input type="hidden" value="{{$data->colorexterior}}" id="colorexterior" name="colorexterior" readonly>
                                         <input type="hidden" value="{{$data->colorinterior}}" id="colorinterior" name="colorinterior" readonly>
+                                        <input type="hidden" value="{{$data->numeroauto}}" id="numeroauto" name="numeroauto" readonly>
+
                                         <button type="submit" class="btn btn-primary mh-100" style="width: 150px; height: 100px;">Handover Check List</button>
                                     
                                     </form> 
@@ -90,6 +95,8 @@
                                         <input type="hidden" value="{{$data->version}}" id="version" name="version" readonly>
                                         <input type="hidden" value="{{$data->colorexterior}}" id="colorexterior" name="colorexterior" readonly>
                                         <input type="hidden" value="{{$data->colorinterior}}" id="colorinterior" name="colorinterior" readonly>
+                                        <input type="hidden" value="{{$data->numeroauto}}" id="numeroauto" name="numeroauto" readonly>
+
                                         <button type="submit" class="btn btn-primary mh-100" style="width: 150px; height: 100px;">Pre-Delivery Inspection (PDI) Checking List</button>
                                     </form>
                                 </div>
@@ -104,7 +111,8 @@
                                         <input type="hidden" value="{{$data->version}}" id="version" name="version" readonly>
                                         <input type="hidden" value="{{$data->colorexterior}}" id="colorexterior" name="colorexterior" readonly>
                                         <input type="hidden" value="{{$data->colorinterior}}" id="colorinterior" name="colorinterior" readonly>
-            
+                                        <input type="hidden" value="{{$data->numeroauto}}" id="numeroauto" name="numeroauto" readonly>
+
                                         <button type="submit" class="btn btn-primary mh-100" style="width: 150px; height: 100px;">48v Battery Vehicle Inspection and charging Record Form</button>
                                     </form>    
                                 </div>
@@ -119,7 +127,7 @@
                                         <input type="hidden" value="{{$data->version}}" id="version" name="version" readonly>
                                         <input type="hidden" value="{{$data->colorexterior}}" id="colorexterior" name="colorexterior" readonly>
                                         <input type="hidden" value="{{$data->colorinterior}}" id="colorinterior" name="colorinterior" readonly>
-            
+                                        <input type="hidden" value="{{$data->numeroauto}}" id="numeroauto" name="numeroauto" readonly>
                                         <button type="submit" class="btn btn-primary mh-100" style="width: 150px; height: 100px;">Long Term Stored Vehicle Check Sheet</button>
                                     </form>    
                                 </div>

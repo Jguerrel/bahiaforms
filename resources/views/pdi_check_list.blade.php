@@ -23,7 +23,7 @@
     <input type="hidden" value="{{$request->version}}" id="version" name="version" >
     <input type="hidden" value="{{$request->colorexterior}}" id="colorexterior" name="colorexterior" >
     <input type="hidden" value="{{$request->colorinterior}}" id="colorinterior" name="colorinterior" >
-    <input type="hidden" value="batteryinspection" id="formname" name="formname" >
+    <input type="hidden" value="Pre-Delivery Inspection (PDI) checking list" id="formname" name="formname" >
     <input type="hidden" value=" " id="formrequest" name="formrequest" >
 <div class="container ">
     <div class="row border border-dark d-flex flex-row ">
@@ -1235,7 +1235,7 @@
                         <p class="m-0 lh-sm ">Job Card </p>
                     </div>
                     <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
-                    <input type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                    <input value="{{$request->numeroauto}}" type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
                     </div>
                     <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
                         <p class="m-0 lh-sm ">Engine Number </p>
