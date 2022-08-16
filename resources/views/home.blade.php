@@ -105,7 +105,7 @@
                                         <input type="hidden" value="{{$data->colorexterior}}" id="colorexterior" name="colorexterior" readonly>
                                         <input type="hidden" value="{{$data->colorinterior}}" id="colorinterior" name="colorinterior" readonly>
             
-                                        <button type="submit" class="btn btn-primary mh-100" style="width: 200px; height: 100px;">48v Battery Vehicule Inspection and charging Record Form</button>
+                                        <button type="submit" class="btn btn-primary mh-100" style="width: 200px; height: 100px;">48v Battery Vehicle Inspection and charging Record Form</button>
                                     </form>    
                                 </div>
                                 <div class="col-md-3">

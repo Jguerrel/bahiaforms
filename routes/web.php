@@ -29,3 +29,9 @@ Route::post('/handover_check_list', [App\Http\Controllers\HandoverController::cl
 Route::post('/pdi_check_list',[App\Http\Controllers\PdiController::class, 'pdi_check_list'])->name('pdi.check');
 Route::post('/battery_inspection',[App\Http\Controllers\BatteryController::class, 'battery_inspection'])->name('battery.inspection');
 Route::post('/long_term_store',[App\Http\Controllers\LongtermController::class, 'long_term_store'])->name('long.term');
+Route::post('/battery_inspection_form',[App\Http\Controllers\BatteryController::class, 'battery_inspection_form'])->name('bi.form');
+Route::post('/vehicleform',[App\Http\Controllers\VehicleFormsController::class, 'create'])->name('vehicleform.create');
+Route::post('/vehicleform',[App\Http\Controllers\VehicleFormsController::class, 'store'])->name('vehicleform.store');
+
+//Route::get('vehicleform', 'VehicleFormsController@create')->name('vehicleform.create');
+//Route::post('vehicleform', 'VehicleFormsController@store')->name('vehicleform.store');

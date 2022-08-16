@@ -1,6 +1,27 @@
 @extends('layouts.app')
 
 @section('content')
+@if ($errors->any())
+      <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+      </div><br />
+    @endif
+<form name="vehicleform" id="vehicleform" method="post" action="{{ route('vehicleform.store') }}">    
+@csrf
+    <input type="hidden" value="{{$request->marca}}"  id="marca"  name="marca"  >
+    <input type="hidden" value="{{$request->modelo}}" id="modelo" name="modelo" >
+    <input type="hidden" value="{{$request->motor}}" id="motor" name="motor" >
+    <input type="hidden" value="{{$request->chasis}}" id="chasis" name="chasis" >
+    <input type="hidden" value="{{$request->anio}}" id="anio" name="anio" >
+    <input type="hidden" value="{{$request->version}}" id="version" name="version" >
+    <input type="hidden" value="{{$request->colorexterior}}" id="colorexterior" name="colorexterior" >
+    <input type="hidden" value="{{$request->colorinterior}}" id="colorinterior" name="colorinterior" >
+    <input type="hidden" value="batteryinspection" id="formname" name="formname" >
+    <input type="hidden" value=" " id="formrequest" name="formrequest" >
 
     <div class="container">
         <div class="row">
@@ -68,28 +89,28 @@
                 <h1 class="fs-5 text-end fw-bold m-0 ">1</h1>
             </div>
             <div class="col-md-2 border-end border-dark d-flex align-items-center p-1 text-center">
-                <input type="date" class=" form-control border-0 p-0 text-center letter w-100" placeholder="" aria-label="" >
+                <input type="date" class=" form-control border-0 p-0 text-center letter w-100" placeholder="" aria-label="" name="a1" value="{{ $request->a1 }}">
             </div>
             <div class="h-100 col-md-1 border-start border-end border-start border-dark d-flex align-items-center p-1 text-center">
-                <input type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" >
+                <input type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" name="a2" value="{{ $request->a2 }}">
             </div>
             <div class="h-100 col-md-1 border-start border-end border-start border-dark d-flex align-items-center p-1 text-center">
-                <input type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" >
+                <input type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" name="a3" value="{{ $request->a3 }}">
             </div>
             <div class="h-100 col-md-2 border-start border-end border-start border-dark d-flex align-items-center p-1 text-center">
-                <input type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" >
+                <input type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" name="a4" value="{{ $request->a4 }}">
             </div>
             <div class="h-100 col-md-2 border-start border-end border-start border-dark d-flex align-items-center p-1 text-center">
-                <input type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" >
+                <input type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" name="a5" value="{{ $request->a5 }}">
             </div>
             <div class="h-100 col-md-1 border-start border-end border-start border-dark d-flex align-items-center p-1 text-center">
-                <input type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" >
+                <input type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" name="a6" value="{{ $request->a6 }}">
             </div>
             <div class="h-100 col-md-1 border-start border-end border-start border-dark d-flex align-items-center p-1 text-center">
-                <input type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" >
+                <input type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" name="a7" value="{{ $request->a7 }}">
             </div>
             <div class="h-100 col-md-1 border-start  border-start border-dark d-flex align-items-center p-1 text-center">
-                <input type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" >
+                <input type="text" class="h-100 form-control border-0 p-0 text-center letter" placeholder="" aria-label="" name="a8" value="{{ $request->a8 }}">
             </div>
         </div>
         <div style="height: 100px;" class="row border border-dark">
@@ -355,6 +376,7 @@
         </div>
     </div>
 
-       
+    <button type="submit" class="btn btn-primary mh-100" style="width: 200px; height: 100px;">Guardar</button>
 
+</form>
 @endsection

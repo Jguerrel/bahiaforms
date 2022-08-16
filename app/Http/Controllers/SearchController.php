@@ -20,6 +20,7 @@ class SearchController extends Controller
      */
     public function search_vin(Request $request)
     {
+        //dd($request);
         $client_token = new Client(['base_uri' => 'https://eskemacloud.hondapanama.com']);
         $http_token   = $client_token->request('GET', '/wsservicestest/authv2/access_token', [
             'headers' => [
