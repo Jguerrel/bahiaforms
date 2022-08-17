@@ -163,7 +163,7 @@
                                 @csrf
                                 <input type="hidden" value="{{$show->formrequest}}" id="formrequest" name="formrequest" readonly>
 
-                                <div class="row justify-content-center ">
+                                <div class="row justify-content-center m-1 p-1">
                                     <div class="col-md-3 ">
                                                         
                                         {{$show->id}}
