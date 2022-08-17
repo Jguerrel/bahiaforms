@@ -21,4 +21,9 @@ class PdiController extends Controller
         //dd($request->marca);
         return view('pdi_check_list',['request' => $request]);
     }
+    public function pdi_check_list_view(Request $request)
+    {
+        //dd($request->marca);
+        return view('pdi_check_list_view',['request' => $request]);
+    }
 }

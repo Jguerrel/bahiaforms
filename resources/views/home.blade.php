@@ -1,24 +1,22 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            
-                <div class="card">
-                    <div class="card-header">{{ __('Ingrese el número de chasis') }}</div>
-                    <form name="vin-search" id="vin-search" method="post" action="{{ route('search.vin') }}">
-                    @csrf
-                    <div class="card-body">
-            
-                    <input type="text" class="form-control border-1 rounded-1 text-start " id="vin" name="vin" placeholder="" value="5KBRL6860HO900094"> 
-                    <br>
-                    <button type="submit" class="btn btn-primary">Buscar</button>
+            <div class="card">
+                <div class="card-header">{{ __('Ingrese el número de chasis') }}</div>
+                <form name="vin-search" id="vin-search" method="post" action="{{ route('search.vin') }}">
+                @csrf
+                <div class="card-body">
+        
+                <input type="text" class="form-control border-1 rounded-1 text-start " id="vin" name="vin" placeholder="" value="5KBRL6860HO900094"> 
+                <br>
+                <button type="submit" class="btn btn-primary">Buscar</button>
 
-                    </div>
-                    </form>
                 </div>
-                @if (isset($data)) 
+                </form>
+            </div>
+            @if (isset($data)) 
                 <div class="card">
                     <div class="card-header">{{ __('Información del Vehículo') }}</div>
                     <div class="card-body">
@@ -135,6 +133,59 @@
                         </div>   
                     </div>
                 </div>
+                
+                @if (!$shows->isEmpty())
+                    <div class="card">
+                        <div class="card-header">{{ __('Lista de formularios guardados para este vehiculo') }}</div>
+                    
+                        <div class="card-body">
+                        
+                            <div class="container ">
+                                <div class="row justify-content-center ">
+                                    <div class="col-md-3 ">
+                                                        
+                                        <strong>Id</strong>
+                                    </div>
+                                    <div class="col-md-3 ">
+
+                                        <strong>Fecha</strong>
+                                    </div>
+                                    <div class="col-md-3">                    
+                                        <strong>Formulario</strong>
+                                    </div>
+                                    <div class="col-md-3">                    
+                                        
+                                    </div>
+                                
+                                </div>
+                                @foreach($shows as $show)
+                                <form name="{{$show->formid}}" id="{{$show->formid}}" method="post" action="{{$show->formaction}}">
+                                @csrf
+                                <input type="hidden" value="{{$show->formrequest}}" id="formrequest" name="formrequest" readonly>
+
+                                <div class="row justify-content-center ">
+                                    <div class="col-md-3 ">
+                                                        
+                                        {{$show->id}}
+                                    </div>
+                                    <div class="col-md-3 ">
+
+                                        {{$show->created_at}}
+                                    </div>
+                                    <div class="col-md-3">                    
+                                        {{$show->formname}}
+                                    </div>
+                                    <div class="col-md-3">                    
+                                        <button type="submit" class="btn btn-primary">Ver</button>
+                                    </div>
+                                
+                                </div>
+                                </form>    
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                @endif
             @endif
         </div>
     </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use GuzzleHttp\Client;
+use App\Models\vehicleform;
 
 class SearchController extends Controller
 {
@@ -51,8 +52,9 @@ class SearchController extends Controller
         $response = json_decode($http->getBody()->getContents());
         //dd($response);
         $data =  $response->sdtconsultaautos->item;
+        $shows = vehicleform::where('chasis', '=', $request->vin)->get();
         //dd($data);
-        return view('home',['data' => $data]);
+        return view('home',['data' => $data,'shows'=>$shows]);
         //return view('greetings', ['name' => 'Victoria']);
 
     }

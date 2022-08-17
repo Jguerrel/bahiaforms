@@ -31,9 +31,17 @@ class VehicleFormsController extends Controller
             'colorinterior' => 'required|max:255',
             'formname' => 'required|max:255',
             'formrequest' => 'required',
+            'formid' => 'required|max:255',
+            'formaction' => 'required|max:255',
         ]);
         vehicleform::create($validatedData);
    
         return redirect('/home')->with('success', 'Formulario guardado satisfactoriamente');   
+    }
+    public function index()
+    {
+        $shows = vehicleform::all();
+
+        return view('home', ['shows'=>$shows]);
     }
 }

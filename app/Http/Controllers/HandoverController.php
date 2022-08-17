@@ -21,4 +21,9 @@ class HandoverController extends Controller
         //dd($request->marca);
         return view('handover_check_list',['request' => $request]);
     }
+    public function handover_check_list_view(Request $request)
+    {
+        //dd($request->marca);
+        return view('handover_check_list_view',['request' => $request]);
+    }
 }

@@ -21,4 +21,9 @@ class LongtermController extends Controller
         //dd($request->marca);
         return view('long_term_store',['request' => $request]);
     }
+    public function long_term_store_view(Request $request)
+    {
+        //dd($request->marca);
+        return view('long_term_store_view',['request' => $request]);
+    }
 }

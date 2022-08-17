@@ -26,6 +26,8 @@ class CreateVehicleformsTable extends Migration
             $table->string('colorinterior');
             $table->string('formname');
             $table->longText('formrequest');
+            $table->string('formid');
+            $table->string('formaction');
         });
     }
 

@@ -1537,13 +1537,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div style="height: 100px;" class="row ">
-            <div class="h-100 col-md-12 d-flex align-items-center p-1 text-center">
-                <button type="submit" class="btn btn-primary mh-100" style="width: 200px; height: 100px;">Guardar</button>
-            </div>
-        </div>
-    </div>
+    
     
 
 </form>

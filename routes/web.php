@@ -26,12 +26,19 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::post('/search_vin',[App\Http\Controllers\SearchController::class, 'search_vin'])->name('search.vin');
 Route::post('/handover_check_list', [App\Http\Controllers\HandoverController::class, 'handover_check_list'])->name('handover.check');
+Route::post('/handover_check_list_view', [App\Http\Controllers\HandoverController::class, 'handover_check_list_view'])->name('handover.check.view');
+
 Route::post('/pdi_check_list',[App\Http\Controllers\PdiController::class, 'pdi_check_list'])->name('pdi.check');
+Route::post('/pdi_check_list_view',[App\Http\Controllers\PdiController::class, 'pdi_check_list_view'])->name('pdi.check.view');
+
 Route::post('/battery_inspection',[App\Http\Controllers\BatteryController::class, 'battery_inspection'])->name('battery.inspection');
+Route::post('/battery_inspection_view',[App\Http\Controllers\BatteryController::class, 'battery_inspection_view'])->name('battery.inspection.view');
+
+
 Route::post('/long_term_store',[App\Http\Controllers\LongtermController::class, 'long_term_store'])->name('long.term');
-Route::post('/battery_inspection_form',[App\Http\Controllers\BatteryController::class, 'battery_inspection_form'])->name('bi.form');
+Route::post('/long_term_store_view',[App\Http\Controllers\LongtermController::class, 'long_term_store_view'])->name('long.term.view');
+
 Route::post('/vehicleform',[App\Http\Controllers\VehicleFormsController::class, 'create'])->name('vehicleform.create');
 Route::post('/vehicleform',[App\Http\Controllers\VehicleFormsController::class, 'store'])->name('vehicleform.store');
 
-//Route::get('vehicleform', 'VehicleFormsController@create')->name('vehicleform.create');
-//Route::post('vehicleform', 'VehicleFormsController@store')->name('vehicleform.store');
+//Route::get('/home', [App\Http\Controllers\VehicleFormsController::class, 'index'])->name('home');
