@@ -1,6 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
+@if ($errors->any())
+      <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+      </div><br />
+    @endif
+    <?php
+        //if(isset($request->formrequest))
+            
+            $formdata=json_decode($request->formrequest);
+            
+            //dd($formdata);
+        //endif
+    ?>
 <h1 class="fs-2 text-center fw-bold m-0"></h1>
 <div class="container">
         <div class="row">
@@ -50,10 +67,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                    <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v1" {{isset($formdata->v1)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v2" {{isset($formdata->v2)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -63,10 +80,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v3" {{isset($formdata->v3)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v4" {{isset($formdata->v4)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -76,10 +93,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v5" {{isset($formdata->v5)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v6" {{isset($formdata->v6)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -89,10 +106,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v7" {{isset($formdata->v7)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v8" {{isset($formdata->v8)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -102,10 +119,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100  " type="checkbox" value="" id="">
+                        <input name="v9" {{isset($formdata->v9)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100  " type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100   " type="checkbox" value="" id="">
+                        <input name="v10" {{isset($formdata->v10)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100   " type="checkbox" value="" id="">
                     </div>
                 </div>
             </div>
@@ -131,10 +148,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v11" {{isset($formdata->v11)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v12" {{isset($formdata->v12)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -144,10 +161,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v13" {{isset($formdata->v13)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v14" {{isset($formdata->v14)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -157,10 +174,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v15" {{isset($formdata->v15)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v16" {{isset($formdata->v16)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -170,10 +187,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v17" {{isset($formdata->v17)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v18" {{isset($formdata->v18)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -183,10 +200,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v19" {{isset($formdata->v19)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v20" {{isset($formdata->v20)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -196,10 +213,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v21" {{isset($formdata->v21)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
+                        <input name="v22" {{isset($formdata->v22)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1  w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -209,10 +226,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v23" {{isset($formdata->v23)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v24" {{isset($formdata->v24)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -222,10 +239,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v25" {{isset($formdata->v25)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v26" {{isset($formdata->v26)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -235,10 +252,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v27" {{isset($formdata->v27)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v28" {{isset($formdata->v28)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -248,10 +265,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v29" {{isset($formdata->v29)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v30" {{isset($formdata->v30)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
             </div>
@@ -289,10 +306,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v31" {{isset($formdata->v31)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v32" {{isset($formdata->v32)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -302,10 +319,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v33" {{isset($formdata->v33)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v34" {{isset($formdata->v34)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -315,10 +332,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v35" {{isset($formdata->v35)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v36" {{isset($formdata->v36)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -328,10 +345,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v37" {{isset($formdata->v37)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v38" {{isset($formdata->v38)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -341,10 +358,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v39" {{isset($formdata->v39)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v40" {{isset($formdata->v40)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -354,10 +371,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v41" {{isset($formdata->v41)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v42" {{isset($formdata->v42)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -367,10 +384,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v43" {{isset($formdata->v43)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v44" {{isset($formdata->v44)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -390,10 +407,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v45" {{isset($formdata->v45)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v46" {{isset($formdata->v46)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -403,10 +420,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v47" {{isset($formdata->v47)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v48" {{isset($formdata->v48)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -416,10 +433,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v49" {{isset($formdata->v49)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v50" {{isset($formdata->v50)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -429,10 +446,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v51" {{isset($formdata->v51)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v52" {{isset($formdata->v52)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -442,10 +459,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v53" {{isset($formdata->v53)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v54" {{isset($formdata->v54)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -455,10 +472,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v55" {{isset($formdata->v55)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v56" {{isset($formdata->v56)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -468,10 +485,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v57" {{isset($formdata->v57)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v58" {{isset($formdata->v58)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -481,10 +498,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v59" {{isset($formdata->v59)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v60" {{isset($formdata->v60)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -494,10 +511,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v61" {{isset($formdata->v61)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v62"{{isset($formdata->v62)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -507,10 +524,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v63" {{isset($formdata->v63)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v64" {{isset($formdata->v64)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -520,10 +537,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v65" {{isset($formdata->v65)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v66" {{isset($formdata->v66)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -533,10 +550,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v67" {{isset($formdata->v67)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v68" {{isset($formdata->v68)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -546,10 +563,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v69" {{isset($formdata->v69)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v70" {{isset($formdata->v70)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -559,10 +576,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v71" {{isset($formdata->v71)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v72" {{isset($formdata->v72)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -572,10 +589,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v73" {{isset($formdata->v73)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v74" {{isset($formdata->v74)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -585,10 +602,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v75" {{isset($formdata->v75)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v76" {{isset($formdata->v76)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -598,10 +615,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v77" {{isset($formdata->v77)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v78" {{isset($formdata->v78)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -611,10 +628,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v79" {{isset($formdata->v79)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v80" {{isset($formdata->v80)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -624,10 +641,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v81" {{isset($formdata->v81)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v82" {{isset($formdata->v82)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -637,10 +654,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v83" {{isset($formdata->v83)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v84" {{isset($formdata->v84)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -650,10 +667,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v85" {{isset($formdata->v85)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v86" {{isset($formdata->v86)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -663,10 +680,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v87" {{isset($formdata->v87)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v88" {{isset($formdata->v88)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -676,10 +693,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v89" {{isset($formdata->v89)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v90" {{isset($formdata->v90)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -689,10 +706,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v91" {{isset($formdata->v91)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v92" {{isset($formdata->v92)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -702,10 +719,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v93" {{isset($formdata->v9389)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v94" {{isset($formdata->v94)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -715,10 +732,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v95" {{isset($formdata->v95)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v96" {{isset($formdata->v96)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -728,10 +745,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v97" {{isset($formdata->v97)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v98" {{isset($formdata->v98)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -740,10 +757,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v99" {{isset($formdata->v99)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v100" {{isset($formdata->v100)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
             </div>
@@ -768,10 +785,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v101" {{isset($formdata->v101)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v102" {{isset($formdata->v102)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -781,10 +798,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v103" {{isset($formdata->v103)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v104" {{isset($formdata->v104)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -794,10 +811,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v105" {{isset($formdata->v105)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v106" {{isset($formdata->v106)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -807,10 +824,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v107" {{isset($formdata->v107)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v108" {{isset($formdata->v108)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -820,10 +837,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v109" {{isset($formdata->v109)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v110" {{isset($formdata->v110)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -833,10 +850,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v111" {{isset($formdata->v111)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v112" {{isset($formdata->v112)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -846,10 +863,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v113" {{isset($formdata->v113)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v114" {{isset($formdata->v114)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -859,10 +876,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v115" {{isset($formdata->v115)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v116" {{isset($formdata->v116)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -872,10 +889,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v117" {{isset($formdata->v117)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v118" {{isset($formdata->v118)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -885,10 +902,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v119" {{isset($formdata->v119)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v120" {{isset($formdata->v120)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -898,10 +915,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v121" {{isset($formdata->v121)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v122" {{isset($formdata->v122)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
             </div>
@@ -927,10 +944,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v123" {{isset($formdata->v123)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v124" {{isset($formdata->v124)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -940,10 +957,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v125" {{isset($formdata->v125)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v126" {{isset($formdata->v126)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -953,10 +970,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v127" {{isset($formdata->v127)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v128" {{isset($formdata->v128)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -966,10 +983,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v129" {{isset($formdata->v129)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v130" {{isset($formdata->v130)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -979,10 +996,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v131" {{isset($formdata->v131)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v132" {{isset($formdata->v132)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -992,10 +1009,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v134" {{isset($formdata->v134)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v135" {{isset($formdata->v135)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1005,10 +1022,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v136" {{isset($formdata->v136)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v137" {{isset($formdata->v137)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1018,10 +1035,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v138" {{isset($formdata->v138)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v139" {{isset($formdata->v139)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1031,10 +1048,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v140" {{isset($formdata->v140)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v141" {{isset($formdata->v141)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1044,10 +1061,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v142" {{isset($formdata->v142)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v143" {{isset($formdata->v143)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
             </div>
@@ -1071,10 +1088,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v144" {{isset($formdata->v144)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v145" {{isset($formdata->v145)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1084,10 +1101,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v146" {{isset($formdata->v146)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v147" {{isset($formdata->v147)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1097,10 +1114,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v148" {{isset($formdata->v148)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v149" {{isset($formdata->v149)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1110,10 +1127,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v150" {{isset($formdata->v150)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v151" {{isset($formdata->v151)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1123,10 +1140,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v152" {{isset($formdata->v152)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v153" {{isset($formdata->v153)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1136,10 +1153,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v154" {{isset($formdata->v154)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v155" {{isset($formdata->v155)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1149,10 +1166,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v156" {{isset($formdata->v156)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v157" {{isset($formdata->v157)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 
@@ -1202,10 +1219,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v158" {{isset($formdata->v158)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v159" {{isset($formdata->v159)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
                 <div class="row border border-dark">    
@@ -1224,10 +1241,10 @@
                     </div>
         
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v160" {{isset($formdata->v160)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                     <div class="col-sm-2 border-end p-1 text-center d-flex align-items-center">
-                        <input  style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
+                        <input name="v161" {{isset($formdata->v161)? __('checked') : __('') }} style="height: 40px;" class="form-check-input rounded-1 border-1 w-100" type="checkbox" value="" id="">
                     </div>
                 </div>
             </div>
@@ -1237,13 +1254,13 @@
                         <p class="m-0 lh-sm ">Job Card </p>
                     </div>
                     <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
-                    <input value="{{$request->numeroauto}}" type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                    <input name="v162" value="{{$formdata->v162}}" type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
                     </div>
                     <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
                         <p class="m-0 lh-sm ">Engine Number </p>
                     </div>
                     <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
-                        <input value="{{$request->motor}}" type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                        <input name="v163" value="{{$formdata->v163}}" type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
                     </div>
                 </div> 
                 <div class="row border ">    
@@ -1251,13 +1268,13 @@
                         <p class="m-0 lh-sm ">Inspector</p>
                     </div>
                     <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
-                        <input value="{{ auth()->user()->name }}" type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                        <input name="v164" value="{{ $formdata->v164 }}" type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
                     </div>
                     <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
                         <p class="m-0 lh-sm ">Quality Inspector</p>
                     </div>
                     <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
-                        <input type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                        <input name="v165" value="{{$formdata->v165}}" type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
                     </div>
                 </div>
                 <div class="row border ">    
@@ -1265,7 +1282,7 @@
                         <p class="m-0 lh-sm ">VIN</p>
                     </div>
                     <div class="col-sm-8 border-end  align-items-center p-1 text-start fw-bold">
-                        <input value="{{$request->chasis}}" type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                        <input name="v166" value="{{$formdata->v166}}" type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
                     </div>
                 </div>
                 <div class="row border ">    
@@ -1273,13 +1290,13 @@
                         <p class="m-0 lh-sm ">Retailer</p>
                     </div>
                     <div class="col-sm-3 border-end  align-items-center p-1 text-start  fw-bold">
-                        <input type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                        <input name="v167" value="{{$formdata->v167}}" type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
                     </div>
                     <div class="col-sm-3 border-end  align-items-center p-1 text-start  fw-bold">
                         <p class="m-0 lh-sm ">Stamp</p>
                     </div>
                     <div class="col-sm-3 border-end  align-items-center p-1 text-start fw-bold">
-                        <input type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                        <input name="v168" value="{{$formdata->v168}}" type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
                     </div>
                 </div>
                 <div class="row border ">    
@@ -1287,7 +1304,7 @@
                         <p class="m-0 lh-sm ">Date</p>
                     </div>
                     <div class="col-sm-8 border-end  align-items-center p-1 text-start  fw-bold">
-                        <input type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                        <input name="v169" value="{{$formdata->v169}}" type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
                     </div>
                 </div>
                 <div class="row border ">    
@@ -1295,7 +1312,7 @@
                         <p class="m-0 lh-sm ">Kilometer</p>
                     </div>
                     <div class="col-sm-8 border-end  align-items-center p-1 text-start fw-bold">
-                        <input type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
+                        <input name="v170" value="{{$formdata->v170}}" type="text" class="form-control rounded-0 border-bottom h-100" id="" placeholder="">
                     </div>
                 </div>
             </div>         
@@ -1345,28 +1362,28 @@
                 
             </div>
             <div class="col-sm-2  align-items-center p-1 text-start  fw-bold">
-                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
+                <input name="v171" value="{{$formdata->v171}}" type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
             </div>
             <div class="col-sm-1  align-items-center p-1 text-end  fw-bold">
                 <p class="m-0 lh-sm ">2.
                 
             </div>
             <div class="col-sm-2  align-items-center p-1 text-start  fw-bold">
-                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
+                <input name="v172" value="{{$formdata->v172}}" type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
             </div>
             <div class="col-sm-1  align-items-center p-1 text-end  fw-bold">
                 <p class="m-0 lh-sm ">3.
                 
             </div>
             <div class="col-sm-2  align-items-center p-1 text-start  fw-bold">
-                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
+                <input name="v173" value="{{$formdata->v173}}" type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
             </div>
             <div class="col-sm-1  align-items-center p-1 text-end  fw-bold">
                 <p class="m-0 lh-sm ">4.
                 
             </div>
             <div class="col-sm-2  align-items-center p-1 text-start  fw-bold">
-                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
+                <input name="v174" value="{{$formdata->v174}}" type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
             </div>
         </div>
         <div class="row border border-dark ">
@@ -1375,28 +1392,28 @@
                 
             </div>
             <div class="col-sm-2  align-items-center p-1 text-start  fw-bold">
-                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
+                <input name="v175" value="{{$formdata->v175}}" type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
             </div>
             <div class="col-sm-1  align-items-center p-1 text-end  fw-bold">
                 <p class="m-0 lh-sm ">6.
                 
             </div>
             <div class="col-sm-2  align-items-center p-1 text-start  fw-bold">
-                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
+                <input name="v176" value="{{$formdata->v176}}" type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
             </div>
             <div class="col-sm-1  align-items-center p-1 text-end  fw-bold">
                 <p class="m-0 lh-sm ">7.
                 
             </div>
             <div class="col-sm-2  align-items-center p-1 text-start  fw-bold">
-                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
+                <input name="v177" value="{{$formdata->v177}}" type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
             </div>
             <div class="col-sm-1  align-items-center p-1 text-end  fw-bold">
                 <p class="m-0 lh-sm ">8.
                 
             </div>
             <div class="col-sm-2  align-items-center p-1 text-start  fw-bold">
-                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
+                <input name="v178" value="{{$formdata->v178}}" type="text" class="form-control rounded-0 border-bottom " id="" placeholder=""></p>
             </div>
         </div>
         <div class="row border border-dark ">
@@ -1410,14 +1427,14 @@
                 
             </div>
             <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
-                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
+                <input name="v179"  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
             </div>
             <div class="col-sm-2  align-items-center p-1 text-end  fw-bold">
                 <p class="m-0 lh-sm ">EV power battery SOC:</p>
                 
             </div>
             <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
-                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
+                <input name="v180" value="{{$formdata->v180}}"  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
             </div>
         </div>
         <div class="row border border-dark ">
@@ -1426,14 +1443,14 @@
                 
             </div>
             <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
-                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
+                <input name="v181" value="{{$formdata->v181}}" type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
             </div>
             <div class="col-sm-2  align-items-center p-1 text-end  fw-bold">
                 <p class="m-0 lh-sm ">48V EMS system battery SOC:</p>
                 
             </div>
             <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
-                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
+                <input name="v182" value="{{$formdata->v182}}" type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
             </div>
         </div>
         <div class="row border border-dark ">
@@ -1447,14 +1464,14 @@
                 
             </div>
             <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
-                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
+                <input name="v183" value="{{$formdata->v183}}" type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
             </div>
             <div class="col-sm-2  align-items-center p-1 text-end  fw-bold">
                 <p class="m-0 lh-sm ">RH</p>
                 
             </div>
             <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
-                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
+                <input name="v184" value="{{$formdata->v184}}" type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
             </div>
         </div>
         <div class="row border border-dark ">
@@ -1463,14 +1480,14 @@
                 
             </div>
             <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
-                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
+                <input name="v185" value="{{$formdata->v185}}" type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
             </div>
             <div class="col-sm-2  align-items-center p-1 text-end  fw-bold">
                 <p class="m-0 lh-sm ">RR</p>
                 
             </div>
             <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
-                <input  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
+                <input name="v186" value="{{$formdata->v186}}" type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
             </div>
         </div>
     </div>  
