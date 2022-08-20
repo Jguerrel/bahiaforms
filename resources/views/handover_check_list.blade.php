@@ -12,7 +12,7 @@
         </div>
     </div>
     <br>
-    <form name="vehicleform" id="vehicleform" method="post" action="{{ route('vehicleform.store') }}">    
+    <form name="vehicleform" id="vehicleform" method="post" action="{{ route('vehicleform.store') }}" enctype="multipart/form-data">    
 @csrf
     <input type="hidden" value="{{$request->marca}}"  id="marca"  name="marca"  >
     <input type="hidden" value="{{$request->modelo}}" id="modelo" name="modelo" >
@@ -43,17 +43,17 @@
         </div>
         <div class="row">
             <div class="col-sm-3 p-0 border border-dark">
-                <input type="text" class="form-control border-0 rounded-0 text-center " id="" placeholder="">
+                <input name="v216" type="text" class="form-control border-0 rounded-0 text-center "  placeholder="">
             </div>
             <div class="col-sm-3 p-0 border border-dark">
-                <input type="text" class="form-control border-0 rounded-0 text-center " id="chasis" placeholder="" value="{{ $request->chasis; }}
+                <input name="v217" type="text" class="form-control border-0 rounded-0 text-center " id="chasis" placeholder="" value="{{ $request->chasis; }}
 ">
             </div>
             <div class="col-sm-3 p-0 border border-dark">
-                <input type="date" class="form-control border-0 rounded-0" id="" placeholder="">
+                <input name="v218" type="date" class="form-control border-0 rounded-0"  placeholder="">
             </div>
             <div class="col-sm-3 p-0 border border-dark">
-                <input type="text" class="form-control border-0 rounded-0 text-center " id="" placeholder="">
+                <input name="v219" type="text" class="form-control border-0 rounded-0 text-center "  placeholder="">
             </div>
         </div>
         <div class="row">
@@ -79,46 +79,46 @@
             </div>
             <div class="col-6">
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" id="">1) </span>
-                    <input type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
+                    <span class="input-group-text bg-transparent border-0 ps-0" >1) </span>
+                    <input name="v1" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" id="">2) </span>
-                    <input type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
+                    <span class="input-group-text bg-transparent border-0 ps-0" >2) </span>
+                    <input name="v2" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" id="">3) </span>
-                    <input type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
+                    <span class="input-group-text bg-transparent border-0 ps-0" >3) </span>
+                    <input name="v3" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" id="">4) </span>
-                    <input type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
+                    <span class="input-group-text bg-transparent border-0 ps-0" >4) </span>
+                    <input name="v4" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" id="">5) </span>
-                    <input type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
+                    <span class="input-group-text bg-transparent border-0 ps-0" >5) </span>
+                    <input name="v5" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
             </div>
             <div class="col-6">
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" id="">6) </span>
-                    <input type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
+                    <span class="input-group-text bg-transparent border-0 ps-0" >6) </span>
+                    <input name="v6" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" id="">7) </span>
-                    <input type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
+                    <span class="input-group-text bg-transparent border-0 ps-0" >7) </span>
+                    <input name="v7" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" id="">8) </span>
-                    <input type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
+                    <span class="input-group-text bg-transparent border-0 ps-0" >8) </span>
+                    <input name="v8" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" id="">9) </span>
-                    <input type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
+                    <span class="input-group-text bg-transparent border-0 ps-0" >9) </span>
+                    <input name="v9" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" id="">10) </span>
-                    <input type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
+                    <span class="input-group-text bg-transparent border-0 ps-0" >10) </span>
+                    <input name="v10" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
             </div>
             <div class="col-12">
@@ -134,13 +134,13 @@
             </div>
             <div class="col-6">
                 <center>
-                    <input value="{{ auth()->user()->name }}" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark mb-2 text-center w-75" placeholder="" aria-label="" aria-describedby="">
+                    <input name="v11" value="{{ auth()->user()->name }}" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark mb-2 text-center w-75" placeholder="" aria-label="" aria-describedby="">
                     <p class="form-label">Signature of inspector</p>
                 </center>
             </div>
             <div class="col-6">
                 <center>
-                    <input type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark mb-2 text-center w-75" placeholder="" aria-label="" aria-describedby="">
+                    <input name="v12" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark mb-2 text-center w-75" placeholder="" aria-label="" aria-describedby="">
                     <p class="form-label">Signature of distributor</p>
                 </center>
             </div>
@@ -154,12 +154,12 @@
             </div>
             <div class="col-6">
                 <div class="input-group">
-                    <span class="input-group-text bg-transparent border-0 ps-0" id="">Waybill No.: </span>
-                    <input type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
+                    <span class="input-group-text bg-transparent border-0 ps-0" >Waybill No.: </span>
+                    <input name="v13" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
                 <div class="input-group">
-                    <span class="input-group-text bg-transparent border-0 ps-0" id="">(BOL).: </span>
-                    <input type="text" class="form-control rounded-0 border-0" placeholder="" aria-label="" aria-describedby="">
+                    <span class="input-group-text bg-transparent border-0 ps-0" >(BOL).: </span>
+                    <input name="v220" type="text" class="form-control rounded-0 border-0" placeholder="" aria-label="" aria-describedby="">
                 </div>
             </div>
         </div>
@@ -167,19 +167,19 @@
             <div class="col-1 border-end border-dark d-flex align-items-center">
                 <div class="input-group d-block">
                     <span class="input-group-text p-0 bg-transparent border-0" id="basic-addon1">No.</span>
-                    <input type="text" class="form-control w-100 ps-0 border-0 rounded-0" placeholder="1" aria-label="" aria-describedby="">
+                    <input name="v14" type="text" class="form-control w-100 ps-0 border-0 rounded-0" placeholder="1" aria-label="" aria-describedby="">
                 </div>
             </div>
             <div class="col-1 border-start border-end border-dark d-flex align-items-center">
                 <div class="input-group d-block">
                     <span class="input-group-text p-0 bg-transparent border-0" id="basic-addon1">Model</span>
-                    <input type="text" class="form-control w-100 ps-0 border-0 rounded-0" placeholder="" value="{{$request->modelo}}" aria-label="" aria-describedby="">
+                    <input name="v15" type="text" class="form-control w-100 ps-0 border-0 rounded-0" placeholder="" value="{{$request->modelo}}" aria-label="" aria-describedby="">
                 </div>
             </div>
             <div class="col-2 border-start border-end border-dark d-flex align-items-center">
                 <div class="input-group d-block">
-                    <span class="input-group-text p-0 bg-transparent border-0" id="">Configuration</span>
-                    <select class="form-select ps-0 pe-0 border-0 rounded-0 w-100" id="">
+                    <span class="input-group-text p-0 bg-transparent border-0" >Configuration</span>
+                    <select name="v16" class="form-select ps-0 pe-0 border-0 rounded-0 w-100" >
                         <option selected>Choose...</option>
                         <option value="1">Manual</option>
                         <option value="2">Automatic</option>
@@ -193,42 +193,42 @@
         <div class="row border border-dark">
             <div class="col-4 border-end border-dark d-flex align-items-center pe-0">
                 <div class="input-group">
-                    <span class="input-group-text bg-transparent border-0 ps-0" id="">Kilometraje (Km)</span>
-                    <input type="number" class="form-control rounded-0 border-0 border-start border-dark" placeholder="" aria-label="" aria-describedby="">
+                    <span class="input-group-text bg-transparent border-0 ps-0" >Kilometraje (Km)</span>
+                    <input name="v17" type="number" class="form-control rounded-0 border-0 border-start border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
             </div>
             <div class="col-8 border-start border-dark d-flex align-items-center p-0" id="phoneInput">
                 <div class="input-group h-100">
-                    <input type="text" class="form-control border-0 p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v18" type="text" class="form-control border-0 p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v19" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v20" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v21" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v22" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v23" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v24" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v25" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v26" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v27" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v28" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v29" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v30" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v31" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v32" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v33" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v34" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v35" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v36" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v37" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v38" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v39" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v40" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v41" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v42" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v43" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v44" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v45" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v46" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v47" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
                 </div>
             </div>
         </div>
@@ -318,40 +318,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v48" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1"  >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v49" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v50" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v51" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v52" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v53" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v54" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v55" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v56" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v57" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v58" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v59" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -363,40 +363,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v60" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v61" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v62" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v63" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v64" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v65" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v66" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v67" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v68" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v69" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v70" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v71" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -408,40 +408,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v72" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v73" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v74" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v75" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v76" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v77" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v78" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v79" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v80" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v81" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v82" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v83" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -453,40 +453,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v84" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v85" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v86" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v87" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v88" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v89" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v90" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v91" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v221" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v92" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v93" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v94" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -498,40 +498,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v95" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v96" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v97" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v98" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v99" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v100" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v222" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v101" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v102" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v103" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v104" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v105" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -543,40 +543,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v106" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v107" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v108" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v109" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v110" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v111" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v112" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v223" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v113" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v114" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v115" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v116" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -588,40 +588,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v117" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v118" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v119" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v120" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v121" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v122" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v123" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v124" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v125" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v126" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v127" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v128" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -633,40 +633,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v129" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v130" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v131" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v132" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v133" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v134" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v135" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v136" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v137" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v138" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v139" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v140" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -678,40 +678,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v141" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v142" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v143" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v144" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v145" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v146" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v147" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v148" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v149" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v150" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v151" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="" id="">
+                        <input name="v152" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -721,7 +721,7 @@
                 <p class="m-0 text-start lh-sm">Confirmed by delivery side:<br>Confirmado por la parte que entrega<br>Signature firma:</p>
             </div>
             <div class="col-12 col-sm-9 border-start border-dark d-flex align-items-center text-center p-0">
-                <input type="text" class="form-control rounded-0 border-0 h-100" id="" placeholder="">
+                <input name="v224" type="text" class="form-control rounded-0 border-0 h-100"  placeholder="">
             </div>
         </div>
         <div class="row border border-dark">
@@ -729,7 +729,7 @@
                 <p class="m-0 text-start lh-sm">Confirmed by receiving party:<br>Confirmado por la parte que recibe<br>Signature firma:</p>
             </div>
             <div class="col-12 col-sm-9 border-start border-dark d-flex align-items-center text-center p-0">
-                <input type="text" class="form-control rounded-0 border-0 h-100" id="" placeholder="">
+                <input name="v153" type="text" class="form-control rounded-0 border-0 h-100"  placeholder="">
             </div>
         </div>
         <div class="row border border-dark">
@@ -737,7 +737,7 @@
                 <p class="m-0 text-start lh-sm">Inspection date fecha de inspección</p>
             </div>
             <div class="col-12 col-sm-9 border-start border-dark d-flex align-items-center text-center p-0">
-                <input type="date" class="form-control rounded-0 border-0 h-100" id="" placeholder="">
+                <input name="v154" type="date" class="form-control rounded-0 border-0 h-100"  placeholder="">
             </div>
         </div>
     </div> 
@@ -756,7 +756,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100" >
                     <p class="m-0 align-self-center text-center w-100 lh-sm">1</p>
                     <div class="position-absolute top-50 start-50 translate-middle" >
-                        <input style="width: 40px !important;" class="form-check-input rounded-circle border-dark  mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v155" style="width: 40px !important;" class="form-check-input rounded-circle border-dark  mt-0 check-r" type="checkbox" value="1" >
                     </div>
                     
 
@@ -769,7 +769,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">22</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark  mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v156" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark  mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -780,7 +780,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">42</p>
                     <div class="position-absolute top-50 start-50 translate-middle">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v157" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -794,7 +794,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">2</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v158" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -805,7 +805,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">23</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v159" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -816,7 +816,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">43</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v160" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -830,7 +830,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">3</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v161" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -841,7 +841,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">24</p>
                     <div class="position-absolute top-50 start-50 translate-middle">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v162" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -852,7 +852,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">44</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v163" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -866,7 +866,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">4</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v164" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -877,7 +877,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">25</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v165" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -888,7 +888,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">45</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"   class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v166" style="width: 40px !important;"   class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -902,7 +902,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">5</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v167" style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -913,7 +913,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">26</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v168" style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -924,7 +924,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">46</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v169" style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -938,7 +938,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">6</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v170" style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -949,7 +949,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">27</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v171" style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -960,7 +960,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">47</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v172" style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -974,7 +974,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">7</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v173" style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -985,7 +985,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">28</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v174" style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -996,7 +996,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">48</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v175" style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1010,7 +1010,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">8</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v176" style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1021,7 +1021,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">29</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v177" style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1032,7 +1032,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">49</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v178" style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1046,7 +1046,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">9</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v179" style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1057,7 +1057,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">30</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v180" style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1068,7 +1068,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">50</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v181" style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1082,7 +1082,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">10</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v182" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1093,7 +1093,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">31</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v183" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1104,7 +1104,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">51</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v184" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1118,7 +1118,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">11</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v185" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1129,7 +1129,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">32</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v186" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1140,7 +1140,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">52</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v187" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1154,7 +1154,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">12</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v188" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1165,7 +1165,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">33</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v189" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1176,7 +1176,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">53</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v190" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1190,7 +1190,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">13</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v191" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1201,7 +1201,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">34</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v192" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1212,7 +1212,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">54</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v193" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1226,7 +1226,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">14</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v194" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1237,7 +1237,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">35</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v195" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1248,7 +1248,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">55</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v196" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1262,7 +1262,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">15</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v197" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1273,7 +1273,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">36</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v198" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1284,7 +1284,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">56</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v199" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1298,7 +1298,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">16</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v200" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1309,7 +1309,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">37</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v201" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1320,7 +1320,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">57</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v202" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1334,7 +1334,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">17</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v203" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1345,7 +1345,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">38</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v204" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1356,7 +1356,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">58</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v205" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1370,7 +1370,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">18</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v206" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1381,7 +1381,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">39</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v207" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1392,7 +1392,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">59</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v208" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1406,7 +1406,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">19</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v209" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1417,7 +1417,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">40</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v210" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1428,7 +1428,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">60</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v211" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1442,7 +1442,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">20</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v212" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1453,7 +1453,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">41</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v213" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1464,7 +1464,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">61</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v214" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
@@ -1478,7 +1478,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">21</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="" id="">
+                        <input name="v215" style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox" value="1" >
                     </div>
                 </div>
             </div>
