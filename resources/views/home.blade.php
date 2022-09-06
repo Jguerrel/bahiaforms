@@ -1,5 +1,14 @@
 @extends('layouts.app')
 @section('content')
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -9,7 +18,7 @@
                 @csrf
                 <div class="card-body">
         
-                <input type="text" class="form-control border-1 rounded-1 text-start " id="vin" name="vin" placeholder="" value="5KBRL6860HO900094"> 
+                <input type="text" class="form-control border-1 rounded-1 text-start " id="vin" name="vin" placeholder="" value=""> 
                 <br>
                 <button type="submit" class="btn btn-primary">Buscar</button>
 
