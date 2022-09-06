@@ -24,6 +24,7 @@ class SearchController extends Controller
         //dd($request);
         $userData = $request->validate([
             'vin' => 'required|string|max:255',
+            'company' => 'required|string|max:255',
         ]);
         $client_token = new Client(['base_uri' => 'https://eskemacloud.hondapanama.com']);
         $http_token   = $client_token->request('GET', '/wsservicestest/authv2/access_token', [
@@ -37,7 +38,7 @@ class SearchController extends Controller
         ]);
         
         $response_token = json_decode($http_token->getBody()->getContents());
-        //dd($response_token);
+        //dd($request->company);
         
         
         $client = new Client(['base_uri' => 'https://eskemacloud.hondapanama.com']);
@@ -48,16 +49,19 @@ class SearchController extends Controller
             ],
             
             'json' => [
-                'ciacod' =>'01',
+                'ciacod' =>$request->company,
                 'chasis' => $request->vin
             ]
         ]);
         $response = json_decode($http->getBody()->getContents());
         //dd($response);
-        $data =  $response->sdtconsultaautos->item;
-        $shows = vehicleform::where('chasis', '=', $request->vin)->get();
+        if( isset($response)){
+            $data =  $response->sdtconsultaautos->item;
+            $shows = vehicleform::where('chasis', '=', $request->vin)->get();
+            return view('home',['data' => $data,'shows'=>$shows]);
+        }
         //dd($data);
-        return view('home',['data' => $data,'shows'=>$shows]);
+        return view('home');
         //return view('greetings', ['name' => 'Victoria']);
 
     }
