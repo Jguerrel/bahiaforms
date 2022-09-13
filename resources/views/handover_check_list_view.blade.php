@@ -216,36 +216,8 @@
             </div>
             <div class="col-8 border-start border-dark d-flex align-items-center p-0" id="phoneInput">
                 <div class="input-group h-100">
-                    <input name="v18" value="{{$formdata->v18}}" type="text" class="form-control border-0 p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v19" value="{{$formdata->v19}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v20" value="{{$formdata->v20}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v21" value="{{$formdata->v21}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v22" value="{{$formdata->v22}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v23" value="{{$formdata->v23}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v24" value="{{$formdata->v24}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v25" value="{{$formdata->v25}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v26" value="{{$formdata->v26}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v27" value="{{$formdata->v27}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v28" value="{{$formdata->v28}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v29" value="{{$formdata->v29}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v30" value="{{$formdata->v30}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v31" value="{{$formdata->v31}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v32" value="{{$formdata->v32}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v33" value="{{$formdata->v33}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v34" value="{{$formdata->v34}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v35" value="{{$formdata->v35}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v36" value="{{$formdata->v36}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v37" value="{{$formdata->v37}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v38" value="{{$formdata->v38}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v39" value="{{$formdata->v39}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v40" value="{{$formdata->v40}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v41" value="{{$formdata->v41}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v42" value="{{$formdata->v42}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v43" value="{{$formdata->v43}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v44" value="{{$formdata->v44}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v45" value="{{$formdata->v45}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v46" value="{{$formdata->v46}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v47" value="{{$formdata->v47}}" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v18" value="{{$formdata->v18}}" type="text" class="form-control border-0 p-0 text-center letter" placeholder="" aria-label="" >
+                    
                 </div>
             </div>
         </div>

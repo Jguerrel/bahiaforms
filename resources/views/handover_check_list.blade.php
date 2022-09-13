@@ -46,8 +46,7 @@
                 <input name="v216" type="text" class="form-control border-0 rounded-0 text-center "  placeholder="">
             </div>
             <div class="col-sm-3 p-0 border border-dark">
-                <input name="v217" type="text" class="form-control border-0 rounded-0 text-center " id="chasis" placeholder="" value="{{ $request->chasis; }}
-">
+                <input name="v217" type="text" class="form-control border-0 rounded-0 text-center " id="chasis" placeholder="" value="{{ $request->chasis; }}">
             </div>
             <div class="col-sm-3 p-0 border border-dark">
                 <input name="v218" type="date" class="form-control border-0 rounded-0"  placeholder="">
@@ -194,41 +193,13 @@
             <div class="col-4 border-end border-dark d-flex align-items-center pe-0">
                 <div class="input-group">
                     <span class="input-group-text bg-transparent border-0 ps-0" >Kilometraje (Km)</span>
-                    <input name="v17" type="number" class="form-control rounded-0 border-0 border-start border-dark" placeholder="" aria-label="" aria-describedby="">
+                    <input name="v17"  type="number" class="form-control rounded-0 border-0 border-start border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
             </div>
             <div class="col-8 border-start border-dark d-flex align-items-center p-0" id="phoneInput">
                 <div class="input-group h-100">
-                    <input name="v18" type="text" class="form-control border-0 p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v19" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v20" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v21" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v22" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v23" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v24" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v25" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v26" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v27" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v28" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v29" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v30" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v31" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v32" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v33" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v34" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v35" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v36" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v37" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v38" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v39" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v40" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v41" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v42" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v43" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v44" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v45" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v46" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
-                    <input name="v47" type="text" class="form-control border-start border-top-0 border-bottom-0 border-end-0 border-dark p-0 text-center letter" placeholder="" aria-label="" maxlength="1">
+                    <input name="v18" value ="{{ $request->chasis; }}" type="text" class="form-control border-0 p-0 text-center letter" placeholder="" aria-label="" >
+                    
                 </div>
             </div>
         </div>
