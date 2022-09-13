@@ -54,8 +54,9 @@ class SearchController extends Controller
             ]
         ]);
         $response = json_decode($http->getBody()->getContents());
-        //dd($response);
+        
         if( isset($response)){
+            //dd($response);
             $data =  $response->sdtconsultaautos->item;
             $shows = vehicleform::where('chasis', '=', $request->vin)->get();
             return view('home',['data' => $data,'shows'=>$shows]);

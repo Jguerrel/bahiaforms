@@ -19,8 +19,8 @@ class VehicleFormsController extends Controller
         
         $request->merge(['formrequest' => json_encode($request->all())]);
         //Systems::create($data);
-        //dd($request);
-        $validatedData = $request->validate([
+        
+        /*$validatedData = $request->validate([
             'marca' => 'required|max:255',
             'modelo' => 'required|max:255',
             'motor' => 'required|max:255',
@@ -33,8 +33,22 @@ class VehicleFormsController extends Controller
             'formrequest' => 'required',
             'formid' => 'required|max:255',
             'formaction' => 'required|max:255',
+        ]);*/
+        //dd($request);
+        vehicleform::create([
+            'marca' => $request['marca'] ?? 'NA',
+            'modelo' => $request['modelo'] ?? 'NA',
+            'motor' => $request['motor'] ?? 'NA',
+            'chasis' => $request['chasis'] ?? 'NA',
+            'anio' => $request['anio'] ?? 'NA',
+            'version' => $request['version'] ?? 'NA',
+            'colorexterior' => $request['colorexterior'] ?? 'NA',
+            'colorinterior' => $request['colorinterior'] ?? 'NA',
+            'formname' => $request['formname'] ?? 'NA',
+            'formrequest' => $request['formrequest'] ?? 'NA',
+            'formid' => $request['formid'] ?? 'NA',
+            'formaction' => $request['formaction'] ?? 'NA',
         ]);
-        vehicleform::create($validatedData);
    
         return redirect('/home')->with('success', 'Formulario guardado satisfactoriamente');   
     }

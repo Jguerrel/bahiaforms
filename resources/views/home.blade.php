@@ -16,6 +16,7 @@
                 <div class="card-header">{{ __('Ingrese un número de chasis válido') }}</div>
                 <form name="vin-search" id="vin-search" method="post" action="{{ route('search.vin') }}">
                 @csrf
+                
                 <div class="card-body">
         
                 <input type="text" class="form-control border-1 rounded-1 text-start " id="vin" name="vin" placeholder="" value=""> 

@@ -14,6 +14,7 @@
     <br>
     <form name="vehicleform" id="vehicleform" method="post" action="{{ route('vehicleform.store') }}" enctype="multipart/form-data">    
 @csrf
+
     <input type="hidden" value="{{$request->marca}}"  id="marca"  name="marca"  >
     <input type="hidden" value="{{$request->modelo}}" id="modelo" name="modelo" >
     <input type="hidden" value="{{$request->motor}}" id="motor" name="motor" >
