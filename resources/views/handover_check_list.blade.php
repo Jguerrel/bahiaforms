@@ -44,7 +44,7 @@
         </div>
         <div class="row">
             <div class="col-sm-3 p-0 border border-dark">
-                <input name="v216" type="text" class="form-control border-0 rounded-0 text-center "  placeholder="">
+                <input name="v216" type="text" class="form-control border-0 rounded-0 text-center "  placeholder="" value="{{ $request->company; }}">
             </div>
             <div class="col-sm-3 p-0 border border-dark">
                 <input name="v217" type="text" class="form-control border-0 rounded-0 text-center " id="chasis" placeholder="" value="{{ $request->chasis; }}">

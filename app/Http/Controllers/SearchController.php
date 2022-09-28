@@ -58,6 +58,8 @@ class SearchController extends Controller
         if( isset($response)){
             //dd($response);
             $data =  $response->sdtconsultaautos->item;
+            $data->company = ($request->company=="01")?"Bahia Motors":"Bay Motors";
+
             $shows = vehicleform::where('chasis', '=', $request->vin)->get();
             return view('home',['data' => $data,'shows'=>$shows]);
         }

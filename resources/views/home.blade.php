@@ -92,6 +92,7 @@
                                         <input type="hidden" value="{{$data->colorexterior}}" id="colorexterior" name="colorexterior" readonly>
                                         <input type="hidden" value="{{$data->colorinterior}}" id="colorinterior" name="colorinterior" readonly>
                                         <input type="hidden" value="{{$data->numeroauto}}" id="numeroauto" name="numeroauto" readonly>
+                                        <input type="hidden" value="{{$data->company}}" id="company" name="company" readonly>
 
                                         <button type="submit" class="btn btn-primary mh-100" style="width: 150px; height: 100px;">Handover Check List</button>
                                     
@@ -109,6 +110,7 @@
                                         <input type="hidden" value="{{$data->colorexterior}}" id="colorexterior" name="colorexterior" readonly>
                                         <input type="hidden" value="{{$data->colorinterior}}" id="colorinterior" name="colorinterior" readonly>
                                         <input type="hidden" value="{{$data->numeroauto}}" id="numeroauto" name="numeroauto" readonly>
+                                        <input type="hidden" value="{{$data->company}}" id="company" name="company" readonly>
 
                                         <button type="submit" class="btn btn-primary mh-100" style="width: 150px; height: 100px;">Pre-Delivery Inspection (PDI) Checking List</button>
                                     </form>
@@ -125,6 +127,7 @@
                                         <input type="hidden" value="{{$data->colorexterior}}" id="colorexterior" name="colorexterior" readonly>
                                         <input type="hidden" value="{{$data->colorinterior}}" id="colorinterior" name="colorinterior" readonly>
                                         <input type="hidden" value="{{$data->numeroauto}}" id="numeroauto" name="numeroauto" readonly>
+                                        <input type="hidden" value="{{$data->company}}" id="company" name="company" readonly>
 
                                         <button type="submit" class="btn btn-primary mh-100" style="width: 150px; height: 100px;">48v Battery Vehicle Inspection and charging Record Form</button>
                                     </form>    
@@ -141,6 +144,8 @@
                                         <input type="hidden" value="{{$data->colorexterior}}" id="colorexterior" name="colorexterior" readonly>
                                         <input type="hidden" value="{{$data->colorinterior}}" id="colorinterior" name="colorinterior" readonly>
                                         <input type="hidden" value="{{$data->numeroauto}}" id="numeroauto" name="numeroauto" readonly>
+                                        <input type="hidden" value="{{$data->company}}" id="company" name="company" readonly>
+
                                         <button type="submit" class="btn btn-primary mh-100" style="width: 150px; height: 100px;">Long Term Stored Vehicle Check Sheet</button>
                                     </form>    
                                 </div>
