@@ -1455,7 +1455,7 @@
         </div>
         <div class="row border border-dark ">
             <div class="col-sm-8 border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
-                <p class="m-0 lh-sm ">Voltage / SOC value record</p>
+                <p class="m-0 lh-sm ">Tire Pressure Record</p>
             </div>
         </div>
         <div class="row border border-dark ">
@@ -1488,6 +1488,17 @@
             </div>
             <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
                 <input name="v186" value="{{$formdata->v186}}" type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
+            </div>
+        </div>
+        <div class="row border border-dark ">
+            <div class="col-sm-8 border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
+                <p class="m-0 lh-sm ">Faulty and repair record</p>
+            </div>
+        </div>
+        <div class="row border border-dark ">
+            <div class="col-sm-8 border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
+            <textarea class="form-control" name="v187"  rows="10" >{{$formdata->v187}}</textarea>
+
             </div>
         </div>
     </div>  
