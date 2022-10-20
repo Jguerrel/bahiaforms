@@ -63,6 +63,7 @@
                 <p>Circle the part of vehicle that has problem or defect. Encierre en un círculo la parte del vehículo que tiene el problema o defecto.</p>
             </div>
         </div>
+        <!-- ------------>
         <div class="row">
             <div class="col-12 col-sm-6 border border-dark text-center">
                 <p><b>Sedan</b></p>
@@ -73,6 +74,7 @@
                 <img src="{{ asset('img/suv.png') }}" alt="SUV">
             </div>
         </div>
+       <!--  ------------>
         <div class="row border border-dark">
             <div class="col-12">
                 <label for="" class="form-label">► Describe each problem or defect, and indicate the completion state on the right side after parts replacement or repair. Describa cada problema o defecto e indique el estado de finalización en el lado derecho después del reemplazo o reparación de piezas</label>
@@ -290,40 +292,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v48" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1"  >
+                        <input name="v48" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value=""  >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v49" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v49" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v50" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v50" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v51" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v51" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v52" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v52" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v53" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v53" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v54" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v54" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v55" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v55" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v56" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v56" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v57" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v57" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v58" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v58" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v59" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v59" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                 </div>
             </div>
@@ -335,40 +337,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v60" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v60" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v61" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v61" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v62" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v62" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v63" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v63" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v64" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v64" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v65" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v65" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v66" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v66" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v67" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v67" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v68" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v68" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v69" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v69" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v70" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v70" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v71" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v71" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                 </div>
             </div>
@@ -380,40 +382,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v72" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v72" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v73" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v73" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v74" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v74" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v75" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v75" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v76" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v76" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v77" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v77" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v78" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v78" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v79" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v79" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v80" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v80" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v81" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v81" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v82" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v82" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v83" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v83" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                 </div>
             </div>
@@ -425,40 +427,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v84" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v84" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v85" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v85" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v86" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v86" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v87" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v87" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v88" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v88" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v89" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v89" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v90" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v90" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v91" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v91" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v221" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v221" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v92" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v92" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v93" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v93" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v94" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v94" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                 </div>
             </div>
@@ -470,40 +472,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v95" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v95" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v96" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v96" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v97" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v97" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v98" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v98" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v99" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v99" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v100" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v100" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v222" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v222" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v101" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v101" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v102" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v102" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v103" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v103" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v104" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v104" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v105" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v105" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                 </div>
             </div>
@@ -515,40 +517,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v106" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v106" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v107" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v107" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v108" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v108" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v109" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v109" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v110" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v110" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v111" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v111" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v112" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v112" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v223" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v223" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v113" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v113" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v114" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v114" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v115" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v115" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v116" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v116" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                 </div>
             </div>
@@ -560,40 +562,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v117" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v117" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v118" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v118" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v119" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v119" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v120" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v120" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v121" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v121" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v122" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v122" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v123" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v123" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v124" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v124" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v125" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v125" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v126" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v126" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v127" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v127" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v128" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v128" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                 </div>
             </div>
@@ -605,40 +607,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v129" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v129" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v130" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v130" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v131" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v131" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v132" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v132" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v133" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v133" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v134" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v134" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v135" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v135" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v136" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v136" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v137" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v137" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v138" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v138" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v139" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v139" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v140" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v140" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                 </div>
             </div>
@@ -650,40 +652,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v141" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v141" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v142" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v142" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v143" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v143" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v144" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v144" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v145" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v145" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v146" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v146" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v147" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v147" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v148" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v148" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v149" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v149" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v150" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v150" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v151" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v151" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v152" class="form-check-input rounded-0 border-0 w-100 mt-0" type="checkbox" value="1" >
+                        <input name="v152" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text" value="" >
                     </div>
                 </div>
             </div>
