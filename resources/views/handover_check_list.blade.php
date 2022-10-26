@@ -134,7 +134,7 @@
                 <p>※ Vehicle-mounted parts (vary with vehicle type and optional item) Piezas montadas en el vehículo (varían según el tipo de vehículo y el artículo opcional)</p>
                 <p>Owner’s Manual, tool kit, cigarette lighter, jack, remote controller, spare wheel, etc. Manual de instrucciones, juego de herramientas, encendedor, gato, mando a distancia, rueda de repuesto, etc.</p>
             </div>
-            <div  class="col-6">
+            <div class="col-6">
                 <center>
                     <input name="v11" value="{{ auth()->user()->name }}" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark mb-2 text-center w-75" placeholder="" aria-label="" aria-describedby="">
                     <p class="form-label">Signature of inspector</p>
@@ -142,7 +142,7 @@
             </div>
             <div class="col-6">
                 <center>
-                    <!--<input name="v12" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark mb-2 text-center w-75" placeholder="" aria-label="" aria-describedby="">-->
+                    <input name="v12" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark mb-2 text-center w-75" placeholder="" aria-label="" aria-describedby="">
                     <iframe width="100" height="142" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark mb-2 text-center w-75" placeholder="" aria-label="" aria-describedby="" src="/firma3"></iframe>
                     <p class="form-label">Signature of distributor</p>
                 </center>
@@ -696,17 +696,17 @@
                 <p class="m-0 text-start lh-sm">Confirmed by delivery side:<br>Confirmado por la parte que entrega<br>Signature firma:</p>
             </div>
             <div class="col-12 col-sm-9 border-start border-dark d-flex align-items-center text-center p-0">
-                <iframe  width="200%" height="75%" src="/firma1">asdasd</iframe>
-              <!--  <input name="v224" type="text" class="form-control rounded-0 border-0 h-100"  placeholder="">-->
+                <input name="v224" type="text" class="form-control rounded-0 border-0 h-100"  placeholder="">
+                <iframe  width="200%" height="75%" src="/firma1"></iframe>
             </div>
         </div>
         <div class="row border border-dark">
             <div class="col-12 col-sm-3 border-end border-dark d-flex align-items-center text-center">
-                <p class="m-0 text-start lh-sm">Confirmed by receiving party:<br>Confirmado por la parte que recibe<br>Signature firma:</p>   
+                <p class="m-0 text-start lh-sm">Confirmed by receiving party:<br>Confirmado por la parte que recibe<br>Signature firma:</p>
             </div>
             <div class="col-12 col-sm-9 border-start border-dark d-flex align-items-center text-center p-0">
-            <iframe  width="200%" height="75%" src="/firma2">asdasd</iframe>    
-            <!-- <input name="v153" type="text" class="form-control rounded-0 border-0 h-100"  placeholder="">-->
+                <input name="v153" type="text" class="form-control rounded-0 border-0 h-100"  placeholder="">
+                <iframe  width="200%" height="75%" src="/firma2"></iframe>    
             </div>
         </div>
         <div class="row border border-dark">
