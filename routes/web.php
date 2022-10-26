@@ -42,3 +42,19 @@ Route::post('/vehicleform',[App\Http\Controllers\VehicleFormsController::class, 
 Route::post('/vehicleform',[App\Http\Controllers\VehicleFormsController::class, 'store'])->name('vehicleform.store');
 
 //Route::get('/home', [App\Http\Controllers\VehicleFormsController::class, 'index'])->name('home');
+
+Route::get('/sedan', function () {
+    return view('canvas/tablero1');
+});
+Route::get('/suv', function () {
+    return view('canvas/tablero2');
+});
+Route::get('/firma1', function () {
+    return view('canvas/tablero3');
+});
+Route::get('/firma2', function () {
+    return view('canvas/tablero4');
+});
+Route::get('/firma3', function () {
+    return view('canvas/tablero5');
+});

@@ -28,6 +28,7 @@ class CreateVehicleformsTable extends Migration
             $table->longText('formrequest');
             $table->string('formid');
             $table->string('formaction');
+            $table->string('imagen');
         });
     }
 
