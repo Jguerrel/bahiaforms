@@ -48,6 +48,7 @@ class VehicleFormsController extends Controller
             'formrequest' => $request['formrequest'] ?? 'NA',
             'formid' => $request['formid'] ?? 'NA',
             'formaction' => $request['formaction'] ?? 'NA',
+            'imagen' => $request['imagen'] ?? 'NA',
         ]);
    
         return redirect('/home')->with('success', 'Formulario guardado satisfactoriamente');   
