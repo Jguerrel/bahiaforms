@@ -58,3 +58,6 @@ Route::get('/firma2', function () {
 Route::get('/firma3', function () {
     return view('canvas/tablero5');
 });
+Route::get('/pdi', function () {
+    return view('canvas/tablero6');
+});

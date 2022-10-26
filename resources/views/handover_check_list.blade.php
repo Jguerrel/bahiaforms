@@ -67,7 +67,10 @@
         <div class="row">
             <div class="col-12 col-sm-6 border border-dark text-center">
                 <p><b>Sedan</b></p>
+                <div class="ratio ratio-1x1">
                 <iframe width="90%" height="375" src="/sedan"></iframe>
+                </div>
+                
             </div>   
             <div class="col-12 col-sm-6 border border-dark text-center">
                 <p><b>SUV</b></p>

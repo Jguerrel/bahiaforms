@@ -20,7 +20,7 @@
                 <div class="card-body">
         
                 <input type="text" class="form-control border-1 rounded-1 text-start " id="vin" name="vin" placeholder="" value=""> 
-                <select name="company" class="form-select ps-0 pe-0 border-0 rounded-0 w-100" >
+                <select name="company" class="form-select ps-0 pe-0 border-1 rounded-0 w-100" >
                         <option value="" selected>Seleccione ...</option>
                         <option value="01">Bahia Motors</option>
                         <option value="06">Bay Motors</option>
