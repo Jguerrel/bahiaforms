@@ -1246,7 +1246,8 @@
                     </div>
                     <div class="row border border-dark ">
                         <div class="col-sm-12 border-end border-dark align-items-center  ">
-                            <img src="{{ asset('img/pdi.png') }}" class="w-50" alt="pdi">
+                        <iframe  width="90%" height="450" src="/pdi"></iframe>    
+                        <!-- <img src="{{ asset('img/pdi.png') }}" class="w-100" alt="pdi"> -->
                         </div>
                     </div>
                 </div>
@@ -1417,7 +1418,7 @@
     <br>
     <div class="container-sm  border border-dark ">
         <div class="row border border-dark ">
-            <div class="col-sm-8 border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
+            <div class="col-sm border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
                 <p class="m-0 lh-sm ">Fault codes record</p>
             </div>
         </div>
@@ -1482,7 +1483,7 @@
             </div>
         </div>
         <div class="row border border-dark ">
-            <div class="col-sm-8 border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
+            <div class="col-sm border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
                 <p class="m-0 lh-sm ">Voltage / SOC value record</p>
             </div>
         </div>
@@ -1519,7 +1520,7 @@
             </div>
         </div>
         <div class="row border border-dark ">
-            <div class="col-sm-8 border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
+            <div class="col-sm border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
                 <p class="m-0 lh-sm ">Tire Pressure Record</p>
             </div>
         </div>
@@ -1556,15 +1557,12 @@
             </div>
         </div>
         <div class="row border border-dark ">
-            <div class="col-sm-8 border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
+            <div class="col-sm border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
                 <p class="m-0 lh-sm ">Faulty and repair record</p>
             </div>
         </div>
-        <div class="row border border-dark ">
-        <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
-                <textarea class="form-control" name="v187"  rows="10" ></textarea>
-
-            </div>
+        <div class="row border border-dark ">       
+                <textarea class="form-control w-100"  name="v187"  rows="10" ></textarea>
         </div>
     </div>  
     <div class="container">

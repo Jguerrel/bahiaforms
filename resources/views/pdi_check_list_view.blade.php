@@ -25,7 +25,7 @@
                 <h1 class="fs-2 text-end fw-bold m-0">Pre-Delivery Inspection (PDI) checking list</h1>
             </div>
             <div class="col-3 p-0 text-end align-self-center">
-            <img src="{{ asset('img/geely.png') }}" class="w-50" alt="Geely">
+            <img src="{{ asset('img/geely.png') }}" class="w-100" alt="Geely">
             </div>
         </div>
     </div>
@@ -1185,7 +1185,7 @@
                 </div> 
                 <div class="row border border-dark ">
                     <div class="col-sm-12 border-end border-dark align-items-center  ">
-                        <img src="{{ asset('img/pdi.png') }}" class="w-50" alt="pdi">
+                        <img src="{{ asset('img/pdi.png') }}" class="w-100" alt="pdi">
                     </div>
                 </div>
             </div>    
@@ -1352,7 +1352,7 @@
     <br>
     <div class="container-sm  border border-dark ">
         <div class="row border border-dark ">
-            <div class="col-sm-8 border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
+            <div class="col-sm border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
                 <p class="m-0 lh-sm ">Fault codes record</p>
             </div>
         </div>
@@ -1417,7 +1417,7 @@
             </div>
         </div>
         <div class="row border border-dark ">
-            <div class="col-sm-8 border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
+            <div class="col-sm border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
                 <p class="m-0 lh-sm ">Voltage / SOC value record</p>
             </div>
         </div>
@@ -1454,7 +1454,7 @@
             </div>
         </div>
         <div class="row border border-dark ">
-            <div class="col-sm-8 border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
+            <div class="col-sm border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
                 <p class="m-0 lh-sm ">Tire Pressure Record</p>
             </div>
         </div>
@@ -1491,15 +1491,14 @@
             </div>
         </div>
         <div class="row border border-dark ">
-            <div class="col-sm-8 border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
+            <div class="col-sm border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
                 <p class="m-0 lh-sm ">Faulty and repair record</p>
             </div>
         </div>
         <div class="row border border-dark ">
-            <div class="col-sm-8 border-end border-dark align-items-center p-1 text-start bg-secondary fw-bold">
-            <textarea class="form-control" name="v187"  rows="10" >{{$formdata->v187}}</textarea>
+            
+            <textarea readonly class="form-control w-200" name="v187"  rows="10" >{{$formdata->v187}}</textarea>
 
-            </div>
         </div>
     </div>  
     
