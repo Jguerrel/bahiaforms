@@ -43,7 +43,7 @@ Route::post('/vehicleform',[App\Http\Controllers\VehicleFormsController::class, 
 
 //Route::get('/home', [App\Http\Controllers\VehicleFormsController::class, 'index'])->name('home');
 
-Route::get('/sedan', function () {
+Route::get ('/sedan', function () {
     return view('canvas/tablero1');
 });
 Route::get('/suv', function () {

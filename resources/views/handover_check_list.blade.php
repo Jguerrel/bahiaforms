@@ -14,7 +14,6 @@
     <br>
     <form name="vehicleform" id="vehicleform" method="post" action="{{ route('vehicleform.store') }}" enctype="multipart/form-data">    
 @csrf
-
     <input type="hidden" value="{{$request->marca}}"  id="marca"  name="marca"  >
     <input type="hidden" value="{{$request->modelo}}" id="modelo" name="modelo" >
     <input type="hidden" value="{{$request->motor}}" id="motor" name="motor" >
@@ -67,16 +66,16 @@
         <div class="row">
             <div class="col-12 col-sm-6 border border-dark text-center">
                 <p><b>Sedan</b></p>
-                <div class="ratio ratio-1x1">
-                <iframe width="90%" height="375" src="/sedan"></iframe>
+                @include('canvas/tablero1')
+                <input type="hidden" id="myText" name="v302" value="no guarda">
                 </div>
-                
-            </div>   
             <div class="col-12 col-sm-6 border border-dark text-center">
                 <p><b>SUV</b></p>
-                <iframe  width="90%" height="375" src="/suv"></iframe>
+                @include('canvas/tablero2')
+                <input type="hidden" id="myText2" name="v303" value="no guarda">
             </div>
         </div>
+        <!-- <button type='button' onclick='allfuncion()'>Borrar</button> -->
        <!--  ------------>
         <div class="row border border-dark">
             <div class="col-12">
@@ -145,9 +144,11 @@
             </div>
             <div class="col-6">
                 <center>
-                    <input name="v12" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark mb-2 text-center w-75" placeholder="" aria-label="" aria-describedby="">
-                    <iframe width="100" height="142" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark mb-2 text-center w-75" placeholder="" aria-label="" aria-describedby="" src="/firma3"></iframe>
-                    <p class="form-label">Signature of distributor</p>
+                @include('canvas/tablero3')   
+                <input type="hidden" id="myText3" name="v12" value="no guarda">
+                <div class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark mb-2 text-center w-75"></div> 
+                <button  class="btn btn-primary mh-100" type='button' onclick='LimpiarTrazado3()'>Borrar</button>
+                <p class="form-label">Signature of distributor</p>
                 </center>
             </div>
         </div>
@@ -699,8 +700,9 @@
                 <p class="m-0 text-start lh-sm">Confirmed by delivery side:<br>Confirmado por la parte que entrega<br>Signature firma:</p>
             </div>
             <div class="col-12 col-sm-9 border-start border-dark d-flex align-items-center text-center p-0">
-                <input name="v224" type="text" class="form-control rounded-0 border-0 h-100"  placeholder="">
-                <iframe  width="200%" height="75%" src="/firma1"></iframe>
+                @include('canvas/tablero4')
+                <button  class="btn btn-primary mh-100" type='button' onclick='LimpiarTrazado4()'>Borrar</button> 
+                <input type="hidden" id="myText4" name="v224" value="no guarda">
             </div>
         </div>
         <div class="row border border-dark">
@@ -708,8 +710,9 @@
                 <p class="m-0 text-start lh-sm">Confirmed by receiving party:<br>Confirmado por la parte que recibe<br>Signature firma:</p>
             </div>
             <div class="col-12 col-sm-9 border-start border-dark d-flex align-items-center text-center p-0">
-                <input name="v153" type="text" class="form-control rounded-0 border-0 h-100"  placeholder="">
-                <iframe  width="200%" height="75%" src="/firma2"></iframe>    
+                @include('canvas/tablero5') 
+                <button  class="btn btn-primary mh-100" type='button' onclick='LimpiarTrazado5()'>Borrar</button>
+                <input type="hidden" id="myText5" name="v153" value="no guarda">
             </div>
         </div>
         <div class="row border border-dark">
@@ -1520,12 +1523,10 @@
     <div class="container">
         <div style="height: 100px;" class="row ">
             <div class="h-100 col-md-12 d-flex align-items-center p-1 text-center">
-                <button type="submit" class="btn btn-primary mh-100" style="width: 200px; height: 100px;">Guardar</button>
+                <button  onclick="allfuncion()" type="submit" class="btn btn-primary mh-100" style="width: 200px; height: 100px;">Guardar</button>
             </div>
         </div>
     </div>
-    
-
 </form>
     <style>
         input[type="checkbox"] {
@@ -1551,6 +1552,13 @@
             onLetterKeyup: function($item, event) {},
             onSet: function($el, event, value) {}
         });
+        function allfuncion() {
+            b64img();
+            b64img2();
+            b64img3();
+            b64img4() 
+            b64img5();
+        }
     </script>
 
 @endsection
