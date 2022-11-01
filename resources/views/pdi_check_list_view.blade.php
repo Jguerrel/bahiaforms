@@ -1185,7 +1185,7 @@
                 </div> 
                 <div class="row border border-dark ">
                     <div class="col-sm-12 border-end border-dark align-items-center  ">
-                        <img src="{{ asset('img/pdi.png') }}" class="w-100" alt="pdi">
+                        <img name="v300" src="{{$formdata->v300}}" border="1">
                     </div>
                 </div>
             </div>    

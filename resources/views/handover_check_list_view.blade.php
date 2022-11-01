@@ -83,11 +83,11 @@
         <div class="row">
             <div class="col-12 col-sm-6 border border-dark text-center">
                 <p><b>Sedan</b></p>
-                <img src="{{ asset('img/sedan.png') }}" alt="Sedan">
-            </div>
+                <img name="v302" src="{{$formdata->v302}}" border="1">
+                </div>
             <div class="col-12 col-sm-6 border border-dark text-center">
                 <p><b>SUV</b></p>
-                <img src="{{ asset('img/suv.png') }}" alt="SUV">
+                <img name="v303" src="{{$formdata->v303}}" border="1">
             </div>
         </div>
         <div class="row border border-dark">
@@ -157,7 +157,8 @@
             </div>
             <div class="col-6">
                 <center>
-                    <input name="v12" value="{{$formdata->v12}}" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark mb-2 text-center w-75" placeholder="" aria-label="" aria-describedby="">
+                    <img name="v12" src="{{$formdata->v12}}" border="1">
+                    <div class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark mb-2 text-center w-75"></div> 
                     <p class="form-label">Signature of distributor</p>
                 </center>
             </div>
@@ -710,7 +711,8 @@
                 <p class="m-0 text-start lh-sm">Confirmed by delivery side:<br>Confirmado por la parte que entrega<br>Signature firma:</p>
             </div>
             <div class="col-12 col-sm-9 border-start border-dark d-flex align-items-center text-center p-0">
-                <input name="v224" value="{{$formdata->v224}}" type="text" class="form-control rounded-0 border-0 h-100"  placeholder="">
+                <img name="v224" src="{{$formdata->v224}}" border="1">
+            
             </div>
         </div>
         <div class="row border border-dark">
@@ -718,7 +720,7 @@
                 <p class="m-0 text-start lh-sm">Confirmed by receiving party:<br>Confirmado por la parte que recibe<br>Signature firma:</p>
             </div>
             <div class="col-12 col-sm-9 border-start border-dark d-flex align-items-center text-center p-0">
-                <input name="v153" value="{{$formdata->v153}}" type="text" class="form-control rounded-0 border-0 h-100"  placeholder="">
+                <img name="v153" src="{{$formdata->v153}}" border="1">
             </div>
         </div>
         <div class="row border border-dark">
