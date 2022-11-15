@@ -2,47 +2,47 @@
 
 @section('content')
 @if ($errors->any())
-      <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-              <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-      </div><br />
-    @endif
-    <?php
-        //if(isset($request->formrequest))
-            
-            $formdata=json_decode($request->formrequest);
-            
-            //dd($formdata);
-        //endif
-    ?>
-    <div class="container">
-        <div class="row">
-            <div class="col-9 p-0">
-                <h1 class="fs-2 text-end fw-bold m-0">Handover Check List <span class="fs-5">Lista de verificación de entrega</span></h1>
-            </div>
-            <div class="col-3 p-0 text-end align-self-center">
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div><br />
+@endif
+<?php
+//if(isset($request->formrequest))
+
+$formdata = json_decode($request->formrequest);
+
+//dd($formdata);
+//endif
+?>
+<div class="container">
+    <div class="row">
+        <div class="col-9 p-0">
+            <h1 class="fs-2 text-end fw-bold m-0">Handover Check List <span class="fs-5">Lista de verificación de entrega</span></h1>
+        </div>
+        <div class="col-3 p-0 text-end align-self-center">
             <img src="{{ asset('img/geely.png') }}" class="w-50" alt="Geely">
-            </div>
         </div>
     </div>
-    <br>
-    <form name="vehicleform" id="vehicleform" method="post" action="{{ route('vehicleform.store') }}">    
-@csrf
-    <input type="hidden" value="{{$request->marca}}"  id="marca"  name="marca"  >
-    <input type="hidden" value="{{$request->modelo}}" id="modelo" name="modelo" >
-    <input type="hidden" value="{{$request->motor}}" id="motor" name="motor" >
-    <input type="hidden" value="{{$request->chasis}}" id="chasis" name="chasis" >
-    <input type="hidden" value="{{$request->anio}}" id="anio" name="anio" >
-    <input type="hidden" value="{{$request->version}}" id="version" name="version" >
-    <input type="hidden" value="{{$request->colorexterior}}" id="colorexterior" name="colorexterior" >
-    <input type="hidden" value="{{$request->colorinterior}}" id="colorinterior" name="colorinterior" >
-    <input type="hidden" value="Handover Check List" id="formname" name="formname" >
-    <input type="hidden" value=" " id="formrequest" name="formrequest" >
-    <input type="hidden" value="handover_check_list" id="formid" name="formid" >
-    <input type="hidden" value="{{ route('handover.check.view') }}" id="formaction" name="formaction" >
+</div>
+<br>
+<form name="vehicleform" id="vehicleform" method="post" action="{{ route('vehicleform.store') }}">
+    @csrf
+    <input type="hidden" value="{{$request->marca}}" id="marca" name="marca">
+    <input type="hidden" value="{{$request->modelo}}" id="modelo" name="modelo">
+    <input type="hidden" value="{{$request->motor}}" id="motor" name="motor">
+    <input type="hidden" value="{{$request->chasis}}" id="chasis" name="chasis">
+    <input type="hidden" value="{{$request->anio}}" id="anio" name="anio">
+    <input type="hidden" value="{{$request->version}}" id="version" name="version">
+    <input type="hidden" value="{{$request->colorexterior}}" id="colorexterior" name="colorexterior">
+    <input type="hidden" value="{{$request->colorinterior}}" id="colorinterior" name="colorinterior">
+    <input type="hidden" value="Handover Check List" id="formname" name="formname">
+    <input type="hidden" value=" " id="formrequest" name="formrequest">
+    <input type="hidden" value="handover_check_list" id="formid" name="formid">
+    <input type="hidden" value="{{ route('handover.check.view') }}" id="formaction" name="formaction">
     <div class="container border border-dark">
         <div class="row bg-secondary d-flex align-items-stretch">
             <div class="col-sm-3 border border-dark d-flex align-items-center">
@@ -60,17 +60,17 @@
         </div>
         <div class="row">
             <div class="col-sm-3 p-0 border border-dark">
-                <input name="v216" value="{{$formdata->v216}}" type="text" class="form-control border-0 rounded-0 text-center "  placeholder="">
+                <input name="v216" value="{{$formdata->v216}}" type="text" class="form-control border-0 rounded-0 text-center " placeholder="">
             </div>
             <div class="col-sm-3 p-0 border border-dark">
                 <input name="v217" value="{{$formdata->v217}}" type="text" class="form-control border-0 rounded-0 text-center " id="chasis" placeholder="" value="{{ $request->chasis; }}
 ">
             </div>
             <div class="col-sm-3 p-0 border border-dark">
-                <input name="v218" value="{{$formdata->v218}}" type="date" class="form-control border-0 rounded-0"  placeholder="">
+                <input name="v218" value="{{$formdata->v218}}" type="date" class="form-control border-0 rounded-0" placeholder="">
             </div>
             <div class="col-sm-3 p-0 border border-dark">
-                <input name="v219" value="{{$formdata->v219}}" type="text" class="form-control border-0 rounded-0 text-center "  placeholder="">
+                <input name="v219" value="{{$formdata->v219}}" type="text" class="form-control border-0 rounded-0 text-center " placeholder="">
             </div>
         </div>
         <div class="row">
@@ -84,7 +84,7 @@
             <div class="col-12 col-sm-6 border border-dark text-center">
                 <p><b>Sedan</b></p>
                 <img name="v302" src="{{$formdata->v302}}" border="1">
-                </div>
+            </div>
             <div class="col-12 col-sm-6 border border-dark text-center">
                 <p><b>SUV</b></p>
                 <img name="v303" src="{{$formdata->v303}}" border="1">
@@ -96,45 +96,45 @@
             </div>
             <div class="col-6">
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" >1) </span>
+                    <span class="input-group-text bg-transparent border-0 ps-0">1) </span>
                     <input name="v1" value="{{$formdata->v1}}" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" >2) </span>
+                    <span class="input-group-text bg-transparent border-0 ps-0">2) </span>
                     <input name="v2" value="{{$formdata->v2}}" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" >3) </span>
-                    <input name="v3"value="{{$formdata->v3}}" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
+                    <span class="input-group-text bg-transparent border-0 ps-0">3) </span>
+                    <input name="v3" value="{{$formdata->v3}}" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" >4) </span>
+                    <span class="input-group-text bg-transparent border-0 ps-0">4) </span>
                     <input name="v4" value="{{$formdata->v4}}" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" >5) </span>
+                    <span class="input-group-text bg-transparent border-0 ps-0">5) </span>
                     <input name="v5" value="{{$formdata->v5}}" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
             </div>
             <div class="col-6">
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" >6) </span>
+                    <span class="input-group-text bg-transparent border-0 ps-0">6) </span>
                     <input name="v6" value="{{$formdata->v6}}" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" >7) </span>
+                    <span class="input-group-text bg-transparent border-0 ps-0">7) </span>
                     <input name="v7" value="{{$formdata->v7}}" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" >8) </span>
+                    <span class="input-group-text bg-transparent border-0 ps-0">8) </span>
                     <input name="v8" value="{{$formdata->v8}}" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" >9) </span>
+                    <span class="input-group-text bg-transparent border-0 ps-0">9) </span>
                     <input name="v9" value="{{$formdata->v9}}" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
                 <div class="input-group mb-1">
-                    <span class="input-group-text bg-transparent border-0 ps-0" >10) </span>
+                    <span class="input-group-text bg-transparent border-0 ps-0">10) </span>
                     <input name="v10" value="{{$formdata->v10}}" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
             </div>
@@ -158,7 +158,7 @@
             <div class="col-6">
                 <center>
                     <img name="v12" src="{{$formdata->v12}}" border="1">
-                    <div class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark mb-2 text-center w-75"></div> 
+                    <div class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark mb-2 text-center w-75"></div>
                     <p class="form-label">Signature of distributor</p>
                 </center>
             </div>
@@ -172,11 +172,11 @@
             </div>
             <div class="col-6">
                 <div class="input-group">
-                    <span class="input-group-text bg-transparent border-0 ps-0" >Waybill No.: </span>
+                    <span class="input-group-text bg-transparent border-0 ps-0">Waybill No.: </span>
                     <input name="v13" value="{{$formdata->v13}}" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0 border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
                 <div class="input-group">
-                    <span class="input-group-text bg-transparent border-0 ps-0" >(BOL).: </span>
+                    <span class="input-group-text bg-transparent border-0 ps-0">(BOL).: </span>
                     <input name="v220" value="{{$formdata->v220}}" type="text" class="form-control rounded-0 border-0" placeholder="" aria-label="" aria-describedby="">
                 </div>
             </div>
@@ -196,8 +196,8 @@
             </div>
             <div class="col-2 border-start border-end border-dark d-flex align-items-center">
                 <div class="input-group d-block">
-                    <span class="input-group-text p-0 bg-transparent border-0" >Configuration</span>
-                    <select name="v16" value="{{$formdata->v16}}" class="form-select ps-0 pe-0 border-0 rounded-0 w-100" >
+                    <span class="input-group-text p-0 bg-transparent border-0">Configuration</span>
+                    <select name="v16" value="{{$formdata->v16}}" class="form-select ps-0 pe-0 border-0 rounded-0 w-100">
                         <option selected>Choose...</option>
                         <option value="1">Manual</option>
                         <option value="2">Automatic</option>
@@ -211,14 +211,14 @@
         <div class="row border border-dark">
             <div class="col-4 border-end border-dark d-flex align-items-center pe-0">
                 <div class="input-group">
-                    <span class="input-group-text bg-transparent border-0 ps-0" >Kilometraje (Km)</span>
+                    <span class="input-group-text bg-transparent border-0 ps-0">Kilometraje (Km)</span>
                     <input name="v17" value="{{$formdata->v17}}" type="number" class="form-control rounded-0 border-0 border-start border-dark" placeholder="" aria-label="" aria-describedby="">
                 </div>
             </div>
             <div class="col-8 border-start border-dark d-flex align-items-center p-0" id="phoneInput">
                 <div class="input-group h-100">
-                    <input name="v18" value="{{$formdata->v18}}" type="text" class="form-control border-0 p-0 text-center letter" placeholder="" aria-label="" >
-                    
+                    <input name="v18" value="{{$formdata->v18}}" type="text" class="form-control border-0 p-0 text-center letter" placeholder="" aria-label="">
+
                 </div>
             </div>
         </div>
@@ -260,7 +260,7 @@
                 <p class="m-0 lh-sm">Defect No.</p>
             </div>
             <div class="col-11 col-sm-9 border-start border-dark">
-            
+
                 <div style="height:200px" class="row">
                     <div class="col-1 border-end border-dark  ">
                         <div style="transform: rotate(90deg);transform-origin: top left;width: 180px;margin-left: 30px; margin-top: 5px;" class="lh-1">Vehicle No</div>
@@ -308,40 +308,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v48" value="{{isset($formdata->v48)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v48" value="{{$formdata->v48}}" type="text" class="form-control" placeholder="" aria-label="" aria-describedby="">
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v49" value="{{isset($formdata->v49)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v49" value="{{isset($formdata->v49)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v50" value="{{isset($formdata->v50)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v50" value="{{isset($formdata->v50)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v51" value="{{isset($formdata->v51)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v51" value="{{isset($formdata->v51)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v52" value="{{isset($formdata->v52)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v52" value="{{isset($formdata->v52)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v53" value="{{isset($formdata->v53)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v53" value="{{isset($formdata->v53)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v54" value="{{isset($formdata->v54)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v54" value="{{isset($formdata->v54)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v55" value="{{isset($formdata->v55)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v55" value="{{isset($formdata->v55)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v56" value="{{isset($formdata->v56)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v56" value="{{isset($formdata->v56)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v57" value="{{isset($formdata->v57)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v57" value="{{isset($formdata->v57)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-start border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v58" value="{{isset($formdata->v58)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v58" value="{{isset($formdata->v58)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v59" value="{{isset($formdata->v59)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v59" value="{{$formdata->v59}}" type="text" class="form-control" placeholder="" aria-label="" aria-describedby="">
                     </div>
                 </div>
             </div>
@@ -353,40 +353,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v60" value="{{isset($formdata->v60)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v60" value="{{isset($formdata->v60)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v61" value="{{isset($formdata->v61)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v61" value="{{isset($formdata->v61)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v62" value="{{isset($formdata->v62)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v62" value="{{isset($formdata->v62)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v63" value="{{isset($formdata->v63)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v63" value="{{isset($formdata->v63)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v64" value="{{isset($formdata->v64)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v64" value="{{isset($formdata->v64)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v65" value="{{isset($formdata->v65)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v65" value="{{isset($formdata->v65)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v66" value="{{isset($formdata->v66)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v66" value="{{isset($formdata->v66)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v67" value="{{isset($formdata->v67)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v67" value="{{isset($formdata->v67)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v68" value="{{isset($formdata->v68)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v68" value="{{isset($formdata->v68)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v69" value="{{isset($formdata->v69)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v69" value="{{isset($formdata->v69)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v70" value="{{isset($formdata->v70)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v70" value="{{isset($formdata->v70)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v71" value="{{isset($formdata->v71)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v71" value="{{isset($formdata->v71)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                 </div>
             </div>
@@ -398,40 +398,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v72" value="{{isset($formdata->v72)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v72" value="{{isset($formdata->v72)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v73" value="{{isset($formdata->v73)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v73" value="{{isset($formdata->v73)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v74" value="{{isset($formdata->v74)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v74" value="{{isset($formdata->v74)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v75" value="{{isset($formdata->v75)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v75" value="{{isset($formdata->v75)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v76" value="{{isset($formdata->v76)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v76" value="{{isset($formdata->v76)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v77" value="{{isset($formdata->v77)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v77" value="{{isset($formdata->v77)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v78" value="{{isset($formdata->v78)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v78" value="{{isset($formdata->v78)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v79" value="{{isset($formdata->v79)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v79" value="{{isset($formdata->v79)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v80" value="{{isset($formdata->v80)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v80" value="{{isset($formdata->v80)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v81" value="{{isset($formdata->v81)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v81" value="{{isset($formdata->v81)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v82" value="{{isset($formdata->v82)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v82" value="{{isset($formdata->v82)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v83" value="{{isset($formdata->v83)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v83" value="{{isset($formdata->v83)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                 </div>
             </div>
@@ -443,40 +443,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v84" value="{{isset($formdata->v84)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v84" value="{{isset($formdata->v84)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v85" value="{{isset($formdata->v85)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v85" value="{{isset($formdata->v85)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v86" value="{{isset($formdata->v86)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v86" value="{{isset($formdata->v86)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v87" value="{{isset($formdata->v87)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v87" value="{{isset($formdata->v87)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v88" value="{{isset($formdata->v88)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v88" value="{{isset($formdata->v88)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v89" value="{{isset($formdata->v89)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v89" value="{{isset($formdata->v89)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v90" value="{{isset($formdata->v90)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v90" value="{{isset($formdata->v90)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v91" value="{{isset($formdata->v91)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v91" value="{{isset($formdata->v91)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v221" value="{{isset($formdata->v221)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v221" value="{{isset($formdata->v221)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v92" value="{{isset($formdata->v92)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v92" value="{{isset($formdata->v92)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v93" value="{{isset($formdata->v93)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v93" value="{{isset($formdata->v93)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v94" value="{{isset($formdata->v94)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v94" value="{{isset($formdata->v94)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                 </div>
             </div>
@@ -488,40 +488,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v95" value="{{isset($formdata->v95)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v95" value="{{isset($formdata->v95)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v96" value="{{isset($formdata->v96)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v96" value="{{isset($formdata->v96)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v97" value="{{isset($formdata->v97)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v97" value="{{isset($formdata->v97)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v98" value="{{isset($formdata->v98)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v98" value="{{isset($formdata->v98)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v99" value="{{isset($formdata->v99)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v99" value="{{isset($formdata->v99)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v100" value="{{isset($formdata->v100)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v100" value="{{isset($formdata->v100)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v222" value="{{isset($formdata->v222)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v222" value="{{isset($formdata->v222)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v101" value="{{isset($formdata->v101)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v101" value="{{isset($formdata->v101)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v102" value="{{isset($formdata->v102)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v102" value="{{isset($formdata->v102)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v103" value="{{isset($formdata->v103)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v103" value="{{isset($formdata->v103)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v104" value="{{isset($formdata->v104)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v104" value="{{isset($formdata->v104)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v105" value="{{isset($formdata->v105)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v105" value="{{isset($formdata->v105)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                 </div>
             </div>
@@ -533,40 +533,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v106" value="{{isset($formdata->v106)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v106" value="{{isset($formdata->v106)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v107" value="{{isset($formdata->v107)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v107" value="{{isset($formdata->v107)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v108" value="{{isset($formdata->v108)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v108" value="{{isset($formdata->v108)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v109" value="{{isset($formdata->v109)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v109" value="{{isset($formdata->v109)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v110" value="{{isset($formdata->v110)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v110" value="{{isset($formdata->v110)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v111" value="{{isset($formdata->v111)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v111" value="{{isset($formdata->v111)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v112" value="{{isset($formdata->v112)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v112" value="{{isset($formdata->v112)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v223" value="{{isset($formdata->v223)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v223" value="{{isset($formdata->v223)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v113" value="{{isset($formdata->v113)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v113" value="{{isset($formdata->v113)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v114" value="{{isset($formdata->v114)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v114" value="{{isset($formdata->v114)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v115" value="{{isset($formdata->v115)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v115" value="{{isset($formdata->v115)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v116" value="{{isset($formdata->v116)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v116" value="{{isset($formdata->v116)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                 </div>
             </div>
@@ -578,40 +578,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v117" value="{{isset($formdata->v117)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v117" value="{{isset($formdata->v117)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v118" value="{{isset($formdata->v118)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v118" value="{{isset($formdata->v118)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v119" value="{{isset($formdata->v119)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v119" value="{{isset($formdata->v119)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v120" value="{{isset($formdata->v120)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v120" value="{{isset($formdata->v120)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v121" value="{{isset($formdata->v121)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v121" value="{{isset($formdata->v121)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v122" value="{{isset($formdata->v122)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v122" value="{{isset($formdata->v122)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v123" value="{{isset($formdata->v123)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v123" value="{{isset($formdata->v123)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v124" value="{{isset($formdata->v124)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v124" value="{{isset($formdata->v124)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v125" value="{{isset($formdata->v125)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v125" value="{{isset($formdata->v125)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v126" value="{{isset($formdata->v126)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v126" value="{{isset($formdata->v126)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v127" value="{{isset($formdata->v127)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v127" value="{{isset($formdata->v127)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v128" value="{{isset($formdata->v128)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v128" value="{{isset($formdata->v128)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                 </div>
             </div>
@@ -623,40 +623,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v129" value="{{isset($formdata->v129)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v129" value="{{isset($formdata->v129)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v130" value="{{isset($formdata->v130)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v130" value="{{isset($formdata->v130)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v131" value="{{isset($formdata->v131)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v131" value="{{isset($formdata->v131)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v132" value="{{isset($formdata->v132)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v132" value="{{isset($formdata->v132)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v133" value="{{isset($formdata->v133)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v133" value="{{isset($formdata->v133)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v134" value="{{isset($formdata->v134)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v134" value="{{isset($formdata->v134)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v135" value="{{isset($formdata->v135)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v135" value="{{isset($formdata->v135)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v136" value="{{isset($formdata->v136)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v136" value="{{isset($formdata->v136)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v137" value="{{isset($formdata->v137)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v137" value="{{isset($formdata->v137)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v138" value="{{isset($formdata->v138)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v138" value="{{isset($formdata->v138)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v139" value="{{isset($formdata->v139)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v139" value="{{isset($formdata->v139)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v140" value="{{isset($formdata->v140)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v140" value="{{isset($formdata->v140)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                 </div>
             </div>
@@ -668,40 +668,40 @@
             <div class="col-12 col-sm-9 border-start border-dark">
                 <div class="row">
                     <div class="col-1 border-end border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v141" value="{{isset($formdata->v141)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v141" value="{{isset($formdata->v141)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v142" value="{{isset($formdata->v142)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v142" value="{{isset($formdata->v142)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v143" value="{{isset($formdata->v143)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v143" value="{{isset($formdata->v143)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v144" value="{{isset($formdata->v144)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v144" value="{{isset($formdata->v144)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v145" value="{{isset($formdata->v145)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v145" value="{{isset($formdata->v145)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v146" value="{{isset($formdata->v146)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v146" value="{{isset($formdata->v146)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v147" value="{{isset($formdata->v147)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v147" value="{{isset($formdata->v147)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v148" value="{{isset($formdata->v148)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v148" value="{{isset($formdata->v148)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v149" value="{{isset($formdata->v149)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v149" value="{{isset($formdata->v149)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v150" value="{{isset($formdata->v150)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v150" value="{{isset($formdata->v150)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-end border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v151" value="{{isset($formdata->v151)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v151" value="{{isset($formdata->v151)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                     <div class="col-1 border-start border-dark d-flex align-items-center pt-2 pb-2 text-center">
-                        <input name="v152" value="{{isset($formdata->v152)}}"  class="form-check-input rounded-0 border-0 w-100 mt-0" type="text"  >
+                        <input name="v152" value="{{isset($formdata->v152)}}" class="form-check-input rounded-0 border-0 w-100 mt-0" type="text">
                     </div>
                 </div>
             </div>
@@ -712,7 +712,7 @@
             </div>
             <div class="col-12 col-sm-9 border-start border-dark d-flex align-items-center text-center p-0">
                 <img name="v224" src="{{$formdata->v224}}" border="1">
-            
+
             </div>
         </div>
         <div class="row border border-dark">
@@ -728,10 +728,10 @@
                 <p class="m-0 text-start lh-sm">Inspection date fecha de inspección</p>
             </div>
             <div class="col-12 col-sm-9 border-start border-dark d-flex align-items-center text-center p-0">
-                <input name="v154" value="{{$formdata->v154}}" type="date" class="form-control rounded-0 border-0 h-100"  placeholder="">
+                <input name="v154" value="{{$formdata->v154}}" type="date" class="form-control rounded-0 border-0 h-100" placeholder="">
             </div>
         </div>
-    </div> 
+    </div>
     <br>
     <div class="container">
         <div class="row border-bottom border-dark">
@@ -744,12 +744,12 @@
         <!-- 1 - 22 - 42  -->
         <div class="row border border-top-0 border-dark">
             <div class="col-1 border-end border-dark d-flex align-items-center p-3 text-center ">
-                <div class="position-relative d-flex align-items-center w-100 h-100" >
+                <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">1</p>
-                    <div class="position-absolute top-50 start-50 translate-middle" >
-                        <input name="v155" {{isset($formdata->v155)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark  mt-0 check-r" type="checkbox"  >
+                    <div class="position-absolute top-50 start-50 translate-middle">
+                        <input name="v155" {{isset($formdata->v155)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark  mt-0 check-r" type="checkbox">
                     </div>
-                    
+
 
                 </div>
             </div>
@@ -760,7 +760,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">22</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v156" {{isset($formdata->v156)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark  mt-0 check-r" type="checkbox"  >
+                        <input name="v156" {{isset($formdata->v156)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark  mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -771,7 +771,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">42</p>
                     <div class="position-absolute top-50 start-50 translate-middle">
-                        <input name="v157" {{isset($formdata->v157)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v157" {{isset($formdata->v157)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -785,7 +785,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">2</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v158" {{isset($formdata->v158)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v158" {{isset($formdata->v158)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -796,7 +796,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">23</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v159" {{isset($formdata->v159)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v159" {{isset($formdata->v159)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -807,7 +807,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">43</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v160" {{isset($formdata->v160)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v160" {{isset($formdata->v160)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -821,7 +821,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">3</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v161" {{isset($formdata->v161)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v161" {{isset($formdata->v161)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -832,7 +832,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">24</p>
                     <div class="position-absolute top-50 start-50 translate-middle">
-                        <input name="v162" {{isset($formdata->v162)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v162" {{isset($formdata->v162)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -843,7 +843,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">44</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v163" {{isset($formdata->v163)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v163" {{isset($formdata->v163)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -857,7 +857,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">4</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v164" {{isset($formdata->v164)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v164" {{isset($formdata->v164)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -868,7 +868,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">25</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v165" {{isset($formdata->v165)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v165" {{isset($formdata->v165)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -879,7 +879,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">45</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v166" {{isset($formdata->v166)? __('checked') : __('') }} style="width: 40px !important;"   class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v166" {{isset($formdata->v166)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -893,7 +893,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">5</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v167" {{isset($formdata->v167)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v167" {{isset($formdata->v167)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -904,7 +904,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">26</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v168" {{isset($formdata->v168)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v168" {{isset($formdata->v168)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -915,7 +915,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">46</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v169" {{isset($formdata->v169)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v169" {{isset($formdata->v169)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -929,7 +929,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">6</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v170" {{isset($formdata->v170)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v170" {{isset($formdata->v170)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -940,7 +940,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">27</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v171" {{isset($formdata->v171)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v171" {{isset($formdata->v171)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -951,7 +951,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">47</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v172" {{isset($formdata->v172)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v172" {{isset($formdata->v172)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -965,7 +965,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">7</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v173" {{isset($formdata->v173)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v173" {{isset($formdata->v173)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -976,7 +976,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">28</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v174" {{isset($formdata->v174)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v174" {{isset($formdata->v174)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -987,7 +987,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">48</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v175" {{isset($formdata->v175)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v175" {{isset($formdata->v175)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1001,7 +1001,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">8</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v176" {{isset($formdata->v176)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v176" {{isset($formdata->v176)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1012,7 +1012,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">29</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v177" {{isset($formdata->v177)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v177" {{isset($formdata->v177)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1023,7 +1023,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">49</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v178" {{isset($formdata->v178)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v178" {{isset($formdata->v178)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1037,7 +1037,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">9</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v179" {{isset($formdata->v179)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v179" {{isset($formdata->v179)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1048,7 +1048,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">30</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v180" {{isset($formdata->v180)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v180" {{isset($formdata->v180)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1059,7 +1059,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">50</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v181" {{isset($formdata->v181)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v181" {{isset($formdata->v181)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1073,7 +1073,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">10</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v182" {{isset($formdata->v182)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v182" {{isset($formdata->v182)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1084,7 +1084,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">31</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v183" {{isset($formdata->v184)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v183" {{isset($formdata->v184)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1095,7 +1095,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">51</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v184" {{isset($formdata->v184)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v184" {{isset($formdata->v184)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1109,7 +1109,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">11</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v185" {{isset($formdata->v185)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v185" {{isset($formdata->v185)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1120,7 +1120,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">32</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v186" {{isset($formdata->v186)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v186" {{isset($formdata->v186)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1131,7 +1131,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">52</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v187" {{isset($formdata->v187)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v187" {{isset($formdata->v187)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1145,7 +1145,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">12</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v188" {{isset($formdata->v188)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v188" {{isset($formdata->v188)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1156,7 +1156,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">33</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v189" {{isset($formdata->v189)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v189" {{isset($formdata->v189)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1167,7 +1167,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">53</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v190" {{isset($formdata->v190)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v190" {{isset($formdata->v190)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1181,7 +1181,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">13</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v191" {{isset($formdata->v191)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v191" {{isset($formdata->v191)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1192,7 +1192,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">34</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v192" {{isset($formdata->v192)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v192" {{isset($formdata->v192)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1203,7 +1203,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">54</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v193" {{isset($formdata->v193)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v193" {{isset($formdata->v193)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1217,7 +1217,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">14</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v194" {{isset($formdata->v194)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v194" {{isset($formdata->v194)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1228,7 +1228,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">35</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v195" {{isset($formdata->v195)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v195" {{isset($formdata->v195)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1239,7 +1239,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">55</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v196" {{isset($formdata->v196)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v196" {{isset($formdata->v196)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1253,7 +1253,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">15</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v197" {{isset($formdata->v197)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v197" {{isset($formdata->v197)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1264,7 +1264,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">36</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v198" {{isset($formdata->v198)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v198" {{isset($formdata->v198)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1275,7 +1275,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">56</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v199" {{isset($formdata->v199)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v199" {{isset($formdata->v199)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1289,7 +1289,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">16</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v200" {{isset($formdata->v200)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v200" {{isset($formdata->v200)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1300,7 +1300,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">37</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v201" {{isset($formdata->v201)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v201" {{isset($formdata->v201)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1311,7 +1311,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">57</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v202" {{isset($formdata->v202)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v202" {{isset($formdata->v202)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1325,7 +1325,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">17</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v203" {{isset($formdata->v203)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v203" {{isset($formdata->v203)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1336,7 +1336,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">38</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v204" {{isset($formdata->v204)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v204" {{isset($formdata->v204)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1347,7 +1347,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">58</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v205" {{isset($formdata->v205)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v205" {{isset($formdata->v205)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1361,7 +1361,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">18</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v206" {{isset($formdata->v206)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v206" {{isset($formdata->v206)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1372,7 +1372,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">39</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v207" {{isset($formdata->v207)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v207" {{isset($formdata->v207)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1383,7 +1383,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">59</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v208" {{isset($formdata->v208)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v208" {{isset($formdata->v208)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1397,7 +1397,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">19</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v209" {{isset($formdata->v209)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v209" {{isset($formdata->v209)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1408,7 +1408,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">40</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v210" {{isset($formdata->v210)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v210" {{isset($formdata->v210)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1419,7 +1419,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">60</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v211" {{isset($formdata->v211)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v211" {{isset($formdata->v211)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1433,7 +1433,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">20</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v212" {{isset($formdata->v212)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v212" {{isset($formdata->v212)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1444,7 +1444,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">41</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v213" {{isset($formdata->v213)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v213" {{isset($formdata->v213)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1455,7 +1455,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">61</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v214" {{isset($formdata->v214)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v214" {{isset($formdata->v214)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1469,7 +1469,7 @@
                 <div class="position-relative d-flex align-items-center w-100 h-100">
                     <p class="m-0 align-self-center text-center w-100 lh-sm">21</p>
                     <div class="position-absolute top-50 start-50 translate-middle ">
-                        <input name="v215" {{isset($formdata->v215)? __('checked') : __('') }} style="width: 40px !important;"  class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox"  >
+                        <input name="v215" {{isset($formdata->v215)? __('checked') : __('') }} style="width: 40px !important;" class="form-check-input rounded-circle border-dark w-50 mt-0 check-r" type="checkbox">
                     </div>
                 </div>
             </div>
@@ -1528,34 +1528,36 @@
             </div>
         </div>
     </div>
-    
-    
+
+
 
 </form>
-    <style>
-        input[type="checkbox"] {
-            min-height: 30px;
-        }
-        .check-r {
-            background: transparent
-        }
-        .check-r:checked[type=checkbox] {
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-    </style>
+<style>
+    input[type="checkbox"] {
+        min-height: 30px;
+    }
 
-    <script type="text/javascript">
-        $('#phoneInput').letteringInput({
-            forbiddenKeyCodes: [ 9, 16, 17, 18, 20, 27, 32, 33, 34, 38, 40, 45, 144 ]
-        });
-        $('#phoneInput').letteringInput({
-            inputClass: 'letter',
-            onFocusLetter: function() {},
-            onBlurLetter: function() {},
-            onLetterKeyup: function($item, event) {},
-            onSet: function($el, event, value) {}
-        });
-    </script>
+    .check-r {
+        background: transparent
+    }
+
+    .check-r:checked[type=checkbox] {
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+</style>
+
+<script type="text/javascript">
+    $('#phoneInput').letteringInput({
+        forbiddenKeyCodes: [9, 16, 17, 18, 20, 27, 32, 33, 34, 38, 40, 45, 144]
+    });
+    $('#phoneInput').letteringInput({
+        inputClass: 'letter',
+        onFocusLetter: function() {},
+        onBlurLetter: function() {},
+        onLetterKeyup: function($item, event) {},
+        onSet: function($el, event, value) {}
+    });
+</script>
 
 @endsection
