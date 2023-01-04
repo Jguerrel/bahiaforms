@@ -1427,7 +1427,7 @@
                 
             </div>
             <div class="col-sm-4  align-items-center p-1 text-start  fw-bold">
-                <input name="v179"  type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
+                <input name="v179" value="{{$formdata->v179}}" type="text" class="form-control rounded-0 border-bottom " id="" placeholder="">
             </div>
             <div class="col-sm-2  align-items-center p-1 text-end  fw-bold">
                 <p class="m-0 lh-sm ">EV power battery SOC:</p>
