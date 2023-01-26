@@ -63,4 +63,4 @@ Route::get('/pdi', function () {
 });
 
 // Ruta para dompdf
-Route::get('download-pdf', [App\Http\Controllers\PdiController::class, 'downloadPdf'])->name('download-pdf');
+Route::get('download-pdf', [App\Http\Controllers\SearchController::class, 'downloadPdf'])->name('download-pdf');
