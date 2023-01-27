@@ -107,23 +107,22 @@
             @endforeach
         @endif
     </table>
-    <br>
-    <h4>Reporte Individual por inspección con observaciones</h4>
-    <h3>HANDOVER</h3>
-    <table>
-        <thead>
-            <tr align="left">
-                <th style="width: 100px;">Marca temporal</th>
-                <th style="width: 100px;">Numero Vim</th>
-                <th style="width: 25px;">KMS</th>
-                <th style="width: 50px;">Marca</th>
-                <th style="width: 50px;">Modelo</th>
-                <th style="width: 25px;">Versión</th>
-                <th>Color del automóvil</th>
-            </tr>
-        </thead>
 
-        @if ($list_handover->isNotEmpty())
+    <h4>Reporte Individual por inspección con observaciones</h4>
+    @if ($list_handover->isNotEmpty())
+        <h3>HANDOVER</h3>
+        <table>
+            <thead>
+                <tr align="left">
+                    <th style="width: 100px;">Marca temporal</th>
+                    <th style="width: 100px;">Numero Vim</th>
+                    <th style="width: 25px;">KMS</th>
+                    <th style="width: 50px;">Marca</th>
+                    <th style="width: 50px;">Modelo</th>
+                    <th style="width: 25px;">Versión</th>
+                    <th>Color del automóvil</th>
+                </tr>
+            </thead>
             @foreach ($list_handover as $data)
                 @if ($data->handover > 0)
                     <tr align="left">
@@ -154,25 +153,25 @@
                     </tr>
                 @endif
             @endforeach
-        @endif
-    </table>
+        </table>
+    @endif
 
-    <br>
-    <h3>LONGTERM</h3>
-    <table>
-        <thead>
-            <tr align="left">
-                <th style="width: 100px;">Marca temporal</th>
-                <th style="width: 100px;">Numero Vim</th>
-                <th style="width: 25px;">KMS</th>
-                <th style="width: 50px;">Marca</th>
-                <th style="width: 50px;">Modelo</th>
-                <th style="width: 25px;">Versión</th>
-                <th>Color del automóvil</th>
-            </tr>
-        </thead>
+    @if ($list_long_term_store->isNotEmpty())
+        <h3>LONGTERM</h3>
+        <table>
+            <thead>
+                <tr align="left">
+                    <th style="width: 100px;">Marca temporal</th>
+                    <th style="width: 100px;">Numero Vim</th>
+                    <th style="width: 25px;">KMS</th>
+                    <th style="width: 50px;">Marca</th>
+                    <th style="width: 50px;">Modelo</th>
+                    <th style="width: 25px;">Versión</th>
+                    <th>Color del automóvil</th>
+                </tr>
+            </thead>
 
-        @if ($list_long_term_store->isNotEmpty())
+
             @foreach ($list_long_term_store as $data)
                 @if ($data->long_term_store > 0)
                     <tr align="left">
@@ -203,26 +202,27 @@
                     </tr>
                 @endif
             @endforeach
-        @endif
-    </table>
 
-    <br>
-    <h3>PDI</h3>
-    <table>
-        <thead>
-            <tr align="left">
-                <th style="width: 100px;">Marca temporal</th>
-                <th style="width: 100px;">Numero Vim</th>
-                <th style="width: 25px;">KMS</th>
-                <th style="width: 50px;">Marca</th>
-                <th style="width: 50px;">Modelo</th>
-                <th style="width: 25px;">Versión</th>
-                <th>Color del automóvil</th>
-                <th>Registro de fallas y reparaciones</th>
-            </tr>
-        </thead>
+        </table>
+    @endif
 
-        @if ($list_pdi->isNotEmpty())
+    @if ($list_pdi->isNotEmpty())
+        <h3>PDI</h3>
+        <table>
+            <thead>
+                <tr align="left">
+                    <th style="width: 100px;">Marca temporal</th>
+                    <th style="width: 100px;">Numero Vim</th>
+                    <th style="width: 25px;">KMS</th>
+                    <th style="width: 50px;">Marca</th>
+                    <th style="width: 50px;">Modelo</th>
+                    <th style="width: 25px;">Versión</th>
+                    <th>Color del automóvil</th>
+                    <th>Registro de fallas y reparaciones</th>
+                </tr>
+            </thead>
+
+
             @foreach ($list_pdi as $data)
                 <?php
                 //if(isset($request->formrequest))
@@ -263,25 +263,26 @@
                     </tr>
                 @endif
             @endforeach
-        @endif
-    </table>
 
-    <br>
-    <h3>BATTERY STOCK</h3>
-    <table>
-        <thead>
-            <tr align="left">
-                <th style="width: 100px;">Marca temporal</th>
-                <th style="width: 100px;">Numero Vim</th>
-                <th style="width: 25px;">KMS</th>
-                <th style="width: 50px;">Marca</th>
-                <th style="width: 50px;">Modelo</th>
-                <th style="width: 25px;">Versión</th>
-                <th>Color del automóvil</th>
-            </tr>
-        </thead>
+        </table>
+    @endif
 
-        @if ($list_battery_inspection->isNotEmpty())
+    @if ($list_battery_inspection->isNotEmpty())
+        <h3>BATTERY STOCK</h3>
+        <table>
+            <thead>
+                <tr align="left">
+                    <th style="width: 100px;">Marca temporal</th>
+                    <th style="width: 100px;">Numero Vim</th>
+                    <th style="width: 25px;">KMS</th>
+                    <th style="width: 50px;">Marca</th>
+                    <th style="width: 50px;">Modelo</th>
+                    <th style="width: 25px;">Versión</th>
+                    <th>Color del automóvil</th>
+                </tr>
+            </thead>
+
+
             @foreach ($list_battery_inspection as $data)
                 @if ($data->battery_inspection > 0)
                     <tr align="left">
@@ -312,9 +313,8 @@
                     </tr>
                 @endif
             @endforeach
-        @endif
-    </table>
-
+        </table>
+    @endif
 </body>
 
 </html>
