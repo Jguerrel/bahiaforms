@@ -59,7 +59,7 @@ class SearchController extends Controller
             //dd($response);
             $c_vin = $request->vin;
             session()->put('cod_vin', $c_vin);
-            dump($c_vin);
+            //dump($c_vin);
             $data =  $response->sdtconsultaautos->item;
             $data->company = ($request->company == "01") ? "Bahia Motors" : "Bay Motors";
 
@@ -97,6 +97,7 @@ class SearchController extends Controller
         sum(case when formid = 'long_term_store'	then 1 else 0 end) long_term_store
         FROM vehicleforms
         GROUP BY chasis,marca,modelo,version,colorexterior,colorinterior;"); */
+        
         if ($c_vin == "") {
             $list = DB::table('vehicleforms')
             ->select(DB::raw("min(created_at) as created_at,
