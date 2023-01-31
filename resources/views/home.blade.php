@@ -20,22 +20,18 @@
                         <div class="card-body">
 
                             <input type="text" class="form-control border-1 rounded-1 text-start " id="vin"
-                                name="vin" placeholder="" value="">
-                            <select name="company" class="form-select ps-0 pe-0 border-1 rounded-0 w-100">
+                                name="vin" placeholder="" value="" required>
+                            <select name="company" class="form-select ps-0 pe-0 border-1 rounded-0 w-100" required>
                                 <option value="" selected>Seleccione ...</option>
                                 <option value="01">Bahia Motors</option>
                                 <option value="06">Bay Motors</option>
                             </select>
                             <br>
                             <button type="submit" class="btn btn-primary">Buscar</button>
-
-                        </div>
-                        <center>
-
                             <a href="{{ route('download-pdf') }}">
                                 <button type="button" class="btn btn-outline-primary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-printer-fill" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-printer-fill" viewBox="0 0 16 16">
                                         <path
                                             d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2H5zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1z">
                                         </path>
@@ -44,9 +40,16 @@
                                         </path>
                                     </svg>
                                     Imprimir Informe
+                                    @if (isset($data))
+                                        {{ $data->chasis }}
+                                    @else
+                                        General
+                                    @endif
+
                                 </button>
                             </a>
-                        </center>
+                        </div>
+
                     </form>
                 </div>
 

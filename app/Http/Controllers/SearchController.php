@@ -14,6 +14,7 @@ class SearchController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        session()->forget('cod_vin');
     }
     /**
      * Show the application dashboard.
@@ -59,7 +60,7 @@ class SearchController extends Controller
             //dd($response);
             $c_vin = $request->vin;
             session()->put('cod_vin', $c_vin);
-            dump($c_vin);
+            //dump($c_vin);
             $data =  $response->sdtconsultaautos->item;
             $data->company = ($request->company == "01") ? "Bahia Motors" : "Bay Motors";
 
@@ -75,7 +76,6 @@ class SearchController extends Controller
     public function downloadPdf()
     {
         $c_vin = session()->get('cod_vin');
-        session()->forget('cod_vin');
         //dump($c_vin);
         /*
         select
@@ -97,46 +97,46 @@ class SearchController extends Controller
         sum(case when formid = 'long_term_store'	then 1 else 0 end) long_term_store
         FROM vehicleforms
         GROUP BY chasis,marca,modelo,version,colorexterior,colorinterior;"); */
+
         if ($c_vin == "") {
             $list = DB::table('vehicleforms')
-            ->select(DB::raw("min(created_at) as created_at,
+                ->select(DB::raw("min(created_at) as created_at,
                           chasis,marca,modelo,version,colorexterior,colorinterior,
                           sum(case when formid = 'handover_check_list' then 1 else 0 end) handover,
                           sum(case when formid = 'pdi_check_list' then 1 else 0 end) pdi,
                           sum(case when formid = 'battery_inspection' then 1 else 0 end) battery_inspection,
                           sum(case when formid = 'long_term_store' then 1 else 0 end) long_term_store"))
-            ->groupBy('chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
-            ->get();
+                ->groupBy('chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
+                ->get();
 
-        $list_handover = DB::table('vehicleforms')
-            ->select(DB::raw("created_at,
+            $list_handover = DB::table('vehicleforms')
+                ->select(DB::raw("created_at,
                           chasis,marca,modelo,version,colorexterior,colorinterior,
                           sum(case when formid = 'handover_check_list' then 1 else 0 end) handover"))
-            ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
-            ->get();
+                ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
+                ->get();
 
-        $list_pdi = DB::table('vehicleforms')
-            ->select(DB::raw("created_at,
+            $list_pdi = DB::table('vehicleforms')
+                ->select(DB::raw("created_at,
                           chasis,marca,modelo,version,colorexterior,colorinterior,formrequest,
                           sum(case when formid = 'pdi_check_list' then 1 else 0 end) pdi"))
-            ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior', 'formrequest')
-            ->get();
+                ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior', 'formrequest')
+                ->get();
 
-        $list_battery_inspection = DB::table('vehicleforms')
-            ->select(DB::raw("created_at,
+            $list_battery_inspection = DB::table('vehicleforms')
+                ->select(DB::raw("created_at,
                           chasis,marca,modelo,version,colorexterior,colorinterior,
                           sum(case when formid = 'battery_inspection' then 1 else 0 end) battery_inspection"))
-            ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
-            ->get();
+                ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
+                ->get();
 
-        $list_long_term_store = DB::table('vehicleforms')
-            ->select(DB::raw("created_at,
+            $list_long_term_store = DB::table('vehicleforms')
+                ->select(DB::raw("created_at,
                           chasis,marca,modelo,version,colorexterior,colorinterior,
                           sum(case when formid = 'long_term_store' then 1 else 0 end) long_term_store"))
-            ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
-            ->get();
-        }
-        else {
+                ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
+                ->get();
+        } else {
             $list = DB::table('vehicleforms')
                 ->select(DB::raw("min(created_at) as created_at,
                               chasis,marca,modelo,version,colorexterior,colorinterior,
@@ -154,6 +154,7 @@ class SearchController extends Controller
                               sum(case when formid = 'handover_check_list' then 1 else 0 end) handover"))
                 ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
                 ->where('chasis', '=', $c_vin)
+                ->having(DB::raw("SUM(CASE WHEN formid = 'handover_check_list' THEN 1 ELSE 0 END)"), 1)
                 ->get();
 
             $list_pdi = DB::table('vehicleforms')
@@ -162,6 +163,7 @@ class SearchController extends Controller
                               sum(case when formid = 'pdi_check_list' then 1 else 0 end) pdi"))
                 ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior', 'formrequest')
                 ->where('chasis', '=', $c_vin)
+                ->having(DB::raw("sum(case when formid = 'pdi_check_list' then 1 else 0 end)"), 1)
                 ->get();
 
             $list_battery_inspection = DB::table('vehicleforms')
@@ -170,6 +172,7 @@ class SearchController extends Controller
                               sum(case when formid = 'battery_inspection' then 1 else 0 end) battery_inspection"))
                 ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
                 ->where('chasis', '=', $c_vin)
+                ->having(DB::raw("sum(case when formid = 'battery_inspection' then 1 else 0 end)"), 1)
                 ->get();
 
             $list_long_term_store = DB::table('vehicleforms')
@@ -178,12 +181,11 @@ class SearchController extends Controller
                               sum(case when formid = 'long_term_store' then 1 else 0 end) long_term_store"))
                 ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
                 ->where('chasis', '=', $c_vin)
+                ->having(DB::raw("sum(case when formid = 'long_term_store' then 1 else 0 end)"), 1)
                 ->get();
         }
-
-
-
         //dump($list);
+        session()->forget('cod_vin');
         $pdf = PDF::loadView('download-pdf', ['list' => $list, 'list_handover' => $list_handover, 'list_pdi' => $list_pdi, 'list_battery_inspection' => $list_battery_inspection, 'list_long_term_store' => $list_long_term_store]);
         return $pdf->download("REPORTE_GENERAL.pdf");
     }
