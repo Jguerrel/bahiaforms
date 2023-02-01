@@ -29,7 +29,7 @@ class SearchController extends Controller
             'company' => 'required|string|max:255',
         ]);
         $client_token = new Client(['base_uri' => 'https://eskemacloud.hondapanama.com']);
-        $http_token   = $client_token->request('GET', '/wsservicestest/authv2/access_token', [
+        $http_token   = $client_token->request('GET', '/apiservices/authv2/access_token', [
             'headers' => [
 
                 'client_id' =>  '4cc16ff5a6924dc7a7b8af5d5bb87fb7',
@@ -43,7 +43,7 @@ class SearchController extends Controller
         //dd($request->company);
 
         $client = new Client(['base_uri' => 'https://eskemacloud.hondapanama.com']);
-        $http   = $client->request('POST', '/wsservicestest/api/formautos/consultachasis', [
+        $http   = $client->request('POST', '/apiservices/api/formautos/consultachasis', [
             'headers' => [
                 'Authorization' => 'Bearer ' . $response_token->level1->access_token,
                 'Accept'        => 'application/json',
