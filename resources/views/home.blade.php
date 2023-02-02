@@ -41,7 +41,7 @@
                                     </svg>
                                     Imprimir Informe
                                     @if (isset($data))
-                                        {{ $data->chasis }}
+                                        {{-- {{ $data->chasis }} --}}
                                     @else
                                         General
                                     @endif
