@@ -16,9 +16,7 @@
                     <div class="card-header">{{ __('Ingrese un número de chasis válido') }}</div>
                     <form name="vin-search" id="vin-search" method="post" action="{{ route('search.vin') }}">
                         @csrf
-
                         <div class="card-body">
-
                             <input type="text" class="form-control border-1 rounded-1 text-start " id="vin"
                                 name="vin" placeholder="" value="" required>
                             <select name="company" class="form-select ps-0 pe-0 border-1 rounded-0 w-100" required>
@@ -27,32 +25,54 @@
                                 <option value="06">Bay Motors</option>
                             </select>
                             <br>
-                            <button type="submit" class="btn btn-primary">Buscar</button>
-                            <a href="{{ route('download-pdf') }}">
-                                <button type="button" class="btn btn-outline-primary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                        fill="currentColor" class="bi bi-printer-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2H5zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1z">
-                                        </path>
-                                        <path
-                                            d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2V7zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z">
-                                        </path>
-                                    </svg>
-                                    Imprimir Informe
-                                    @if (isset($data))
-                                        {{-- {{ $data->chasis }} --}}
-                                    @else
-                                        General
-                                    @endif
+                            <button type="submit" class="btn btn-primary w-50">Buscar</button>
+                            <br><br>
 
-                                </button>
-                            </a>
                         </div>
 
                     </form>
-                </div>
+                    <form name="download-pdf" id="download-pdf" method="post" action="{{ route('download-pdf') }}">
+                        @csrf
+                        <div class="card-body">
+                            <div class="input-group">
+                                <span class="input-group-text">De</span>
+                                <input name="DateTrxfrom" type="date" id="abc" value="" class="form-control"
+                                    placeholder="0.00" required>
+                                <span class="input-group-text">Hasta</span>
+                                <input name="DateTrxto" type="date" id="abc" value="" class="form-control"
+                                    placeholder="0.00">
+                                @if (isset($data))
+                                    <input type="hidden" value="{{ $data->chasis }}" id="chasis" name="chasis" readonly
+                                        class="border-1 rounded-1 text-start ">
+                                @else
+                                    <input type="hidden" value="" id="chasis" name="chasis" readonly
+                                        class="border-1 rounded-1 text-start ">
+                                @endif
 
+                            </div>
+                            {{--  <a href="{{ route('download-pdf') }}"> --}}
+                            <button type="submit" class="btn btn-outline-primary w-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-printer-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2H5zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1z">
+                                    </path>
+                                    <path
+                                        d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2V7zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z">
+                                    </path>
+                                </svg>
+                                Imprimir Informe
+                                @if (isset($data))
+                                    {{ $data->chasis }}
+                                @else
+                                    General
+                                @endif
+                            </button>
+                            {{-- </a> --}}
+                        </div>
+                    </form>
+                </div>
+                <br>
 
                 @if (isset($data))
                     <div class="card">
@@ -112,12 +132,12 @@
                                                 readonly class="border-1 rounded-1 text-start ">
                                             <input type="hidden" value="{{ $data->modelo }}" id="modelo" name="modelo"
                                                 readonly>
-                                            <input type="hidden" value="{{ $data->motor }}" id="motor" name="motor"
-                                                readonly>
-                                            <input type="hidden" value="{{ $data->chasis }}" id="chasis" name="chasis"
-                                                readonly>
-                                            <input type="hidden" value="{{ $data->anio }}" id="anio" name="anio"
-                                                readonly>
+                                            <input type="hidden" value="{{ $data->motor }}" id="motor"
+                                                name="motor" readonly>
+                                            <input type="hidden" value="{{ $data->chasis }}" id="chasis"
+                                                name="chasis" readonly>
+                                            <input type="hidden" value="{{ $data->anio }}" id="anio"
+                                                name="anio" readonly>
                                             <input type="hidden" value="{{ $data->version }}" id="version"
                                                 name="version" readonly>
                                             <input type="hidden" value="{{ $data->colorexterior }}" id="colorexterior"
