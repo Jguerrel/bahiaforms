@@ -32,10 +32,10 @@ class SearchController extends Controller
         $http_token   = $client_token->request('GET', '/apiservices/authv2/access_token', [
             'headers' => [
 
-                'client_id' =>  '4cc16ff5a6924dc7a7b8af5d5bb87fb7',
-                'clientsecret' => '2a195db7afe042fb8f301b264bfb766749808777511f6acf2d64ddd89899573302554ed',
+                'client_id' =>  '80ffaaf918604f26a07f97e6cda1b9a9',
+                'clientsecret' => '0133a953841246dd93ef396acca5605f35955234c9778b4f44d54b4691824da4926f3b82',
                 'user' => 'formdigi',
-                'password' => 'A%h4g7#jK'
+                'password' => '4d%Gf2&kl'
             ]
         ]);
 
