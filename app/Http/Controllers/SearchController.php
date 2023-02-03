@@ -73,9 +73,11 @@ class SearchController extends Controller
 
     }
 
-    public function downloadPdf()
+    public function downloadPdf(Request $request)
     {
-        $c_vin = session()->get('cod_vin');
+        //dd($request);
+        //dump($request->DateTrxfrom,$request->DateTrxto);
+        $c_vin = $request->chasis;
         //dump($c_vin);
         /*
         select
@@ -99,6 +101,9 @@ class SearchController extends Controller
         GROUP BY chasis,marca,modelo,version,colorexterior,colorinterior;"); */
 
         if ($c_vin == "") {
+            $dateFrom = $request->DateTrxfrom ? $request->DateTrxfrom : date('Y-m-d');
+            $dateTo = $request->DateTrxto ? $request->DateTrxto : date('Y-m-d');
+
             $list = DB::table('vehicleforms')
                 ->select(DB::raw("min(created_at) as created_at,
                           chasis,marca,modelo,version,colorexterior,colorinterior,
@@ -106,6 +111,7 @@ class SearchController extends Controller
                           sum(case when formid = 'pdi_check_list' then 1 else 0 end) pdi,
                           sum(case when formid = 'battery_inspection' then 1 else 0 end) battery_inspection,
                           sum(case when formid = 'long_term_store' then 1 else 0 end) long_term_store"))
+                ->whereDate('created_at', '>=', $dateFrom)->WhereDate('created_at', '<=', $dateTo)
                 ->groupBy('chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
                 ->get();
 
@@ -113,6 +119,7 @@ class SearchController extends Controller
                 ->select(DB::raw("created_at,
                           chasis,marca,modelo,version,colorexterior,colorinterior,
                           sum(case when formid = 'handover_check_list' then 1 else 0 end) handover"))
+                ->whereDate('created_at', '>=',$dateFrom)->WhereDate('created_at', '<=',  $dateTo)
                 ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
                 ->get();
 
@@ -120,6 +127,7 @@ class SearchController extends Controller
                 ->select(DB::raw("created_at,
                           chasis,marca,modelo,version,colorexterior,colorinterior,formrequest,
                           sum(case when formid = 'pdi_check_list' then 1 else 0 end) pdi"))
+                ->whereDate('created_at', '>=', $dateFrom)->WhereDate('created_at', '<=',  $dateTo)
                 ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior', 'formrequest')
                 ->get();
 
@@ -127,6 +135,7 @@ class SearchController extends Controller
                 ->select(DB::raw("created_at,
                           chasis,marca,modelo,version,colorexterior,colorinterior,
                           sum(case when formid = 'battery_inspection' then 1 else 0 end) battery_inspection"))
+                ->whereDate('created_at', '>=', $dateFrom)->WhereDate('created_at', '<=',  $dateTo)
                 ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
                 ->get();
 
@@ -134,9 +143,12 @@ class SearchController extends Controller
                 ->select(DB::raw("created_at,
                           chasis,marca,modelo,version,colorexterior,colorinterior,
                           sum(case when formid = 'long_term_store' then 1 else 0 end) long_term_store"))
+                ->whereDate('created_at', '>=', $dateFrom)->WhereDate('created_at', '<=',  $dateTo)
                 ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
                 ->get();
         } else {
+            $dateFrom = $request->DateTrxfrom ? $request->DateTrxfrom : date('Y-m-d');
+            $dateTo = $request->DateTrxto ? $request->DateTrxto : date('Y-m-d');
             $list = DB::table('vehicleforms')
                 ->select(DB::raw("min(created_at) as created_at,
                               chasis,marca,modelo,version,colorexterior,colorinterior,
@@ -145,6 +157,7 @@ class SearchController extends Controller
                               sum(case when formid = 'battery_inspection' then 1 else 0 end) battery_inspection,
                               sum(case when formid = 'long_term_store' then 1 else 0 end) long_term_store"))
                 ->where('chasis', '=', $c_vin)
+                ->whereDate('created_at', '>=', $dateFrom)->WhereDate('created_at', '<=', $dateTo)
                 ->groupBy('chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
                 ->get();
 
@@ -154,6 +167,7 @@ class SearchController extends Controller
                               sum(case when formid = 'handover_check_list' then 1 else 0 end) handover"))
                 ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
                 ->where('chasis', '=', $c_vin)
+                ->whereDate('created_at', '>=', $dateFrom)->WhereDate('created_at', '<=', $dateTo)
                 ->having(DB::raw("SUM(CASE WHEN formid = 'handover_check_list' THEN 1 ELSE 0 END)"), 1)
                 ->get();
 
@@ -163,6 +177,7 @@ class SearchController extends Controller
                               sum(case when formid = 'pdi_check_list' then 1 else 0 end) pdi"))
                 ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior', 'formrequest')
                 ->where('chasis', '=', $c_vin)
+                ->whereDate('created_at', '>=', $dateFrom)->WhereDate('created_at', '<=', $dateTo)
                 ->having(DB::raw("sum(case when formid = 'pdi_check_list' then 1 else 0 end)"), 1)
                 ->get();
 
@@ -172,6 +187,7 @@ class SearchController extends Controller
                               sum(case when formid = 'battery_inspection' then 1 else 0 end) battery_inspection"))
                 ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
                 ->where('chasis', '=', $c_vin)
+                ->whereDate('created_at', '>=', $dateFrom)->WhereDate('created_at', '<=', $dateTo)
                 ->having(DB::raw("sum(case when formid = 'battery_inspection' then 1 else 0 end)"), 1)
                 ->get();
 
@@ -181,11 +197,12 @@ class SearchController extends Controller
                               sum(case when formid = 'long_term_store' then 1 else 0 end) long_term_store"))
                 ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior')
                 ->where('chasis', '=', $c_vin)
+                ->whereDate('created_at', '>=', $dateFrom)->WhereDate('created_at', '<=', $dateTo)
                 ->having(DB::raw("sum(case when formid = 'long_term_store' then 1 else 0 end)"), 1)
                 ->get();
         }
         //dump($list);
-        session()->forget('cod_vin');
+        //session()->forget('cod_vin');
         $pdf = PDF::loadView('download-pdf', ['list' => $list, 'list_handover' => $list_handover, 'list_pdi' => $list_pdi, 'list_battery_inspection' => $list_battery_inspection, 'list_long_term_store' => $list_long_term_store]);
         return $pdf->download("REPORTE_GENERAL.pdf");
     }
