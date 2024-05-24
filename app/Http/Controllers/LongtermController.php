@@ -30,24 +30,28 @@ class LongtermController extends Controller
     }
 
     public function edit($id)
-{
-    $form = vehicleform::findOrFail($id);
+    {
+        $form = vehicleform::findOrFail($id);
+        $title = request('title', null); // Obtener el parámetro 'title' de la URL
+        $type = request('type', null); // Obtener el parámetro 'type' de la URL
 
-    // Validar que hayan pasado 24 horas desde la creación del formulario
-    $createdAt = $form->created_at;
-    $currentTime = now();
+        // Validar que hayan pasado 24 horas desde la creación del formulario
+        $createdAt = $form->created_at;
+        $currentTime = now();
 
-    // Calcular la diferencia en horas
-    $hoursDifference = $currentTime->diffInHours($createdAt);
+        // Calcular la diferencia en horas
+        $hoursDifference = $currentTime->diffInHours($createdAt);
 
-    if ($hoursDifference < 24) {
-        return redirect('/home')->with('error', 'No han pasado 24 horas desde la creación del formulario.');
+        if ($hoursDifference < 24 && $type == 2) {
+            return redirect('/home')->with('error', 'No han pasado 24 horas desde la creación del formulario.');
+        }
+
+        $formrequest = json_decode($form->formrequest);
+
+
+
+        return view('long_term_edit', ['request' => $form, 'formdata' => $formrequest, 'title' => $title]);
     }
-
-    $formrequest = json_decode($form->formrequest);
-
-    return view('long_term_edit', ['request' => $form, 'formdata' => $formrequest]);
-}
 
 
     public function update(Request $request, $id)

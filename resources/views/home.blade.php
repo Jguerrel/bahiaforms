@@ -299,9 +299,13 @@
                                                 <div class="col-md-3">
                                                     <button type="submit" class="btn btn-primary">Ver</button>
                                                     {{-- edit --}}
-                                                    <a href="{{ route('long.term.edit', $show->id) }}" class="btn btn-primary">
+                                                    <a href="{{ route('long.term.edit', ['id' => $show->id, 'title' => 'Nueva inspección', 'type' => 2]) }}" class="btn btn-primary">
                                                         Editar
                                                     </a>
+                                                    <a href="{{ route('long.term.edit', $show->id) }}?title=Nueva Inspeccion" class="btn btn-warning new-inspection" data-url="{{ route('long.term.edit', ['id' => $show->id, 'title' => 'Nueva inspección', 'type' => 1]) }}">
+                                                        Nueva Inspección
+                                                    </a>
+
                                                 </div>
 
                                             </div>
@@ -316,4 +320,29 @@
         </div>
 
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.new-inspection').forEach(function (element) {
+                element.addEventListener('click', function (event) {
+                    event.preventDefault(); // Prevent the default behavior of the link
+                    const url = this.getAttribute('data-url');
+
+                    Swal.fire({
+                        title: 'Advertencia',
+                        text: "Va a realizar una inspección adelantada. ¿Desea continuar?",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Sí, continuar'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = url;
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 @endsection
