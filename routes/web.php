@@ -62,5 +62,10 @@ Route::get('/pdi', function () {
     return view('canvas/tablero6');
 });
 
+//edit
+Route::get('/long_term_edit/{id}', [App\Http\Controllers\LongtermController::class, 'edit'])->name('long.term.edit');
+//update
+Route::post('/long_term_update/{id}', [App\Http\Controllers\LongtermController::class, 'update'])->name('long.term.update');
+
 // Ruta para dompdf
 Route::post('download-pdf', [App\Http\Controllers\SearchController::class, 'downloadPdf'])->name('download-pdf');

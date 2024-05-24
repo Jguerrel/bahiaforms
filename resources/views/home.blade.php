@@ -298,6 +298,10 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <button type="submit" class="btn btn-primary">Ver</button>
+                                                    {{-- edit --}}
+                                                    <a href="{{ route('long.term.edit', $show->id) }}" class="btn btn-primary">
+                                                        Editar
+                                                    </a>
                                                 </div>
 
                                             </div>
