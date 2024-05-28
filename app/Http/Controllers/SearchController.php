@@ -65,7 +65,13 @@ class SearchController extends Controller
             $data->company = ($request->company == "01") ? "Bahia Motors" : "Bay Motors";
 
             $shows = vehicleform::where('chasis', '=', $request->vin)->get();
-            return view('home', ['data' => $data, 'shows' => $shows]);
+
+           $exists = vehicleform::where('chasis', $request->vin) //si ya existe unr egistro de este chasis con el form  long...
+                    ->where('formname', 'Long-term Stored Vehicle Check Sheet')
+                    ->first();
+
+
+            return view('home', ['data' => $data, 'shows' => $shows , 'longTerm' => $exists]);
         }
         //dd($data);
         return view('home');

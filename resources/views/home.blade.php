@@ -217,6 +217,13 @@
                                         </form>
                                     </div>
                                     <div class="col-md-3">
+                                        @if($longTerm != null)
+                                        <a href="{{ route('long.term.edit', ['id' => $longTerm->id, 'title' => 'Nueva inspección', 'type' => 2]) }}" class="btn btn-primary mh-100"
+                                            style="width: 150px; height: 100px;">
+                                            Long Term Stored Vehicle Check
+                                                Sheet
+                                        </a>
+                                        @else
                                         <form name="long_term_store" id="long_term_store" method="post"
                                             action="{{ route('long.term') }}">
                                             @csrf
@@ -245,6 +252,7 @@
                                                 style="width: 150px; height: 100px;">Long Term Stored Vehicle Check
                                                 Sheet</button>
                                         </form>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
