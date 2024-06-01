@@ -306,13 +306,14 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <button type="submit" class="btn btn-primary">Ver</button>
-                                                    {{-- edit --}}
-                                                    <a href="{{ route('long.term.edit', ['id' => $show->id, 'title' => 'Nueva inspección', 'type' => 2]) }}" class="btn btn-primary">
-                                                        Editar
-                                                    </a>
-                                                    <a href="{{ route('long.term.edit', $show->id) }}?title=Nueva Inspeccion" class="btn btn-warning new-inspection" data-url="{{ route('long.term.edit', ['id' => $show->id, 'title' => 'Nueva inspección', 'type' => 1]) }}">
-                                                        Nueva Inspección
-                                                    </a>
+                                                    @if($show->formname == 'Long Term Stored Vehicle Check Sheet')
+                                                        <a href="{{ route('long.term.edit', ['id' => $show->id, 'title' => 'Nueva inspección', 'type' => 2]) }}" class="btn btn-primary">
+                                                            Editar
+                                                        </a>
+                                                        <a href="{{ route('long.term.edit', $show->id) }}?title=Nueva Inspeccion" class="btn btn-warning new-inspection" data-url="{{ route('long.term.edit', ['id' => $show->id, 'title' => 'Nueva inspección', 'type' => 1]) }}">
+                                                            Nueva Inspección
+                                                        </a>
+                                                    @endif
 
                                                 </div>
 
