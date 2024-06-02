@@ -306,11 +306,11 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <button type="submit" class="btn btn-primary">Ver</button>
-                                                    @if($show->formname == 'Long Term Stored Vehicle Check Sheet')
+                                                    @if($show->formname === 'Long-term Stored Vehicle Check Sheet')
                                                         <a href="{{ route('long.term.edit', ['id' => $show->id, 'title' => 'Nueva inspección', 'type' => 2]) }}" class="btn btn-primary">
                                                             Editar
                                                         </a>
-                                                        <a href="{{ route('long.term.edit', $show->id) }}?title=Nueva Inspeccion" class="btn btn-warning new-inspection" data-url="{{ route('long.term.edit', ['id' => $show->id, 'title' => 'Nueva inspección', 'type' => 1]) }}">
+                                                        <a href="{{ route('long.term.edit', $show->id) }}?title=Nueva Inspeccion" data-date="{{$show->created_at}}" class="btn btn-warning new-inspection" data-url="{{ route('long.term.edit', ['id' => $show->id, 'title' => 'Nueva inspección', 'type' => 1]) }}">
                                                             Nueva Inspección
                                                         </a>
                                                     @endif
@@ -336,10 +336,16 @@
                 element.addEventListener('click', function (event) {
                     event.preventDefault(); // Prevent the default behavior of the link
                     const url = this.getAttribute('data-url');
+                    const creationDate = new Date(this.getAttribute('data-date'));
+                    const currentDate = new Date();
+                    const differenceInDays = Math.floor((currentDate - creationDate) / (1000 * 60 * 60 * 24));
+                    const message = differenceInDays < 90
+                        ? `Va a realizar una inspección adelantada. ¿Desea continuar? Han pasado solamente ${differenceInDays} días desde su creación.`
+                        : `Va a realizar una inspección de este vehículo. Fue creado hace ${differenceInDays} días. ¿Desea continuar?`;
 
                     Swal.fire({
                         title: 'Advertencia',
-                        text: "Va a realizar una inspección adelantada. ¿Desea continuar?",
+                        text: message,
                         icon: 'warning',
                         showCancelButton: true,
                         confirmButtonColor: '#3085d6',
@@ -353,5 +359,5 @@
                 });
             });
         });
-    </script>
+        </script>
 @endsection
