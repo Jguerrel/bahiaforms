@@ -212,6 +212,7 @@
             <thead>
                 <tr align="left">
                     <th style="width: 100px;">Marca temporal</th>
+					<th style="width: 25px;"># Auto</th>
                     <th style="width: 100px;">Numero Vim</th>
                     <th style="width: 25px;">KMS</th>
                     <th style="width: 50px;">Marca</th>
@@ -242,8 +243,11 @@
                         <td>
                             {{ $data->chasis }}
                         </td>
+					    <td>
+                           {{ $formdata->v162 }} 
+                        </td>
                         <td>
-                            kms
+                           {{ $formdata->v170 }} kms
                         </td>
                         <td>
                             {{ $data->marca }}
