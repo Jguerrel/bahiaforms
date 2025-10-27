@@ -57,7 +57,6 @@
                 <th>48V BATTERY STOCK</th>
             </tr>
         </thead>
-
         @if ($list->isNotEmpty())
             @foreach ($list as $data)
                 <tr align="left">
@@ -170,12 +169,9 @@
                     <th>Color del automóvil</th>
                 </tr>
             </thead>
-
-
             @foreach ($list_long_term_store as $data)
                 @if ($data->long_term_store > 0)
                     <tr align="left">
-
                         <td>
                             {{ $data->created_at }}
                         </td>
@@ -198,7 +194,6 @@
                             {{ $data->colorexterior }}-
                             {{ $data->colorinterior }}
                         </td>
-
                     </tr>
                 @endif
             @endforeach
@@ -219,24 +214,16 @@
                     <th style="width: 50px;">Modelo</th>
                     <th style="width: 25px;">Versión</th>
                     <th>Color del automóvil</th>
+                    <th>Inspector</th>
                     <th>Registro de fallas y reparaciones</th>
                 </tr>
             </thead>
-
-
             @foreach ($list_pdi as $data)
                 <?php
-                //if(isset($request->formrequest))
-
                 $formdata = json_decode($data->formrequest);
-
-                //dd($formdata);
-                //endif
-
                 ?>
                 @if ($data->pdi > 0)
                     <tr align="left">
-
                         <td>
                             {{ $data->created_at }}
                         </td>
@@ -262,8 +249,8 @@
                             {{ $data->colorexterior }}-
                             {{ $data->colorinterior }}
                         </td>
+                        <td>{{ $formdata->v164 }}</td>
                         <td>{{ $formdata->v187 }}</td>
-
                     </tr>
                 @endif
             @endforeach
@@ -285,12 +272,9 @@
                     <th>Color del automóvil</th>
                 </tr>
             </thead>
-
-
             @foreach ($list_battery_inspection as $data)
                 @if ($data->battery_inspection > 0)
                     <tr align="left">
-
                         <td>
                             {{ $data->created_at }}
                         </td>
@@ -313,7 +297,6 @@
                             {{ $data->colorexterior }}-
                             {{ $data->colorinterior }}
                         </td>
-
                     </tr>
                 @endif
             @endforeach
