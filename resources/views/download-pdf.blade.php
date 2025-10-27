@@ -120,9 +120,13 @@
                     <th style="width: 50px;">Modelo</th>
                     <th style="width: 25px;">Versión</th>
                     <th>Color del automóvil</th>
+                    <th>Inspector</th>
                 </tr>
             </thead>
             @foreach ($list_handover as $data)
+                <?php
+                $formdatahandover = json_decode($data->formrequest);
+                ?>
                 @if ($data->handover > 0)
                     <tr align="left">
 
@@ -133,7 +137,8 @@
                             {{ $data->chasis }}
                         </td>
                         <td>
-                            kms
+
+                           kms
                         </td>
                         <td>
                             {{ $data->marca }}
@@ -148,7 +153,7 @@
                             {{ $data->colorexterior }}-
                             {{ $data->colorinterior }}
                         </td>
-
+                        <td>{{ $formdatahandover->v11}}</td>
                     </tr>
                 @endif
             @endforeach
@@ -167,9 +172,13 @@
                     <th style="width: 50px;">Modelo</th>
                     <th style="width: 25px;">Versión</th>
                     <th>Color del automóvil</th>
+                    <th>Inspector</th>
                 </tr>
             </thead>
             @foreach ($list_long_term_store as $data)
+                  <?php
+                $formdatalong_term = json_decode($data->formrequest);
+                ?>
                 @if ($data->long_term_store > 0)
                     <tr align="left">
                         <td>
@@ -194,6 +203,7 @@
                             {{ $data->colorexterior }}-
                             {{ $data->colorinterior }}
                         </td>
+                        <td> {{ $formdatalong_term->v120}}</td>
                     </tr>
                 @endif
             @endforeach
@@ -206,10 +216,10 @@
         <table>
             <thead>
                 <tr align="left">
-                    <th style="width: 100px;">Marca temporal</th>
-					<th style="width: 25px;"># Auto</th>
-                    <th style="width: 100px;">Numero Vim</th>
-                    <th style="width: 25px;">KMS</th>
+                    <th style="width: 90px;">Marca temporal</th>
+                    <th style="width: 90px;">Numero Vim</th>
+                    <th style="width: 25px;"># Auto</th>
+                    <th style="width: 30px;">KMS</th>
                     <th style="width: 50px;">Marca</th>
                     <th style="width: 50px;">Modelo</th>
                     <th style="width: 25px;">Versión</th>
@@ -231,7 +241,7 @@
                             {{ $data->chasis }}
                         </td>
 					    <td>
-                           {{ $formdata->v162 }} 
+                           {{ $formdata->v162 }}
                         </td>
                         <td>
                            {{ $formdata->v170 }} kms
@@ -270,9 +280,13 @@
                     <th style="width: 50px;">Modelo</th>
                     <th style="width: 25px;">Versión</th>
                     <th>Color del automóvil</th>
+                    <th>Inspector</th>
                 </tr>
             </thead>
             @foreach ($list_battery_inspection as $data)
+                <?php
+                $formdata = json_decode($data->formrequest);
+                ?>
                 @if ($data->battery_inspection > 0)
                     <tr align="left">
                         <td>
@@ -282,7 +296,7 @@
                             {{ $data->chasis }}
                         </td>
                         <td>
-                            kms
+                          {{ $formdata->v170 }} kms
                         </td>
                         <td>
                             {{ $data->marca }}
@@ -297,6 +311,7 @@
                             {{ $data->colorexterior }}-
                             {{ $data->colorinterior }}
                         </td>
+                        <td>{{ $formdata->v120 }}</td>
                     </tr>
                 @endif
             @endforeach
