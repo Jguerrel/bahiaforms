@@ -184,7 +184,6 @@
                                                 List</button>
                                         </form>
 
-
                                     </div>
                                     <div class="col-md-3">
                                         <form name="48v_battery" id="48v_battery" method="post"
