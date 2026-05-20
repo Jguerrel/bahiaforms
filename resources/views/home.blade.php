@@ -315,7 +315,6 @@
                                                     @endif
 
                                                 </div>
-
                                             </div>
                                         </form>
                                     @endforeach
