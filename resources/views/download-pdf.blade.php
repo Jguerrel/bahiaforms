@@ -60,6 +60,7 @@
 
         @if ($list->isNotEmpty())
             @foreach ($list as $data)
+
                 <tr align="left">
                     <td>
                         {{ $data->created_at }}
@@ -68,7 +69,7 @@
                         {{ $data->chasis }}
                     </td>
                     <td>
-                        kms
+                       kms
                     </td>
                     <td>
                         {{ $data->marca }}
@@ -229,10 +230,11 @@
 
                 $formdata = json_decode($data->formrequest);
 
-                //dd($formdata);
+              //  dd($formdata);
                 //endif
 
                 ?>
+
                 @if ($data->pdi > 0)
                     <tr align="left">
 
@@ -243,7 +245,7 @@
                             {{ $data->chasis }}
                         </td>
                         <td>
-                            kms
+                          {{ $formdata->v170 }}  kms
                         </td>
                         <td>
                             {{ $data->marca }}
