@@ -51,23 +51,40 @@
 
                             </div>
                             {{--  <a href="{{ route('download-pdf') }}"> --}}
-                            <button type="submit" class="btn btn-outline-primary w-100">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-printer-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2H5zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1z">
-                                    </path>
-                                    <path
-                                        d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2V7zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z">
-                                    </path>
-                                </svg>
-                                Imprimir Informe
-                                @if (isset($data))
-                                    {{ $data->chasis }}
-                                @else
-                                    General
-                                @endif
-                            </button>
+                            <div class="d-flex gap-2">
+                                <button type="submit" class="btn btn-outline-primary w-100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-printer-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2H5zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1z">
+                                        </path>
+                                        <path
+                                            d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2V7zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z">
+                                        </path>
+                                    </svg>
+                                    Imprimir Informe (PDF)
+                                    @if (isset($data))
+                                        {{ $data->chasis }}
+                                    @else
+                                        General
+                                    @endif
+                                </button>
+                                <button type="submit" formaction="{{ route('download-excel') }}"
+                                    class="btn btn-outline-success w-100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-file-earmark-excel-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM5.884 6.68a.5.5 0 1 0-.768.64L7.349 10l-2.233 2.68a.5.5 0 0 0 .768.64L8 10.781l2.116 2.54a.5.5 0 0 0 .768-.641L8.651 10l2.233-2.68a.5.5 0 0 0-.768-.64L8 9.219l-2.116-2.54z">
+                                        </path>
+                                    </svg>
+                                    Descargar Excel
+                                    @if (isset($data))
+                                        {{ $data->chasis }}
+                                    @else
+                                        General
+                                    @endif
+                                </button>
+                            </div>
                             {{-- </a> --}}
                         </div>
                     </form>
