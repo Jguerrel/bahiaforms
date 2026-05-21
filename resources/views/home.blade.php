@@ -201,7 +201,6 @@
                                                 List</button>
                                         </form>
 
-
                                     </div>
                                     <div class="col-md-3">
                                         <form name="48v_battery" id="48v_battery" method="post"
@@ -234,6 +233,13 @@
                                         </form>
                                     </div>
                                     <div class="col-md-3">
+                                        @if($longTerm != null)
+                                        <a href="{{ route('long.term.edit', ['id' => $longTerm->id, 'title' => 'Nueva inspección', 'type' => 2]) }}" class="btn btn-primary mh-100"
+                                            style="width: 150px; height: 100px;">
+                                            Long Term Stored Vehicle Check
+                                                Sheet
+                                        </a>
+                                        @else
                                         <form name="long_term_store" id="long_term_store" method="post"
                                             action="{{ route('long.term') }}">
                                             @csrf
@@ -262,6 +268,7 @@
                                                 style="width: 150px; height: 100px;">Long Term Stored Vehicle Check
                                                 Sheet</button>
                                         </form>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -315,8 +322,16 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <button type="submit" class="btn btn-primary">Ver</button>
-                                                </div>
+                                                    @if($show->formname === 'Long-term Stored Vehicle Check Sheet')
+                                                        <a href="{{ route('long.term.edit', ['id' => $show->id, 'title' => 'Nueva inspección', 'type' => 2]) }}" class="btn btn-primary">
+                                                            Editar
+                                                        </a>
+                                                        <a href="{{ route('long.term.edit', $show->id) }}?title=Nueva Inspeccion" data-date="{{$show->created_at}}" class="btn btn-warning new-inspection" data-url="{{ route('long.term.edit', ['id' => $show->id, 'title' => 'Nueva inspección', 'type' => 1]) }}">
+                                                            Nueva Inspección
+                                                        </a>
+                                                    @endif
 
+                                                </div>
                                             </div>
                                         </form>
                                     @endforeach
@@ -329,4 +344,35 @@
         </div>
 
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.new-inspection').forEach(function (element) {
+                element.addEventListener('click', function (event) {
+                    event.preventDefault(); // Prevent the default behavior of the link
+                    const url = this.getAttribute('data-url');
+                    const creationDate = new Date(this.getAttribute('data-date'));
+                    const currentDate = new Date();
+                    const differenceInDays = Math.floor((currentDate - creationDate) / (1000 * 60 * 60 * 24));
+                    const message = differenceInDays < 90
+                        ? `Va a realizar una inspección adelantada. ¿Desea continuar? Han pasado solamente ${differenceInDays} días desde su creación.`
+                        : `Va a realizar una inspección de este vehículo. Fue creado hace ${differenceInDays} días. ¿Desea continuar?`;
+
+                    Swal.fire({
+                        title: 'Advertencia',
+                        text: message,
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Sí, continuar'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = url;
+                        }
+                    });
+                });
+            });
+        });
+        </script>
 @endsection
