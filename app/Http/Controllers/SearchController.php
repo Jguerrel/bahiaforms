@@ -8,6 +8,10 @@ use GuzzleHttp\Client;
 use App\Models\vehicleform;
 use PDF;
 use Illuminate\Support\Facades\DB;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Style\Alignment;
+use PhpOffice\PhpSpreadsheet\Style\Fill;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class SearchController extends Controller
 {
@@ -207,11 +211,165 @@ class SearchController extends Controller
     {
         set_time_limit(0);
 
-        $html = view('download-excel', $this->getReportData($request))->render();
+        $data = $this->getReportData($request);
+        $spreadsheet = new Spreadsheet();
+        $spreadsheet->removeSheetByIndex(0);
 
-        return response($html, 200, [
-            'Content-Type' => 'application/vnd.ms-excel; charset=UTF-8',
-            'Content-Disposition' => 'attachment; filename="REPORTE_GENERAL.xls"',
-        ]);
+        $this->addSummarySheet($spreadsheet, $data['list']);
+        $this->addHandoverSheet($spreadsheet, $data['list_handover']);
+        $this->addLongTermSheet($spreadsheet, $data['list_long_term_store']);
+        $this->addPdiSheet($spreadsheet, $data['list_pdi']);
+        $this->addBatterySheet($spreadsheet, $data['list_battery_inspection']);
+
+        $spreadsheet->setActiveSheetIndex(0);
+
+        $writer = new Xlsx($spreadsheet);
+        $filename = 'REPORTE_GENERAL.xlsx';
+
+        return response()->streamDownload(
+            function () use ($writer) { $writer->save('php://output'); },
+            $filename,
+            [
+                'Content-Type' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                'Cache-Control' => 'max-age=0, no-cache, must-revalidate, post-check=0, pre-check=0',
+            ]
+        );
+    }
+
+    private function addSummarySheet(Spreadsheet $book, $list): void
+    {
+        $sheet = $book->createSheet();
+        $sheet->setTitle('Resumen');
+        $headers = ['Marca temporal','Numero Vim','KMS','Marca','Modelo','Versión','Color del automóvil','HANDOVER','LONG TERM','PDI','48V BATTERY'];
+        $this->writeHeader($sheet, $headers);
+
+        $row = 2;
+        foreach ($list as $d) {
+            $sheet->fromArray([
+                (string) $d->created_at,
+                $d->chasis,
+                'kms',
+                $d->marca,
+                $d->modelo,
+                $d->version,
+                $d->colorexterior . '-' . $d->colorinterior,
+                $d->handover > 0 ? 'Inspeccionado' : '',
+                $d->long_term_store > 0 ? 'Inspeccionado' : '',
+                $d->pdi > 0 ? 'Inspeccionado' : '',
+                $d->battery_inspection > 0 ? 'Inspeccionado' : '',
+            ], null, "A{$row}");
+            $row++;
+        }
+        $this->autosize($sheet, count($headers));
+    }
+
+    private function addHandoverSheet(Spreadsheet $book, $list): void
+    {
+        $sheet = $book->createSheet();
+        $sheet->setTitle('Handover');
+        $headers = ['Marca temporal','Numero Vim','KMS','Marca','Modelo','Versión','Color del automóvil','Inspector'];
+        $this->writeHeader($sheet, $headers);
+
+        $row = 2;
+        foreach ($list as $d) {
+            if ($d->handover <= 0) continue;
+            $form = json_decode($d->formrequest);
+            $sheet->fromArray([
+                (string) $d->created_at, $d->chasis, 'kms', $d->marca, $d->modelo, $d->version,
+                $d->colorexterior . '-' . $d->colorinterior,
+                $form->v11 ?? '',
+            ], null, "A{$row}");
+            $row++;
+        }
+        $this->autosize($sheet, count($headers));
+    }
+
+    private function addLongTermSheet(Spreadsheet $book, $list): void
+    {
+        $sheet = $book->createSheet();
+        $sheet->setTitle('Long Term');
+        $headers = ['Marca temporal','Numero Vim','KMS','Marca','Modelo','Versión','Color del automóvil','Inspector'];
+        $this->writeHeader($sheet, $headers);
+
+        $row = 2;
+        foreach ($list as $d) {
+            if ($d->long_term_store <= 0) continue;
+            $form = json_decode($d->formrequest);
+            $sheet->fromArray([
+                (string) $d->created_at, $d->chasis, 'kms', $d->marca, $d->modelo, $d->version,
+                $d->colorexterior . '-' . $d->colorinterior,
+                $form->v120 ?? '',
+            ], null, "A{$row}");
+            $row++;
+        }
+        $this->autosize($sheet, count($headers));
+    }
+
+    private function addPdiSheet(Spreadsheet $book, $list): void
+    {
+        $sheet = $book->createSheet();
+        $sheet->setTitle('PDI');
+        $headers = ['Marca temporal','Numero Vim','# Auto','KMS','Marca','Modelo','Versión','Color del automóvil','Inspector','Registro de fallas y reparaciones'];
+        $this->writeHeader($sheet, $headers);
+
+        $row = 2;
+        foreach ($list as $d) {
+            if ($d->pdi <= 0) continue;
+            $form = json_decode($d->formrequest);
+            $sheet->fromArray([
+                (string) $d->created_at, $d->chasis,
+                $form->v162 ?? '',
+                ($form->v170 ?? '') . ' kms',
+                $d->marca, $d->modelo, $d->version,
+                $d->colorexterior . '-' . $d->colorinterior,
+                $form->v164 ?? '',
+                $form->v187 ?? '',
+            ], null, "A{$row}");
+            $row++;
+        }
+        $this->autosize($sheet, count($headers));
+    }
+
+    private function addBatterySheet(Spreadsheet $book, $list): void
+    {
+        $sheet = $book->createSheet();
+        $sheet->setTitle('48V Battery');
+        $headers = ['Marca temporal','Numero Vim','KMS','Marca','Modelo','Versión','Color del automóvil','Inspector'];
+        $this->writeHeader($sheet, $headers);
+
+        $row = 2;
+        foreach ($list as $d) {
+            if ($d->battery_inspection <= 0) continue;
+            $form = json_decode($d->formrequest);
+            $sheet->fromArray([
+                (string) $d->created_at, $d->chasis,
+                ($form->v170 ?? '') . ' kms',
+                $d->marca, $d->modelo, $d->version,
+                $d->colorexterior . '-' . $d->colorinterior,
+                $form->v120 ?? '',
+            ], null, "A{$row}");
+            $row++;
+        }
+        $this->autosize($sheet, count($headers));
+    }
+
+    private function writeHeader($sheet, array $headers): void
+    {
+        $sheet->fromArray($headers, null, 'A1');
+        $lastCol = $sheet->getHighestColumn();
+        $sheet->getStyle("A1:{$lastCol}1")->getFont()->setBold(true)->getColor()->setRGB('FFFFFF');
+        $sheet->getStyle("A1:{$lastCol}1")->getFill()
+            ->setFillType(Fill::FILL_SOLID)
+            ->getStartColor()->setRGB('246355');
+        $sheet->getStyle("A1:{$lastCol}1")->getAlignment()->setHorizontal(Alignment::HORIZONTAL_LEFT);
+        $sheet->freezePane('A2');
+    }
+
+    private function autosize($sheet, int $columnCount): void
+    {
+        for ($i = 1; $i <= $columnCount; $i++) {
+            $col = \PhpOffice\PhpSpreadsheet\Cell\Coordinate::stringFromColumnIndex($i);
+            $sheet->getColumnDimension($col)->setAutoSize(true);
+        }
     }
 }
