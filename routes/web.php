@@ -69,3 +69,6 @@ Route::post('/long_term_update/{id}', [App\Http\Controllers\LongtermController::
 
 // Ruta para dompdf
 Route::post('download-pdf', [App\Http\Controllers\SearchController::class, 'downloadPdf'])->name('download-pdf');
+
+// Ruta para descargar el reporte en Excel (.xls)
+Route::post('download-excel', [App\Http\Controllers\SearchController::class, 'downloadExcel'])->name('download-excel');
