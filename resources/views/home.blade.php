@@ -25,7 +25,7 @@
                                 <option value="06">Bay Motors</option>
                             </select>
                             <br>
-                            <button type="submit" class="btn btn-primary w-50">Buscar</button>
+                            <button type="submit" class="btn btn-primary w-100">Buscar</button>
                             <br><br>
 
                         </div>

@@ -190,12 +190,17 @@ class SearchController extends Controller
 
     public function downloadPdf(Request $request)
     {
+        // Reportes grandes pueden tardar minutos en DOMPDF — quitar el límite por request.
+        set_time_limit(0);
+
         $pdf = PDF::loadView('download-pdf', $this->getReportData($request));
         return $pdf->download("REPORTE_GENERAL.pdf");
     }
 
     public function downloadExcel(Request $request)
     {
+        set_time_limit(0);
+
         $html = view('download-excel', $this->getReportData($request))->render();
 
         return response($html, 200, [
