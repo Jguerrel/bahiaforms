@@ -73,32 +73,9 @@ class SearchController extends Controller
 
     }
 
-    public function downloadPdf(Request $request)
+    private function getReportData(Request $request): array
     {
-        //dd($request);
-        //dump($request->DateTrxfrom,$request->DateTrxto);
         $c_vin = $request->chasis;
-        //dump($c_vin);
-        /*
-        select
-        sum(case when formid = 'handover_check_list' then 1 else 0 end) handover,
-        sum(case when formid = 'pdi_check_list' then 1 else 0 end) pdi,
-        sum(case when formid = 'battery_inspection' then 1 else 0 end) battery_inspection,
-        sum(case when formid = 'long_term_store' then 1 else 0 end) long_term_store
-        FROM public.vehicleforms
-        where motor = 'ABCDEFG'
-        group by motor
-        */
-        /* $listo = vehicleform::all();
-        $list = DB::unprepared("select
-        min(created_at) as created_at,
-        chasis,marca,modelo,version,colorexterior,colorinterior,
-        sum(case when formid = 'handover_check_list'then 1 else 0 end) handover,
-        sum(case when formid = 'pdi_check_list'		then 1 else 0 end) pdi,
-        sum(case when formid = 'battery_inspection'	then 1 else 0 end) battery_inspection,
-        sum(case when formid = 'long_term_store'	then 1 else 0 end) long_term_store
-        FROM vehicleforms
-        GROUP BY chasis,marca,modelo,version,colorexterior,colorinterior;"); */
 
         if ($c_vin == "") {
             $dateFrom = $request->DateTrxfrom ? $request->DateTrxfrom : date('Y-m-d');
@@ -201,9 +178,34 @@ class SearchController extends Controller
                 ->having(DB::raw("sum(case when formid = 'long_term_store' then 1 else 0 end)"), 1)
                 ->get();
         }
-        //dump($list);
-        //session()->forget('cod_vin');
-        $pdf = PDF::loadView('download-pdf', ['list' => $list, 'list_handover' => $list_handover, 'list_pdi' => $list_pdi, 'list_battery_inspection' => $list_battery_inspection, 'list_long_term_store' => $list_long_term_store]);
+
+        return [
+            'list' => $list,
+            'list_handover' => $list_handover,
+            'list_pdi' => $list_pdi,
+            'list_battery_inspection' => $list_battery_inspection,
+            'list_long_term_store' => $list_long_term_store,
+        ];
+    }
+
+    public function downloadPdf(Request $request)
+    {
+        // Reportes grandes pueden tardar minutos en DOMPDF — quitar el límite por request.
+        set_time_limit(0);
+
+        $pdf = PDF::loadView('download-pdf', $this->getReportData($request));
         return $pdf->download("REPORTE_GENERAL.pdf");
+    }
+
+    public function downloadExcel(Request $request)
+    {
+        set_time_limit(0);
+
+        $html = view('download-excel', $this->getReportData($request))->render();
+
+        return response($html, 200, [
+            'Content-Type' => 'application/vnd.ms-excel; charset=UTF-8',
+            'Content-Disposition' => 'attachment; filename="REPORTE_GENERAL.xls"',
+        ]);
     }
 }
