@@ -345,11 +345,14 @@
 
     </div>
 
+@endsection
+
+@push('scripts')
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.new-inspection').forEach(function (element) {
                 element.addEventListener('click', function (event) {
-                    event.preventDefault(); // Prevent the default behavior of the link
+                    event.preventDefault();
                     const url = this.getAttribute('data-url');
                     const creationDate = new Date(this.getAttribute('data-date'));
                     const currentDate = new Date();
@@ -374,5 +377,5 @@
                 });
             });
         });
-        </script>
-@endsection
+    </script>
+@endpush
