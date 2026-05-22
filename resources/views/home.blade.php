@@ -23,6 +23,7 @@
                                 <option value="" selected>Seleccione ...</option>
                                 <option value="01">Bahia Motors</option>
                                 <option value="06">Bay Motors</option>
+                                <option value="07">Coastal Motors S.A</option>
                             </select>
                             <br>
                             <button type="submit" class="btn btn-primary w-100">Buscar</button>
