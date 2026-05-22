@@ -66,7 +66,12 @@ class SearchController extends Controller
             session()->put('cod_vin', $c_vin);
             //dump($c_vin);
             $data =  $response->sdtconsultaautos->item;
-            $data->company = ($request->company == "01") ? "Bahia Motors" : "Bay Motors";
+            $companyNames = [
+                '01' => 'Bahia Motors',
+                '06' => 'Bay Motors',
+                '07' => 'Coastal Motors S.A',
+            ];
+            $data->company = $companyNames[$request->company] ?? $request->company;
 
             $shows = vehicleform::where('chasis', '=', $request->vin)->get();
 
