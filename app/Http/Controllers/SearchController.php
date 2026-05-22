@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Carbon\Carbon;
 use GuzzleHttp\Client;
 use App\Models\vehicleform;
 use PDF;
@@ -189,12 +190,24 @@ class SearchController extends Controller
                 ->get();
         }
 
+        // Los timestamps están almacenados en UTC; los reportes deben mostrarse en hora de Panamá.
+        $toPanama = function ($rows) {
+            foreach ($rows as $row) {
+                if (!empty($row->created_at)) {
+                    $row->created_at = Carbon::parse($row->created_at, 'UTC')
+                        ->setTimezone('America/Panama')
+                        ->format('Y-m-d H:i:s');
+                }
+            }
+            return $rows;
+        };
+
         return [
-            'list' => $list,
-            'list_handover' => $list_handover,
-            'list_pdi' => $list_pdi,
-            'list_battery_inspection' => $list_battery_inspection,
-            'list_long_term_store' => $list_long_term_store,
+            'list' => $toPanama($list),
+            'list_handover' => $toPanama($list_handover),
+            'list_pdi' => $toPanama($list_pdi),
+            'list_battery_inspection' => $toPanama($list_battery_inspection),
+            'list_long_term_store' => $toPanama($list_long_term_store),
         ];
     }
 
