@@ -92,8 +92,19 @@
                 <br>
 
                 @if (isset($data))
+                    @php
+                        // Electric vehicles: Geely EV drive-unit codes start with "TZ"
+                        // (Geometry E/C), the version says ELECTRIC, or the model is a Geometry.
+                        $isEv = \Illuminate\Support\Str::startsWith(strtoupper((string) $data->motor), 'TZ')
+                            || \Illuminate\Support\Str::contains(strtoupper((string) $data->version), 'ELECTRIC')
+                            || \Illuminate\Support\Str::contains(strtoupper((string) $data->modelo), 'GEOMETRY');
+                    @endphp
                     <div class="card">
-                        <div class="card-header">{{ __('Información del Vehículo') }}</div>
+                        <div class="card-header">{{ __('Información del Vehículo') }}
+                            @if ($isEv)
+                                <span class="badge bg-success">EV</span>
+                            @endif
+                        </div>
                         <div class="card-body">
 
                             <div class="container ">
@@ -173,7 +184,7 @@
                                     </div>
                                     <div class="col-md-3">
                                         <form name="pdi_check_list" id="pdi_check_list" method="post"
-                                            action="{{ route('pdi.check') }}">
+                                            action="{{ $isEv ? route('ev.pdi.check') : route('pdi.check') }}">
                                             @csrf
                                             <input type="hidden" value="{{ $data->marca }}" id="marca"
                                                 name="marca" readonly class="border-1 rounded-1 text-start ">
@@ -197,7 +208,7 @@
                                                 name="company" readonly>
 
                                             <button type="submit" class="btn btn-primary mh-100"
-                                                style="width: 150px; height: 100px;">Pre-Delivery Inspection (PDI) Checking
+                                                style="width: 150px; height: 100px;">{{ $isEv ? 'EV: ' : '' }}Pre-Delivery Inspection (PDI) Checking
                                                 List</button>
                                         </form>
 
@@ -265,7 +276,7 @@
                                                 name="company" readonly>
 
                                             <button type="submit" class="btn btn-primary mh-100"
-                                                style="width: 150px; height: 100px;">Long Term Stored Vehicle Check
+                                                style="width: 150px; height: 100px;">{{ $isEv ? 'EV: ' : '' }}Long Term Stored Vehicle Check
                                                 Sheet</button>
                                         </form>
                                         @endif

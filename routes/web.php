@@ -31,6 +31,11 @@ Route::post('/handover_check_list_view', [App\Http\Controllers\HandoverControlle
 Route::post('/pdi_check_list', [App\Http\Controllers\PdiController::class, 'pdi_check_list'])->name('pdi.check');
 Route::post('/pdi_check_list_view', [App\Http\Controllers\PdiController::class, 'pdi_check_list_view'])->name('pdi.check.view');
 
+// EV PDI checklist (electric vehicles). The EV long-term sheet is served by the
+// normal long-term routes, which pick the EV vs combustion content per vehicle.
+Route::post('/ev_pdi_check_list', [App\Http\Controllers\EvPdiController::class, 'ev_pdi_check_list'])->name('ev.pdi.check');
+Route::post('/ev_pdi_check_list_view', [App\Http\Controllers\EvPdiController::class, 'ev_pdi_check_list_view'])->name('ev.pdi.check.view');
+
 Route::post('/battery_inspection', [App\Http\Controllers\BatteryController::class, 'battery_inspection'])->name('battery.inspection');
 Route::post('/battery_inspection_view', [App\Http\Controllers\BatteryController::class, 'battery_inspection_view'])->name('battery.inspection.view');
 
