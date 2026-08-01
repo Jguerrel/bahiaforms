@@ -36,6 +36,10 @@ Route::post('/pdi_check_list_view', [App\Http\Controllers\PdiController::class, 
 Route::post('/ev_pdi_check_list', [App\Http\Controllers\EvPdiController::class, 'ev_pdi_check_list'])->name('ev.pdi.check');
 Route::post('/ev_pdi_check_list_view', [App\Http\Controllers\EvPdiController::class, 'ev_pdi_check_list_view'])->name('ev.pdi.check.view');
 
+// Model-specific Zeekr PDI checklists (Zeekr X / 7X / 001), picked by model.
+Route::post('/zeekr_pdi', [App\Http\Controllers\ZeekrPdiController::class, 'pdi'])->name('zeekr.pdi');
+Route::post('/zeekr_pdi_view', [App\Http\Controllers\ZeekrPdiController::class, 'pdi_view'])->name('zeekr.pdi.view');
+
 Route::post('/battery_inspection', [App\Http\Controllers\BatteryController::class, 'battery_inspection'])->name('battery.inspection');
 Route::post('/battery_inspection_view', [App\Http\Controllers\BatteryController::class, 'battery_inspection_view'])->name('battery.inspection.view');
 
