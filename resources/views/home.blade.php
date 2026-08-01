@@ -100,7 +100,7 @@
                             || \Illuminate\Support\Str::contains(strtoupper((string) $data->modelo), 'GEOMETRY');
 
                         // Zeekr models get their own model-specific PDI (takes precedence).
-                        $zeekrModel = \App\Http\Controllers\ZeekrPdiController::detectModel($data->modelo);
+                        $zeekrModel = \App\Http\Controllers\ZeekrPdiController::detectModel($data->marca, $data->modelo);
                         // Zeekr is electric, so treat it as EV for the other forms too.
                         $isEv = $isEv || $zeekrModel !== null;
                         // PDI button target: Zeekr sheet > EV sheet > standard sheet.

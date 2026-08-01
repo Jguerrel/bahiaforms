@@ -22,13 +22,20 @@ class ZeekrPdiController extends Controller
         $this->middleware('auth');
     }
 
-    /** Which Zeekr sheet applies to this model name, or null if not a Zeekr. */
-    public static function detectModel($modelo): ?string
+    /**
+     * Which Zeekr sheet applies to this vehicle, or null if not a Zeekr.
+     * Real data has marca = "ZEEKR" and modelo = the model code ("X", "7X", "001"),
+     * so the brand check looks at both fields.
+     */
+    public static function detectModel($marca, $modelo): ?string
     {
-        $m = strtoupper((string) $modelo);
-        if (!Str::contains($m, 'ZEEKR')) {
+        $brand = strtoupper((string) $marca);
+        $m = strtoupper(trim((string) $modelo));
+        if (!Str::contains($brand, 'ZEEKR') && !Str::contains($m, 'ZEEKR')) {
             return null;
         }
+        // Normalise a "ZEEKR 7X" style modelo down to just the model code.
+        $m = trim(str_replace('ZEEKR', '', $m));
         if (Str::contains($m, '001')) return '001';
         if (Str::contains($m, '7X'))  return '7x';
         if (Str::contains($m, 'X'))   return 'x';
@@ -38,14 +45,17 @@ class ZeekrPdiController extends Controller
     /** Render the blank Zeekr PDI for data entry. */
     public function pdi(Request $request)
     {
-        return $this->render($request, null, ZeekrPdiController::detectModel($request->modelo));
+        return $this->render($request, null, ZeekrPdiController::detectModel($request->marca, $request->modelo));
     }
 
     /** Render a saved Zeekr PDI (read of the stored JSON). */
     public function pdi_view(Request $request)
     {
         $formdata = json_decode($request->formrequest);
-        $model = ZeekrPdiController::detectModel(data_get($formdata, 'modelo', $request->modelo));
+        $model = ZeekrPdiController::detectModel(
+            data_get($formdata, 'marca', $request->marca),
+            data_get($formdata, 'modelo', $request->modelo)
+        );
         return $this->render($request, $formdata, $model);
     }
 
