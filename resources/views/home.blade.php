@@ -99,6 +99,13 @@
                         $isEv = \Illuminate\Support\Str::startsWith(strtoupper((string) $data->motor), 'TZ')
                             || \Illuminate\Support\Str::contains(strtoupper((string) $data->version), 'ELECTRIC')
                             || \Illuminate\Support\Str::contains(strtoupper((string) $data->modelo), 'GEOMETRY');
+
+                        // Zeekr models get their own model-specific PDI (takes precedence).
+                        $zeekrModel = \App\Http\Controllers\ZeekrPdiController::detectModel($data->modelo);
+                        // Zeekr is electric, so treat it as EV for the other forms too.
+                        $isEv = $isEv || $zeekrModel !== null;
+                        // PDI button target: Zeekr sheet > EV sheet > standard sheet.
+                        $pdiRoute = $zeekrModel !== null ? route('zeekr.pdi') : ($isEv ? route('ev.pdi.check') : route('pdi.check'));
                     @endphp
                     <div class="card">
                         <div class="card-header">{{ __('Información del Vehículo') }}
@@ -185,7 +192,7 @@
                                     </div>
                                     <div class="col-md-3">
                                         <form name="pdi_check_list" id="pdi_check_list" method="post"
-                                            action="{{ $isEv ? route('ev.pdi.check') : route('pdi.check') }}">
+                                            action="{{ $pdiRoute }}">
                                             @csrf
                                             <input type="hidden" value="{{ $data->marca }}" id="marca"
                                                 name="marca" readonly class="border-1 rounded-1 text-start ">
@@ -209,7 +216,7 @@
                                                 name="company" readonly>
 
                                             <button type="submit" class="btn btn-primary mh-100"
-                                                style="width: 150px; height: 100px;">{{ $isEv ? 'EV: ' : '' }}Pre-Delivery Inspection (PDI) Checking
+                                                style="width: 150px; height: 100px;">{{ $zeekrModel ? 'Zeekr ' . strtoupper($zeekrModel) . ' ' : ($isEv ? 'EV: ' : '') }}Pre-Delivery Inspection (PDI) Checking
                                                 List</button>
                                         </form>
 
