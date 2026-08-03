@@ -25,6 +25,15 @@ return [
         'i_inicio'           => 'Comienza el trabajo',
         'i_fin'              => 'Fin del trabajo',
     ],
+    // Header info fields we can pre-fill from the searched vehicle (info-key => data token).
+    'autofill' => [
+        'i_socio'       => 'company',
+        'i_serie'       => 'modelo',
+        'i_version_com' => 'version',
+        'i_chapa'       => 'colorexterior',
+        'i_recortar'    => 'colorinterior',
+        'i_maquina'     => 'motor',
+    ],
     'footer' => ['final' => 'Resultado final', 'remark' => 'Observación', 'operator' => 'Operador'],
     'groups' => [
         [
