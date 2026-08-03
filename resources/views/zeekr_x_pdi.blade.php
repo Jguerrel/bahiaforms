@@ -13,6 +13,14 @@
         $colorexterior = data_get($formdata, 'colorexterior', $request->colorexterior);
         $colorinterior = data_get($formdata, 'colorinterior', $request->colorinterior);
         $opts = $cfg['result_options'];
+
+        // Header fields we can auto-fill (from vehicle / technician / today), mapped via $cfg['autofill'].
+        $auto = [
+            'company'   => $request->company,
+            'inspector' => optional(auth()->user())->name,
+            'today'     => now()->format('Y-m-d'),
+        ];
+        $autofill = $cfg['autofill'] ?? [];
     @endphp
 
     <div class="container">
@@ -21,7 +29,7 @@
                 <h1 class="fs-3 text-end fw-bold m-0">{{ $cfg['title'] }}</h1>
             </div>
             <div class="col-3 p-0 text-end align-self-center">
-                <img src="{{ asset('img/geely.png') }}" class="w-50" alt="Zeekr">
+                <img src="{{ asset('img/zeekr.png') }}" class="w-50" alt="Zeekr">
             </div>
         </div>
     </div>
@@ -46,10 +54,12 @@
             {{-- Header info fields --}}
             <div class="container-sm border border-dark p-0 mb-3">
                 @foreach ($cfg['header'] as $hk => $hl)
+                    @php $hkDefault = isset($autofill[$hk]) ? ($auto[$autofill[$hk]] ?? '') : ''; @endphp
                     <div class="row border-bottom border-dark m-0">
                         <div class="col-sm-4 border-end border-dark p-1 fw-bold"><p class="m-0 lh-sm">{{ $hl }}</p></div>
                         <div class="col-sm-8 p-1">
-                            <input name="{{ $hk }}" value="{{ data_get($formdata, $hk) }}" type="text"
+                            <input name="{{ $hk }}" value="{{ data_get($formdata, $hk, $hkDefault) }}"
+                                type="{{ $hk === 'fecha' ? 'date' : 'text' }}"
                                 class="form-control border-0 border-bottom p-0 w-100">
                         </div>
                     </div>

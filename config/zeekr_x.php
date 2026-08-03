@@ -18,6 +18,12 @@ return [
         'hora_in'  => 'Hora en',
         'hora_out' => 'Se acabó el tiempo',
     ],
+    // Header fields we can pre-fill from the searched vehicle / session (field-key => data token).
+    'autofill' => [
+        'centro' => 'company',
+        'fecha'  => 'today',
+        'firma'  => 'inspector',
+    ],
     'appearance_legend' => 'X: Arañazo   O: Irregular   U: Espacio libre irregular   B: Daño',
     'sections' => [
         [

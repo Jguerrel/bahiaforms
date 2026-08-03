@@ -25,6 +25,14 @@ return [
         'i_operation_start'  => 'Operation start',
         'i_operation_end'    => 'Operation end',
     ],
+    // Header info fields we can pre-fill from the searched vehicle (info-key => data token).
+    'autofill' => [
+        'i_delivery_partner' => 'company',
+        'i_version'          => 'version',
+        'i_exterior'         => 'colorexterior',
+        'i_interior'         => 'colorinterior',
+        'i_motor'            => 'motor',
+    ],
     'footer' => ['final' => 'Final result', 'remark' => 'Remarks', 'operator' => 'Operator'],
     'remark_hint' => 'Runs, dirty spots, scratches, surface scoring, color deviation, paint bubbles, cracks, staining, peeling, damage, tactile protrusions, sharp edges, surface waviness, rust, fluid leakage, abrasion marks, mechanical interference, abnormal noise, looseness, deformation, oxidation, sticking, dead pixels, gap mismatch, software malfunction, black screen, start failure, card key malfunction.',
     'groups' => [
