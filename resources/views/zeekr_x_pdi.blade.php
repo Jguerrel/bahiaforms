@@ -15,8 +15,9 @@
         $opts = $cfg['result_options'];
 
         // Header fields we can auto-fill (from vehicle / technician / today), mapped via $cfg['autofill'].
+        // Zeekr vehicles handled by Bay Motors are serviced at Coastal Motors' PDI center.
         $auto = [
-            'company'   => $request->company,
+            'company'   => $request->company === 'Bay Motors' ? 'Coastal Motors S.A' : $request->company,
             'inspector' => optional(auth()->user())->name,
             'today'     => now()->format('Y-m-d'),
         ];
