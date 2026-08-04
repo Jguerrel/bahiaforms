@@ -15,8 +15,9 @@
 
         // Values we can auto-fill header fields with, resolved from the searched vehicle,
         // the logged-in technician, and today. Mapped per-field via $cfg['autofill'].
+        // Zeekr vehicles handled by Bay Motors are serviced at Coastal Motors' PDI center.
         $auto = [
-            'company'       => $request->company,
+            'company'       => $request->company === 'Bay Motors' ? 'Coastal Motors S.A' : $request->company,
             'modelo'        => $modelo,
             'version'       => $version,
             'colorexterior' => $colorexterior,
