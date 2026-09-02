@@ -243,10 +243,10 @@
                             {{ $data->chasis }}
                         </td>
 					    <td>
-                           {{ $formdata->v162 }}
+                           {{ $formdata->v162 ?? $formdata->numeroauto ?? '' }}
                         </td>
                         <td>
-                           {{ $formdata->v170 }} kms
+                           {{ $formdata->v170 ?? $formdata->kms ?? $formdata->km ?? '' }} kms
                         </td>
                         <td>
                             {{ $data->marca }}
@@ -261,8 +261,8 @@
                             {{ $data->colorexterior }}-
                             {{ $data->colorinterior }}
                         </td>
-                        <td>{{ $formdata->v164 }}</td>
-                        <td>{{ $formdata->v187 }}</td>
+                        <td>{{ $formdata->v164 ?? $formdata->inspector ?? $formdata->firma ?? $formdata->operator ?? '' }}</td>
+                        <td>{{ $formdata->v187 ?? $formdata->fault_repair ?? $formdata->remarks ?? '' }}</td>
                     </tr>
                 @endif
             @endforeach
