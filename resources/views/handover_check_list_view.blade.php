@@ -24,7 +24,7 @@ $formdata = json_decode($request->formrequest);
             <h1 class="fs-2 text-end fw-bold m-0">Handover Check List <span class="fs-5">Lista de verificación de entrega</span></h1>
         </div>
         <div class="col-3 p-0 text-end align-self-center">
-            <img src="{{ asset('img/geely.png') }}" class="w-50" alt="Geely">
+            @include('partials.brand_logo', ['marca' => $marca ?? data_get($formdata ?? null, 'marca', $request->marca ?? null), 'logoClass' => 'w-50'])
         </div>
     </div>
 </div>
@@ -168,7 +168,7 @@ $formdata = json_decode($request->formrequest);
     <div class="container border border-dark">
         <div class="row border border-dark">
             <div class="col-6 d-flex align-items-center">
-                <img src="{{ asset('img/geely.png') }}" class="w-25" alt="Geely">
+                @include('partials.brand_logo', ['marca' => $marca ?? data_get($formdata ?? null, 'marca', $request->marca ?? null), 'logoClass' => 'w-25'])
             </div>
             <div class="col-6">
                 <div class="input-group">

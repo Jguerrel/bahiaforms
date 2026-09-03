@@ -101,7 +101,7 @@ class SearchController extends Controller
                 ->select(DB::raw("min(created_at) as created_at,
                           chasis,marca,modelo,version,colorexterior,colorinterior,formrequest,
                           sum(case when formid = 'handover_check_list' then 1 else 0 end) handover,
-                          sum(case when formid = 'pdi_check_list' then 1 else 0 end) pdi,
+                          sum(case when formid in ('pdi_check_list', 'ev_pdi_check_list', 'zeekr_pdi') then 1 else 0 end) pdi,
                           sum(case when formid = 'battery_inspection' then 1 else 0 end) battery_inspection,
                           sum(case when formid = 'long_term_store' then 1 else 0 end) long_term_store"))
                 ->whereDate('created_at', '>=', $dateFrom)->WhereDate('created_at', '<=', $dateTo)
@@ -119,7 +119,7 @@ class SearchController extends Controller
             $list_pdi = DB::table('vehicleforms')
                 ->select(DB::raw("created_at,
                           chasis,marca,modelo,version,colorexterior,colorinterior,formrequest,
-                          sum(case when formid = 'pdi_check_list' then 1 else 0 end) pdi"))
+                          sum(case when formid in ('pdi_check_list', 'ev_pdi_check_list', 'zeekr_pdi') then 1 else 0 end) pdi"))
                 ->whereDate('created_at', '>=', $dateFrom)->WhereDate('created_at', '<=',  $dateTo)
                 ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior', 'formrequest')
                 ->get();
@@ -146,7 +146,7 @@ class SearchController extends Controller
                 ->select(DB::raw("min(created_at) as created_at,
                               chasis,marca,modelo,version,colorexterior,colorinterior,
                               sum(case when formid = 'handover_check_list' then 1 else 0 end) handover,
-                              sum(case when formid = 'pdi_check_list' then 1 else 0 end) pdi,
+                              sum(case when formid in ('pdi_check_list', 'ev_pdi_check_list', 'zeekr_pdi') then 1 else 0 end) pdi,
                               sum(case when formid = 'battery_inspection' then 1 else 0 end) battery_inspection,
                               sum(case when formid = 'long_term_store' then 1 else 0 end) long_term_store"))
                 ->where('chasis', '=', $c_vin)
@@ -167,11 +167,11 @@ class SearchController extends Controller
             $list_pdi = DB::table('vehicleforms')
                 ->select(DB::raw("created_at,
                               chasis,marca,modelo,version,colorexterior,colorinterior,formrequest,
-                              sum(case when formid = 'pdi_check_list' then 1 else 0 end) pdi"))
+                              sum(case when formid in ('pdi_check_list', 'ev_pdi_check_list', 'zeekr_pdi') then 1 else 0 end) pdi"))
                 ->groupBy('created_at', 'chasis', 'marca', 'modelo', 'version', 'colorexterior', 'colorinterior', 'formrequest')
                 ->where('chasis', '=', $c_vin)
                 ->whereDate('created_at', '>=', $dateFrom)->WhereDate('created_at', '<=', $dateTo)
-                ->having(DB::raw("sum(case when formid = 'pdi_check_list' then 1 else 0 end)"), 1)
+                ->having(DB::raw("sum(case when formid in ('pdi_check_list', 'ev_pdi_check_list', 'zeekr_pdi') then 1 else 0 end)"), 1)
                 ->get();
 
             $list_battery_inspection = DB::table('vehicleforms')
@@ -334,14 +334,16 @@ class SearchController extends Controller
         foreach ($list as $d) {
             if ($d->pdi <= 0) continue;
             $form = json_decode($d->formrequest);
+            // Field names differ per PDI variant: combustion uses vNNN; EV uses
+            // numeroauto/kms/inspector/fault_repair; Zeekr uses km/firma/operator/remarks.
             $sheet->fromArray([
                 (string) $d->created_at, $d->chasis,
-                $form->v162 ?? '',
-                ($form->v170 ?? '') . ' kms',
+                $form->v162 ?? $form->numeroauto ?? '',
+                ($form->v170 ?? $form->kms ?? $form->km ?? '') . ' kms',
                 $d->marca, $d->modelo, $d->version,
                 $d->colorexterior . '-' . $d->colorinterior,
-                $form->v164 ?? '',
-                $form->v187 ?? '',
+                $form->v164 ?? $form->inspector ?? $form->firma ?? $form->operator ?? '',
+                $form->v187 ?? $form->fault_repair ?? $form->remarks ?? '',
             ], null, "A{$row}");
             $row++;
         }

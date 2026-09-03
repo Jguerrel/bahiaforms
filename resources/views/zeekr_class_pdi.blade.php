@@ -35,7 +35,7 @@
                 <h1 class="fs-3 text-end fw-bold m-0">{{ $cfg['title'] }}</h1>
             </div>
             <div class="col-3 p-0 text-end align-self-center">
-                <img src="{{ asset('img/zeekr.png') }}" class="w-50" alt="Zeekr">
+                @include('partials.brand_logo', ['marca' => $marca ?? data_get($formdata ?? null, 'marca', $request->marca ?? null), 'logoClass' => 'w-50'])
             </div>
         </div>
     </div>

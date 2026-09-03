@@ -41,7 +41,7 @@
                 <h5 class=" text-end fw-bold m-0">48V Battery Vehicle Inspection and charging Record Form</h5>
             </div>
             <div class="col-3 p-0 text-end align-self-center">
-                <img src="{{ asset('img/geely.png') }}" class="w-50" alt="Geely">
+                @include('partials.brand_logo', ['marca' => $marca ?? data_get($formdata ?? null, 'marca', $request->marca ?? null), 'logoClass' => 'w-50'])
             </div>
         </div>
     </div>
